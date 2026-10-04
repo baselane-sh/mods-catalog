@@ -17,7 +17,7 @@ OWN-WORLD: Black anodized rails with slotted mounting holes hold the rows. Facep
 
 STORY: The visitor scans the rack, filters it like a utility module, opens one faceplate, reads its jacks in plain words (risky outputs first), and patches it in: copies the two install lines.
 
-FIRST VIEWPORT: A full-width utility strip (search field, category switch row as a stepped tab rail sized by count, Verified toggle, sort) sits on the top rail. Below it, the Top mods row: eight modules of real width on one rail. Then the full rack, rows of faceplates wrapping by HP width. The ⌘K palette opens over the rack. The primary action on a mod page, the install block, sits beside the faceplate above the fold.
+FIRST VIEWPORT: A full-width utility strip (search field, category switch row as a stepped tab rail sized by count, Verified toggle, sort) sits on the top rail. Below it, the Top mods row: eight modules of real width on one rail, shown only when GitHub star counts differ (no ranking signal otherwise; at launch every mod shares one repo, so the row is hidden). Then the full rack, rows of faceplates wrapping by HP width. The ⌘K palette opens over the rack. The primary action on a mod page, the install block, sits beside the faceplate above the fold.
 
 FORM: Eurorack modular synth case and module panels, candidate 3 of my ordered list (1 Claude Code TUI, 2 electronic parts datasheet, 3 Eurorack modules, 4 Drug Facts label, 5 blister-card pegboard, 6 library card catalog, 7 game mod manager). Seed key 0e74a6f8.
 Raise from the manual acetate tab board (competitive): the category switch is a stepped tab rail whose tab widths follow each category's mod count.
