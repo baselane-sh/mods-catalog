@@ -9,7 +9,7 @@ Owner answers before the run:
 
 Tiers:
 1. Plan A (catalog core) passing locally, plus spike gates (Tasks 1 to 13).
-2. Plan C launch: mods public, real catalog repo, 68 seeded, 3 installed from a clean HOME.
+2. Plan C launch: mods public, real catalog repo, 68 seeded (plan target; 98 listed at launch), 3 installed from a clean HOME.
 3. Plan B site: functional first, polish last.
 
 ## Status
