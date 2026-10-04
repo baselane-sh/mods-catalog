@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C: boxed manual tab board (mockup)</title>
+<style>
+  :root { --board: #f2b705; --leaf: rgb(255 255 255 / .82); --ink: #1a1a1a; --dim: #4b4b4b; --vermilion: #b8301a; }
+  body { margin: 0; background: #d9dadc; color: var(--ink); font: 17px/1.55 Georgia, serif; }
+  .book { display: grid; grid-template-columns: 1fr 56px; max-width: 1100px; margin: 32px auto; min-height: 640px; }
+  .board { background: var(--board); padding: 40px; }
+  .leaf { background: var(--leaf); padding: 28px 32px; box-shadow: 0 2px 0 rgb(0 0 0 / .15); max-width: 62ch; }
+  .leaf + .leaf { margin-top: 18px; }
+  h1 { font: 700 40px/1.05 "Helvetica Neue", Arial, sans-serif; margin: 0 0 8px; }
+  h2 { font: 700 20px/1.2 "Helvetica Neue", Arial, sans-serif; margin: 0; }
+  code { font: 14px ui-monospace, Menlo, monospace; }
+  .rail { display: grid; align-content: start; gap: 2px; }
+  .tab { writing-mode: vertical-rl; font: 700 13px "Helvetica Neue", Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #fff; padding: 10px 0; text-align: center; }
+  .t1 { background: #b3261e; height: 120px; } .t2 { background: #1f5fb0; height: 40px; } .t3 { background: #11795a; height: 80px; } .t4 { background: #5b3fb6; height: 90px; } .t5 { background: #a3266f; height: 150px; }
+  .errata { display: inline-block; background: var(--vermilion); color: #fff; padding: 2px 8px; font: 700 13px "Helvetica Neue", Arial, sans-serif; transform: rotate(-2deg); }
+</style>
+</head>
+<body>
+<div class="book">
+  <div class="board">
+    <p>Direction C, not built. The gallery as a boxed-software reference manual: one coloured divider board per category, every mod a clear acetate leaf above it, the category tabs down the fore edge sized by how many mods they hold.</p>
+    <div class="leaf"><h1>Guards</h1><p>Guards stop or question a tool call before it runs.</p></div>
+    <div class="leaf"><h2>secret-guard <span class="dim">0.2.0</span></h2><p>Asks before a live API key, token or private key is written, edited or run.</p><p><code>/plugin install secret-guard@baselane-mods</code></p><p><span class="errata">Can approve or block tool calls</span></p></div>
+  </div>
+  <div class="rail" aria-label="Categories"><span class="tab t1">Guards 18</span><span class="tab t2">Panes 4</span><span class="tab t3">Bands 11</span><span class="tab t4">Commands 12</span><span class="tab t5">Styles 20</span></div>
+</div>
+</body>
+</html>
