@@ -1,0 +1,31 @@
+{
+  "name": "big-diff-nudge",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "big-diff-nudge--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "classic.Stop",
+    "tool.call"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.fs.exists",
+    "$.fs.read",
+    "$.model.complete",
+    "$.session.usage",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 9,
+  "manifest": {
+    "description": "Suggests splitting the change once your edits added or removed more than 500 lines since the last git commit. A successful commit resets the count.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

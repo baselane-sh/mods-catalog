@@ -1,0 +1,10 @@
+{
+  "name": "nudge-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/nudge-pack",
+    "ref": "nudge-pack--v0.2.0"
+  },
+  "category": "nudge"
+}

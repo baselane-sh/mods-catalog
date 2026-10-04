@@ -1,0 +1,10 @@
+{
+  "name": "auto-format",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/auto-format",
+    "ref": "auto-format--v0.2.0"
+  },
+  "category": "lifecycle"
+}

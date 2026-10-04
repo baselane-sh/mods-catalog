@@ -1,0 +1,10 @@
+{
+  "name": "gitignore-check",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/gitignore-check",
+    "ref": "gitignore-check--v0.2.0"
+  },
+  "category": "guard"
+}

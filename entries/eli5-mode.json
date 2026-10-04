@@ -1,0 +1,10 @@
+{
+  "name": "eli5-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/eli5-mode",
+    "ref": "eli5-mode--v0.2.0"
+  },
+  "category": "style"
+}

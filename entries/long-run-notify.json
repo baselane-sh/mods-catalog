@@ -1,0 +1,10 @@
+{
+  "name": "long-run-notify",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/long-run-notify",
+    "ref": "long-run-notify--v0.2.0"
+  },
+  "category": "lifecycle"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "terse-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/terse-mode",
+    "ref": "terse-mode--v0.2.0"
+  },
+  "category": "style"
+}

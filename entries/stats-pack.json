@@ -1,0 +1,10 @@
+{
+  "name": "stats-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/stats-pack",
+    "ref": "stats-pack--v0.2.0"
+  },
+  "category": "stats"
+}

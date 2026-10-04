@@ -1,0 +1,10 @@
+{
+  "name": "team-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/team-pack",
+    "ref": "team-pack--v0.2.0"
+  },
+  "category": "style"
+}

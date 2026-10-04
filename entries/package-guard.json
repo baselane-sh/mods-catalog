@@ -1,0 +1,10 @@
+{
+  "name": "package-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/package-guard",
+    "ref": "package-guard--v0.2.0"
+  },
+  "category": "guard"
+}

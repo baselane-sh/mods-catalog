@@ -1,0 +1,10 @@
+{
+  "name": "branch-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/branch-band",
+    "ref": "branch-band--v0.2.0"
+  },
+  "category": "band"
+}

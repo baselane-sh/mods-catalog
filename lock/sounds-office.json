@@ -1,0 +1,26 @@
+{
+  "name": "sounds-office",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "sounds-office--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "tool.call",
+    "turn.complete"
+  ],
+  "calls": [
+    "$.audio.play",
+    "$.ui.log"
+  ],
+  "testCount": 17,
+  "manifest": {
+    "description": "Quiet office sounds: a soft click when tests pass, a low thud when they fail, paper when a call is blocked.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

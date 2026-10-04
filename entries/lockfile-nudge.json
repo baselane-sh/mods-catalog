@@ -1,0 +1,10 @@
+{
+  "name": "lockfile-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/lockfile-nudge",
+    "ref": "lockfile-nudge--v0.2.0"
+  },
+  "category": "nudge"
+}

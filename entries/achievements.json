@@ -1,0 +1,10 @@
+{
+  "name": "achievements",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/achievements",
+    "ref": "achievements--v0.2.0"
+  },
+  "category": "stats"
+}

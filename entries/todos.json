@@ -1,0 +1,10 @@
+{
+  "name": "todos",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/todos",
+    "ref": "todos--v0.2.0"
+  },
+  "category": "command"
+}

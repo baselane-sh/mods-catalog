@@ -1,0 +1,10 @@
+{
+  "name": "code-only",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/code-only",
+    "ref": "code-only--v0.2.0"
+  },
+  "category": "style"
+}

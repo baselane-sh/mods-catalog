@@ -1,0 +1,10 @@
+{
+  "name": "sounds-office",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sounds-office",
+    "ref": "sounds-office--v0.2.0"
+  },
+  "category": "sound"
+}

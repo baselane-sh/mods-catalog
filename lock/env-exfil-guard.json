@@ -1,0 +1,28 @@
+{
+  "name": "env-exfil-guard",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "env-exfil-guard--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "classic.PreToolUse",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 11,
+  "manifest": {
+    "description": "Asks before a command prints your environment, echoes a secret variable or sends local data to a remote host.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "security-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/security-mode",
+    "ref": "security-mode--v0.2.0"
+  },
+  "category": "style"
+}

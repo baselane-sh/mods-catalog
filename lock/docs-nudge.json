@@ -1,0 +1,31 @@
+{
+  "name": "docs-nudge",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "docs-nudge--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "classic.Stop",
+    "tool.call"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.fs.exists",
+    "$.fs.read",
+    "$.model.complete",
+    "$.session.usage",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 8,
+  "manifest": {
+    "description": "At turn end, one toast when edits added exported code (an export statement in .ts or .js, or a public function signature) and no README or docs file was edited this session.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

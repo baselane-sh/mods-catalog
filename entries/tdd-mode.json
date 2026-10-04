@@ -1,0 +1,10 @@
+{
+  "name": "tdd-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/tdd-mode",
+    "ref": "tdd-mode--v0.2.0"
+  },
+  "category": "style"
+}

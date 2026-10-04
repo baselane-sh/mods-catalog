@@ -1,0 +1,38 @@
+{
+  "name": "night-owl",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "night-owl--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 32,
+  "manifest": {
+    "description": "Records the hour of each prompt across sessions and adds /hours: a 24-hour histogram of when you work, naming your peak hour.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

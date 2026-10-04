@@ -1,0 +1,10 @@
+{
+  "name": "ste-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ste-mode",
+    "ref": "ste-mode--v0.2.0"
+  },
+  "category": "style"
+}

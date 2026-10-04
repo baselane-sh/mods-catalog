@@ -1,0 +1,10 @@
+{
+  "name": "no-sycophancy",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/no-sycophancy",
+    "ref": "no-sycophancy--v0.2.0"
+  },
+  "category": "style"
+}

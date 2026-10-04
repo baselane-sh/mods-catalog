@@ -1,0 +1,24 @@
+{
+  "name": "no-em-dash",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "no-em-dash--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [
+    "nothing on $"
+  ],
+  "testCount": 7,
+  "manifest": {
+    "description": "Never writes the em-dash character. Uses a comma, colon, period or parentheses.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

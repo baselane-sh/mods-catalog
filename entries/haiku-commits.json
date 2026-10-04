@@ -1,0 +1,10 @@
+{
+  "name": "haiku-commits",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/haiku-commits",
+    "ref": "haiku-commits--v0.2.0"
+  },
+  "category": "style"
+}
