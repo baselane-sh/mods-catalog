@@ -10,6 +10,7 @@ import { renderComment, COMMENT_MARKER } from '../lib/report.mjs'
 import { runRules } from '../lib/rules.mjs'
 import { realIo } from '../lib/io.mjs'
 import { makeLock } from '../lib/lock.mjs'
+import { findNameClash } from '../lib/names.mjs'
 
 const { GITHUB_REPOSITORY: repo, WORKFLOW_HEAD_SHA: runHeadSha, CHECK_CONCLUSION: conclusion, GH_TOKEN: token } = process.env
 const run = (cmd, args) => execFileSync(cmd, args, { encoding: 'utf8' })
@@ -46,19 +47,30 @@ async function gatherMergeInput(pr, files) {
   }
 }
 
-// The checkout keeps no credentials, so the token is given to git only for the push.
+// The checkout keeps no credentials. The token reaches git only through the environment
+// of the push, never its argv, so a failed command cannot print it.
 function pushMain() {
   const auth = Buffer.from(`x-access-token:${token}`).toString('base64')
-  const withAuth = ['-c', `http.https://github.com/.extraheader=AUTHORIZATION: basic ${auth}`]
+  console.log(`::add-mask::${auth}`)
+  const env = { ...process.env, GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'http.https://github.com/.extraheader', GIT_CONFIG_VALUE_0: `AUTHORIZATION: basic ${auth}` }
+  const git = args => execFileSync('git', args, { encoding: 'utf8', env, stdio: ['ignore', 'pipe', 'pipe'] })
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      run('git', [...withAuth, 'pull', '-q', '--rebase', 'origin', 'main'])
-      run('git', [...withAuth, 'push', '-q', 'origin', 'HEAD:main'])
+      git(['pull', '-q', '--rebase', 'origin', 'main'])
+      git(['push', '-q', 'origin', 'HEAD:main'])
       return
-    } catch (error) {
-      if (attempt === 3) throw error
+    } catch {
+      if (attempt === 3) stop('the lock push failed 3 times; a maintainer must write the lock')
     }
   }
+}
+
+// Another PR may have been listed since this job checked out main.
+function latestNameClash(name) {
+  run('git', ['fetch', '-q', 'origin', 'main'])
+  const listed = run('git', ['ls-tree', '--name-only', 'origin/main', 'lock/'])
+    .trim().split('\n').filter(Boolean).map(file => path.basename(file, '.json'))
+  return findNameClash(name, listed)
 }
 
 async function writeLock(result, pr, lockOnMain) {
@@ -78,18 +90,25 @@ if (shapeErrors.length) stop(shapeErrors.join('; '))
 
 const pr = ghJson([`repos/${repo}/pulls/${report.prNumber}`])
 if (!prMatchesRun(pr, runHeadSha)) stop('the report names a PR whose head is not the checked commit')
-upsertComment(report.prNumber, renderComment(report))
-if (conclusion !== 'success' || !report.ok) process.exit(0)
+// A failed check is shown from its report: the comment then lists rules only, no capabilities.
+if (conclusion !== 'success' || !report.ok) {
+  upsertComment(report.prNumber, renderComment({ ...report, ok: false }))
+  process.exit(0)
+}
 
 // Two files are enough to refuse the merge, so one small page is enough to decide.
 const files = ghJson([`repos/${repo}/pulls/${report.prNumber}/files?per_page=3`])
 const input = await gatherMergeInput(pr, files)
 const recomputed = await runRules(input, realIo({ cleanEnv: true }), { skip: ['R9'], testCount: report.result.testCount })
-const errors = verifyForMerge({ report, pr, recomputed })
+const clash = recomputed.ok && !input.lockOnMain ? latestNameClash(recomputed.result.name) : null
+const errors = [...verifyForMerge({ report, pr, recomputed }), ...(clash ? [`the name is too close to ${clash}, listed a moment ago`] : [])]
+// The comment shows the merge job's own result, never the capabilities the check report claims.
+const shown = { ...recomputed, rules: recomputed.rules.map(rule => rule.id === 'R9' && recomputed.ok ? { ...rule, status: 'pass' } : rule) }
 if (errors.length) {
-  upsertComment(report.prNumber, `${renderComment(report)}\n**Not merged.** The merge job found:\n\n${fence(errors.join('\n'))}\n`)
+  upsertComment(report.prNumber, `${renderComment({ ...shown, ok: false })}\n**Not merged.** The merge job found:\n\n${fence(errors.join('\n'))}\n`)
   stop(`not merging: ${errors.join('; ')}`)
 }
+upsertComment(report.prNumber, renderComment(shown))
 
 run('gh', ['pr', 'merge', String(report.prNumber), '--repo', repo, '--squash', '--match-head-commit', pr.head.sha])
 await writeLock(recomputed.result, pr, input.lockOnMain)

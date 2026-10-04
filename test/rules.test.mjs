@@ -27,6 +27,7 @@ const makeIo = (root, change = {}) => ({
   validate: async () => ({ code: 0, output: VALIDATE_OK }),
   test: async () => ({ code: 0, output: TEST_OK }),
   checkShape: async () => [],
+  checkLinks: async () => [],
   ...change,
 })
 
@@ -197,4 +198,13 @@ test('only https homepage and repository URLs reach the result', async () => {
   const report = await runRules(makeInput(), makeIo(await checkout({ manifest })))
   assert.equal(report.result.manifest.homepage, undefined)
   assert.equal(report.result.manifest.repository, 'https://github.com/a/b')
+})
+
+test('R4 refuses a checkout with a symlink that leaves it, before any file is read', async () => {
+  const root = await checkout()
+  let validated = false
+  const io = makeIo(root, { checkLinks: async () => ['plugins/cost-meter/x points outside the mod'], validate: async () => { validated = true; return { code: 0, output: VALIDATE_OK } } })
+  const report = await runRules(makeInput(), io)
+  assert.equal(failed(report).id, 'R4')
+  assert.equal(validated, false)
 })
