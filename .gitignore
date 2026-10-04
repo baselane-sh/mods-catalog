@@ -2,3 +2,4 @@ node_modules/
 _site/
 check-report.json
 report/
+.impeccable/config.local.json

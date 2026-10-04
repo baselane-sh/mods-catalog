@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B: Claude Code TUI (mockup)</title>
+<style>
+  :root { --bg: #f7f6f2; --ink: #1d1d1b; --dim: #6b6a65; --rule: #d6d4cc; --accent: #c2410c; --ok: #15803d; --warn: #a16207; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #141413; --ink: #ecebe6; --dim: #9a988f; --rule: #34332f; --accent: #fb923c; --ok: #4ade80; --warn: #facc15; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 ui-monospace, "SF Mono", Menlo, monospace; }
+  .frame { max-width: 1100px; margin: 32px auto; padding: 0 16px; }
+  .box { border: 1px solid var(--rule); padding: 16px 20px; }
+  .title { color: var(--accent); }
+  .prompt { display: flex; gap: 8px; border: 1px solid var(--ink); padding: 10px 14px; margin: 16px 0; }
+  .prompt b { color: var(--accent); }
+  .row { display: grid; grid-template-columns: 22ch 10ch 1fr 14ch; gap: 0 16px; padding: 6px 0; border-bottom: 1px dashed var(--rule); }
+  .row:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .dim { color: var(--dim); }
+  .ok { color: var(--ok); } .warn { color: var(--warn); }
+  .band { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 10px; color: var(--dim); }
+  h1 { font-size: 15px; font-weight: 700; margin: 0; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <p class="dim">Direction B, not built. The gallery drawn in Claude Code's own terminal grammar: a session transcript, a prompt box, a band above the prompt. Mod rows read like /plugin output.</p>
+  <div class="box">
+    <h1><span class="title">✻ Baselane mods</span> <span class="dim">98 mods, checked and pinned</span></h1>
+    <div class="prompt"><b>&gt;</b><span>search mods: <span class="dim">git</span></span></div>
+    <div class="row dim"><span>NAME</span><span>KIND</span><span>WHAT IT DOES</span><span>CAN</span></div>
+    <div class="row"><span>git-pane</span><span>pane</span><span>A pane with the branch, changed files and recent commits.</span><span class="warn">runs programs</span></div>
+    <div class="row"><span>branch-band</span><span>band</span><span>A band above the prompt with the git branch and changed files.</span><span class="warn">runs programs</span></div>
+    <div class="row"><span>protect-main</span><span>guard</span><span>Asks before a commit or push lands on main.</span><span class="warn">gates tools</span></div>
+    <div class="row"><span>commit-nudge</span><span>nudge</span><span>Suggests a commit after a set number of edits.</span><span class="ok">reads session</span></div>
+    <div class="band">⏵⏵ /plugin install git-pane@baselane-mods <span class="dim">· enter to copy</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -92,3 +92,12 @@ test('sourceRepo and sourcePath read both source types', () => {
   assert.equal(sourceRepo(github), 'acme/x')
   assert.equal(sourcePath(github), '.')
 })
+
+test('a path or repo with encoded or dot segments is refused', () => {
+  for (const path of ['%2e%2e/x', 'a/./b', 'a?b', 'a#b', 'a b']) {
+    assert.match(errorsFor(withChange({ source: { ...VALID.source, path } })).join(), /relative path/, path)
+  }
+  for (const repo of ['acme/..', 'acme/.']) {
+    assert.match(errorsFor(withChange({ source: { source: 'github', repo, ref: 'v1' } })).join(), /owner\/repo/, repo)
+  }
+})
