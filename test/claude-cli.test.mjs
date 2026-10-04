@@ -56,3 +56,8 @@ test('the real claude CLI validates and tests the fixture mod', { skip: !hasClau
   assert.equal(run.code, 0, run.output)
   assert.ok(parseTestRun(run.output).total > 0)
 })
+
+test('parseValidate drops the "nothing on $" placeholder', () => {
+  const out = '  ❯ ./register.ts hooks: tool.call\n  ❯ ./register.ts calls: nothing on $\n\n✔ Validation passed\n'
+  assert.deepEqual(parseValidate(out).calls, [])
+})
