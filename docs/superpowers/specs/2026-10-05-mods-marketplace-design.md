@@ -22,6 +22,11 @@ This is a separate Baselane product line. It reverses the line "Out of scope for
 | D7 | The site is built by a zero-dependency Node script, with one pinned markdown library. |
 | D8 | GitHub holds the CI run of every first-time contributor until a maintainer approves it. This is permanent. |
 | D9 | The UI must be very good. It gets its own design phase and a measurable quality bar (Section 7). |
+| D10 | claudemod.com is a UI reference, not a scope change. The design phase takes its good ideas (7.1). The scope stays mods only. |
+
+### Nearest existing site
+
+claudemod.com (checked 2026-10-05) is a community gallery for every Claude Code extension type: 155 items in 9 types. It has ⌘K search, category filters, a "Top Mods" list and a mascot. It shows no verification, no capability list and no one-line install, and each item links to its GitHub repo. It uses "mod" for every extension type, so visitors may expect our gallery to list skills and MCP servers too. The browse page and `/submit/` say in one line what a mod is and link to the Claude Code mods docs.
 
 ### Facts this design depends on
 
@@ -215,13 +220,13 @@ Static pages built by `site/build.mjs` (Node 22, no dependencies except one pinn
 
 | Route | Content |
 | :- | :- |
-| `/` | Browse. Search box, category filter, "Verified only" toggle, sort (newest, recently updated, most stars, name). A grid of cards: name, one-line description, category, author, version, update date, stars, Verified badge. Filter and sort state is in the URL query, so a link keeps it. |
+| `/` | Browse. A one-line explanation of what a mod is, with a link to the Claude Code mods docs. A "Top mods" row: the 8 mods with the most GitHub stars. Search box, category filter, "Verified only" toggle, sort (newest, recently updated, most stars, name). A grid of cards: name, one-line description, category, author, version, update date, stars, Verified badge. Filter and sort state is in the URL query, so a link keeps it. |
 | `/mods/<name>/` | Mod page. See 5.2. |
 | `/submit/` | How to publish: steps, an entry template, the R1 to R10 rules in plain words, and how Verified works. |
 | `/index.json` | The search index: name, description, category, tags, author, version, dates, stars, verified. |
 | `/404.html` | Not found page. |
 
-Search runs in the browser over `index.json`. It matches name, description and tags.
+Search runs in the browser over `index.json`. It matches name, description and tags. ⌘K (Ctrl+K on Windows and Linux) opens a search palette on every page. Arrow keys move through the results, Enter opens a mod page, and Escape closes the palette.
 
 ### 5.2 Mod page
 
@@ -290,6 +295,8 @@ Before any page is built:
 4. After the build, an `impeccable` finish review compares the site with the approved mockups. Material differences are fixed before launch.
 
 The direction must fit the baselane.sh brand. The design phase can propose a distinct look for the gallery, and the owner decides.
+
+Reference: claudemod.com. The design phase must include its ⌘K search palette and its "Top mods" ranking (5.1), and must propose a brand character for the gallery. The owner decides if the character ships. The design must not copy its layout, art or copy.
 
 ### 7.2 Measurable bar
 
