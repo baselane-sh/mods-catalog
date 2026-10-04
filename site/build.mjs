@@ -30,7 +30,7 @@ function history(name) {
   return log.trim().split('\n').filter(Boolean).flatMap(line => {
     const [commit, date] = line.split(' ')
     try {
-      const lock = JSON.parse(execFileSync('git', ['-C', root, 'show', `${commit}:lock/${name}.json`], { encoding: 'utf8' }))
+      const lock = JSON.parse(execFileSync('git', ['-C', root, 'show', `${commit}:lock/${name}.json`], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }))
       return [{ version: lock.version, date, sha: lock.sha }]
     } catch {
       return []
