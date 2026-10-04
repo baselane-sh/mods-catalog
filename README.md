@@ -1,6 +1,6 @@
 # Baselane mods catalog
 
-The catalog behind https://mods.baselane.sh. Every mod here passed automated checks and is pinned to the commit that passed them.
+The catalog behind https://baselane-sh.github.io/mods-catalog/. Every mod here passed automated checks and is pinned to the commit that passed them.
 
 ## Install a mod
 
