@@ -82,14 +82,38 @@ function setupFilters() {
   apply({ write: false })
 }
 
+// The signature moment: a copied install line patches a cable from the button to the LED.
+function patchCable(button, led) {
+  if (!led || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const from = button.getBoundingClientRect()
+  const to = led.getBoundingClientRect()
+  const x1 = from.left + from.width / 2
+  const y1 = from.top + from.height / 2
+  const x2 = to.left + to.width / 2
+  const y2 = to.top + to.height / 2
+  const sag = Math.max(90, Math.abs(x2 - x1) * 0.3)
+  const ns = 'http://www.w3.org/2000/svg'
+  const svg = document.createElementNS(ns, 'svg')
+  const path = document.createElementNS(ns, 'path')
+  svg.setAttribute('class', 'cable')
+  svg.setAttribute('aria-hidden', 'true')
+  path.setAttribute('d', `M${x1} ${y1} C ${x1} ${y1 + sag}, ${x2} ${y2 + sag}, ${x2} ${y2}`)
+  svg.append(path)
+  document.body.append(svg)
+  requestAnimationFrame(() => requestAnimationFrame(() => svg.classList.add('drawn')))
+  setTimeout(() => svg.classList.add('done'), 1100)
+  setTimeout(() => svg.remove(), 1700)
+}
+
 function setupCopy() {
-  const led = $('.brand-led')
+  const led = $('.mod-plate .led') ?? $('.brand-led')
   for (const button of $$('[data-copy]')) {
     const label = $('[data-copy-label]', button)
     button.addEventListener('click', async () => {
       const text = document.getElementById(button.dataset.copy)?.textContent ?? ''
       try {
         await navigator.clipboard.writeText(text)
+        patchCable(button, led)
         button.dataset.state = 'copied'
         label.textContent = 'Copied'
         led?.classList.add('lit')

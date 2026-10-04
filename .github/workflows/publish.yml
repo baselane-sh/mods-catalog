@@ -12,20 +12,19 @@ concurrency:
   group: publish
   cancel-in-progress: false
 jobs:
-  publish:
+  marketplace:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: main
-          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
-      - run: npm ci && npm install -g @anthropic-ai/claude-code@2.1.289
+      - run: npm install -g @anthropic-ai/claude-code@2.1.289
         env:
           DISABLE_AUTOUPDATER: '1'
       - run: node scripts/publish.mjs
@@ -41,6 +40,23 @@ jobs:
             sleep 5
           done
           exit 1
+  # The site build reads author content (READMEs), so it runs read-only, with no write token.
+  site:
+    needs: marketplace
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - run: npm ci
       # SITE_BASE is /mods-catalog/ until mods.baselane.sh points at GitHub Pages; then unset it.
       - run: node site/build.mjs
         env:
@@ -50,7 +66,7 @@ jobs:
         with:
           path: _site
   deploy:
-    needs: publish
+    needs: site
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

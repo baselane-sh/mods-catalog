@@ -20,6 +20,7 @@ const ICONS = raw(`<svg class="sprite" aria-hidden="true" focusable="false"><def
 <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 5H5.5A1.5 1.5 0 0 0 4 6.5V16" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3l10 18H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v5M12 18v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-jack" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--nut)"/><circle cx="12" cy="12" r="9" fill="none" stroke="var(--nut-hi)" stroke-width="2" stroke-dasharray="1.6 1.6"/><circle cx="12" cy="12" r="6" fill="var(--nut-hi)"/><circle cx="12" cy="12" r="4.4" fill="var(--hole)"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>`)
 
@@ -96,7 +97,7 @@ export function browsePage({ base, mods, top }) {
   const body = html`<section class="utility" aria-labelledby="intro-title">
   <div class="utility-intro">
     <h1 id="intro-title">Mods for Claude Code, checked and pinned.</h1>
-    <p>A mod is code that runs inside Claude Code: a pane, a band above the prompt, a command, a sound or a guard. Every mod here passed ${RULES.length} automated checks, and each one shows what it can do before you install it. <a href="${SITE.modsDocs}">What is a mod?</a></p>
+    <p>Panes, bands, commands, sounds and guards that run inside Claude Code. Each one passed ${RULES.length} automated checks and shows what it can do before you install it. <a href="${SITE.modsDocs}">What is a mod?</a></p>
   </div>
   <div class="controls">
     <label class="search">${icon('search')}<span class="sr-only">Search mods</span><input type="search" data-filter="q" placeholder="Search ${mods.length} mods" autocomplete="off" spellcheck="false"></label>
