@@ -33,4 +33,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .claude-plugin/marketplace.json
-          git diff --cached --quiet || { git commit -m "Publish marketplace.json"; git push origin HEAD:main; }
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish marketplace.json"
+          for attempt in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

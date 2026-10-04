@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { validateReport, prMatchesRun, verifyForMerge } from '../lib/merge.mjs'
+import { validateReport, prMatchesRun, verifyForMerge, changedFilesFromApi } from '../lib/merge.mjs'
 
 const HEAD = 'c'.repeat(40)
 const SHA = 'a'.repeat(40)
@@ -10,9 +10,6 @@ const REPORT = {
   result: { name: 'xmod', sha: SHA, ref: 'v1', version: '1.0.0', hooks: ['tool.call'], calls: [], testCount: 1, manifest: { description: 'd', author: { name: 'a' }, license: 'MIT' } },
 }
 const PR = { state: 'open', head: { sha: HEAD }, user: { login: 'alice' } }
-const FILES = [{ filename: 'entries/xmod.json', status: 'added' }]
-const ENTRY = { name: 'xmod', source: { source: 'github', repo: 'alice/xmod', ref: 'v1' }, category: 'band' }
-const good = change => ({ report: REPORT, pr: PR, files: FILES, entry: ENTRY, lsRemoteSha: SHA, lockOnMain: null, ...change })
 
 test('a well-formed report has no shape errors', () => {
   assert.deepEqual(validateReport(REPORT), [])
@@ -31,6 +28,14 @@ test('prMatchesRun needs the PR head to be the checked commit', () => {
   assert.equal(prMatchesRun({ ...PR, head: { sha: 'd'.repeat(40) } }, HEAD), false)
 })
 
+const passed = (change = {}) => ({ ok: true, rules: [], result: { ...REPORT.result, ...change } })
+const good = change => ({ report: REPORT, pr: PR, recomputed: passed(), ...change })
+
+test('changedFilesFromApi maps GitHub file statuses', () => {
+  assert.deepEqual(changedFilesFromApi([{ filename: 'entries/a.json', status: 'added' }, { filename: 'b', status: 'removed' }]),
+    [{ status: 'A', path: 'entries/a.json' }, { status: 'D', path: 'b' }])
+})
+
 test('a good PR verifies with no errors', () => {
   assert.deepEqual(verifyForMerge(good()), [])
 })
@@ -39,17 +44,9 @@ test('each broken condition stops the merge', () => {
   const cases = {
     closed: { pr: { ...PR, state: 'closed' } },
     'new commit': { pr: { ...PR, head: { sha: 'd'.repeat(40) } } },
-    'two files': { files: [...FILES, { filename: 'entries/y.json', status: 'added' }] },
-    'workflow file': { files: [{ filename: '.github/workflows/check.yml', status: 'modified' }] },
-    'other entry': { files: [{ filename: 'entries/y.json', status: 'added' }] },
-    removal: { files: [{ filename: 'entries/xmod.json', status: 'removed' }] },
-    'tag moved': { lsRemoteSha: 'b'.repeat(40) },
-    'tag gone': { lsRemoteSha: null },
-    'ref differs': { entry: { ...ENTRY, source: { ...ENTRY.source, ref: 'v2' } } },
-    'name differs': { entry: { ...ENTRY, name: 'y' } },
-    'other owner': { lockOnMain: { name: 'xmod', version: '0.9.0', submitter: 'bob' } },
-    'no version bump': { lockOnMain: { name: 'xmod', version: '1.0.0', submitter: 'alice' } },
     'failed report': { report: { ...REPORT, ok: false } },
+    'rule fails at merge': { recomputed: { ok: false, rules: [{ id: 'R1', name: 'Scope', status: 'fail', message: 'two files' }], result: null } },
+    'tag moved after the tests': { recomputed: passed({ sha: 'b'.repeat(40) }) },
   }
   for (const [label, change] of Object.entries(cases)) {
     assert.ok(verifyForMerge(good(change)).length > 0, label)

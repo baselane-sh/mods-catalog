@@ -174,3 +174,27 @@ test('an unexpected IO error fails the current rule instead of crashing', async 
   assert.equal(failed(report).id, 'R9')
   assert.match(failed(report).message, /internal error: spawn claude ENOENT/)
 })
+
+test('R3 refuses a change to an entry that has no lock', async () => {
+  const input = makeInput({ changedFiles: [{ status: 'M', path: 'entries/cost-meter.json' }], listedNames: [] })
+  const report = await runRules(input, makeIo(await checkout()))
+  assert.equal(failed(report).id, 'R3')
+  assert.match(failed(report).message, /has no lock/)
+})
+
+test('a skipped rule does not run, and its count comes from the option', async () => {
+  let ran = false
+  const io = makeIo(await checkout(), { test: async () => { ran = true; return { code: 1, output: '' } } })
+  const report = await runRules(makeInput(), io, { skip: ['R9'], testCount: 5 })
+  assert.equal(ran, false)
+  assert.equal(report.ok, true)
+  assert.equal(report.rules.find(rule => rule.id === 'R9').status, 'skip')
+  assert.equal(report.result.testCount, 5)
+})
+
+test('only https homepage and repository URLs reach the result', async () => {
+  const manifest = { ...MANIFEST, homepage: 'javascript:alert(1)', repository: 'https://github.com/a/b' }
+  const report = await runRules(makeInput(), makeIo(await checkout({ manifest })))
+  assert.equal(report.result.manifest.homepage, undefined)
+  assert.equal(report.result.manifest.repository, 'https://github.com/a/b')
+})

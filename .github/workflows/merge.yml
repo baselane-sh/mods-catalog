@@ -5,9 +5,8 @@ on:
     types: [completed]
 permissions:
   contents: read
-concurrency:
-  group: merge
-  cancel-in-progress: false
+# No shared concurrency group: GitHub keeps only one pending run per group and cancels
+# the rest, which would drop merges. Parallel merges are safe; the lock push retries.
 jobs:
   merge:
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion != 'cancelled'
@@ -24,9 +23,14 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: main
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
+      - run: npm install -g @anthropic-ai/claude-code@2.1.289
+        env:
+          DISABLE_AUTOUPDATER: '1'
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: check-report
