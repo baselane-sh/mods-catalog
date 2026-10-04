@@ -14,10 +14,11 @@ async function readJsonDir(root, dir) {
   return new Map(pairs)
 }
 
-function hpFor(jackCount) {
-  if (jackCount <= 2) return 6
-  if (jackCount <= 4) return 8
-  if (jackCount <= 7) return 10
+// Width follows the longer jack row, like a real module: more jacks, more HP.
+function hpFor(widestRow) {
+  if (widestRow <= 2) return 6
+  if (widestRow <= 3) return 8
+  if (widestRow <= 5) return 10
   return 12
 }
 
@@ -49,7 +50,7 @@ function toMod({ entry, lock }, verified) {
     calls: lock.calls,
     caps,
     risk: topRisk(caps),
-    hp: hpFor(caps.inputs.length + caps.outputs.length),
+    hp: hpFor(Math.max(caps.inputs.length, caps.outputs.length)),
     rawBase: `https://raw.githubusercontent.com/${repo}/${lock.sha}/${joinPath(dir)}${dir === '.' ? '' : '/'}`,
     blobBase: `https://github.com/${repo}/blob/${lock.sha}/${joinPath(dir)}${dir === '.' ? '' : '/'}`,
     sourceUrl: `https://github.com/${repo}/tree/${lock.sha}/${joinPath(dir)}`,
@@ -85,8 +86,10 @@ export async function loadCatalog(root, io) {
   return { mods, warnings }
 }
 
-// Stars, then test-free tie-breaks: a newer update first, then name.
+// Ranked by GitHub stars. With no stars, or when every mod has the same count (one shared
+// repo), there is no signal, so there is no Top row.
 export function topMods(mods, count = 8) {
+  if (new Set(mods.map(mod => mod.stars ?? -1)).size < 2) return []
   return [...mods]
     .sort((a, b) => (b.stars ?? -1) - (a.stars ?? -1) || b.updatedAt.localeCompare(a.updatedAt) || a.name.localeCompare(b.name))
     .slice(0, count)

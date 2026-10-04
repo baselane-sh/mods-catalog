@@ -39,7 +39,8 @@ function setupFilters() {
       module.hidden = !match
       if (match) shown += 1
     }
-    rack.append(...[...modules].sort(SORTS[s.sort] ?? SORTS.updated))
+    // The page is served sorted by update date; reorder only for another sort.
+    if (write || s.sort !== 'updated') rack.append(...[...modules].sort(SORTS[s.sort] ?? SORTS.updated))
     count.textContent = String(shown)
     empty.hidden = shown > 0
     if (top) top.hidden = Boolean(s.q || s.category || s.verified)

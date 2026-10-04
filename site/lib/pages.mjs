@@ -109,10 +109,10 @@ export function browsePage({ base, mods, top }) {
     ${copyLine(`/plugin marketplace add ${SITE.catalogRepo}`, 'marketplace')}
   </div>
 </section>
-<section class="rack-section" aria-labelledby="top-title" data-top>
+${top.length ? html`<section class="rack-section" aria-labelledby="top-title" data-top>
   <h2 id="top-title">Top mods</h2>
   <div class="rack rack-top">${top.map(mod => faceplate(mod, { base }))}</div>
-</section>
+</section>` : ''}
 <section class="rack-section" aria-labelledby="all-title">
   <h2 id="all-title">All mods <span class="count" data-count>${mods.length}</span></h2>
   <div class="rack" data-rack>${mods.map(mod => faceplate(mod, { base }))}</div>

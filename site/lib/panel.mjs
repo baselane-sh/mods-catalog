@@ -12,11 +12,10 @@ function jackRow(groups, kind, limit) {
 }
 
 export function faceplate(mod, { base, size = 'rack' } = {}) {
-  const limit = size === 'rack' ? Math.max(2, mod.hp / 2) : 20
+  const limit = size === 'rack' ? mod.hp / 2 - 1 : 20
   const tag = size === 'rack' ? 'a' : 'div'
   const href = size === 'rack' ? `${base}mods/${mod.name}/` : null
-  const label = `${mod.name}, ${CATEGORY_NAMES[mod.category]}, version ${mod.version}${mod.verified ? ', verified' : ', not verified'}`
-  return html`<${tag} class="module hp-${size === 'rack' ? mod.hp : 'big'} cat-${mod.category}" ${href ? html`href="${href}"` : ''} data-name="${mod.name}" data-category="${mod.category}" data-verified="${mod.verified ? '1' : '0'}" data-listed="${mod.listedAt}" data-updated="${mod.updatedAt}" data-stars="${mod.stars ?? 0}" data-search="${[mod.name, mod.description, ...mod.tags, mod.category].join(' ').toLowerCase()}" aria-label="${label}">
+  return html`<${tag} class="module hp-${size === 'rack' ? mod.hp : 'big'} cat-${mod.category}" ${href ? html`href="${href}"` : ''} data-name="${mod.name}" data-category="${mod.category}" data-verified="${mod.verified ? '1' : '0'}" data-listed="${mod.listedAt}" data-updated="${mod.updatedAt}" data-stars="${mod.stars ?? 0}" data-search="${[mod.name, mod.description, ...mod.tags, mod.category].join(' ').toLowerCase()}">
   <span class="screw s-tl" aria-hidden="true"></span><span class="screw s-tr" aria-hidden="true"></span>
   <span class="plate-head">
     <span class="led" aria-hidden="true"></span>
@@ -24,7 +23,7 @@ export function faceplate(mod, { base, size = 'rack' } = {}) {
     <span class="plate-stripe" aria-hidden="true"><span>${CATEGORY_NAMES[mod.category]}</span></span>
   </span>
   <span class="plate-silk">${mod.description}</span>
-  <span class="plate-io">
+  <span class="plate-io" aria-hidden="true">
     <span class="io-label" aria-hidden="true">IN</span>${jackRow(mod.caps.inputs, 'in', limit)}
     <span class="io-label" aria-hidden="true">OUT</span>${jackRow(mod.caps.outputs, 'out', limit)}
   </span>
