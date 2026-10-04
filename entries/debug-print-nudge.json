@@ -1,0 +1,10 @@
+{
+  "name": "debug-print-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/debug-print-nudge",
+    "ref": "debug-print-nudge--v0.2.0"
+  },
+  "category": "nudge"
+}

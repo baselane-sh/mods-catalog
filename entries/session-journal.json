@@ -1,0 +1,10 @@
+{
+  "name": "session-journal",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/session-journal",
+    "ref": "session-journal--v0.2.0"
+  },
+  "category": "lifecycle"
+}

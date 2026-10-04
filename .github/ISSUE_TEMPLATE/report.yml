@@ -1,0 +1,29 @@
+name: Report a mod
+description: Tell the maintainers about a mod that is broken, harmful or against the rules. For a security problem, use private vulnerability reporting instead.
+labels: [report]
+body:
+  - type: input
+    id: mod
+    attributes:
+      label: Mod name
+      description: The name in the install line.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - It does something its page does not say
+        - It is broken
+        - It copies another mod
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you saw, and the steps to see it again.
+    validations:
+      required: true

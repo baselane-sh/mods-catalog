@@ -1,0 +1,10 @@
+{
+  "name": "prod-db-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/prod-db-guard",
+    "ref": "prod-db-guard--v0.2.0"
+  },
+  "category": "guard"
+}

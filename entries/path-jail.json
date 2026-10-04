@@ -1,0 +1,10 @@
+{
+  "name": "path-jail",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/path-jail",
+    "ref": "path-jail--v0.2.0"
+  },
+  "category": "guard"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "mood-ring",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/mood-ring",
+    "ref": "mood-ring--v0.2.0"
+  },
+  "category": "band"
+}

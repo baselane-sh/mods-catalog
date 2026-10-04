@@ -1,0 +1,10 @@
+{
+  "name": "caveman-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/caveman-mode",
+    "ref": "caveman-mode--v0.2.0"
+  },
+  "category": "style"
+}

@@ -1,0 +1,58 @@
+name: merge
+on:
+  workflow_run:
+    workflows: [check]
+    types: [completed]
+permissions:
+  contents: read
+# No shared concurrency group: GitHub keeps only one pending run per group and cancels
+# the rest, which would drop merges. Parallel merges are safe; the lock push retries.
+jobs:
+  merge:
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: read
+    outputs:
+      merged: ${{ steps.merge.outputs.merged }}
+    steps:
+      # main's own code only. The PR head is fetched as data inside merge-pr.mjs.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - run: npm install -g @anthropic-ai/claude-code@2.1.289
+        env:
+          DISABLE_AUTOUPDATER: '1'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: check-report
+          path: report
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - id: merge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node scripts/merge-pr.mjs report/check-report.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          WORKFLOW_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          CHECK_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+  # A push made with the built-in token does not start other workflows, so publish is called here.
+  publish:
+    needs: merge
+    if: needs.merge.outputs.merged == 'true'
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/publish.yml

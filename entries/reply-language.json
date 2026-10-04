@@ -1,0 +1,10 @@
+{
+  "name": "reply-language",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/reply-language",
+    "ref": "reply-language--v0.2.0"
+  },
+  "category": "style"
+}

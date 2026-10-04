@@ -1,0 +1,10 @@
+{
+  "name": "no-em-dash",
+  "version": "0.2.0",
+  "description": "Never writes the em-dash character. Uses a comma, colon, period or parentheses.",
+  "author": {
+    "name": "Baselane",
+    "url": "https://baselane.sh"
+  },
+  "license": "MIT"
+}

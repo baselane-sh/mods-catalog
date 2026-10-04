@@ -1,0 +1,10 @@
+{
+  "name": "render-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/render-pack",
+    "ref": "render-pack--v0.2.0"
+  },
+  "category": "render"
+}

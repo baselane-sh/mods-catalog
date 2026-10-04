@@ -1,0 +1,10 @@
+{
+  "name": "model-badge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/model-badge",
+    "ref": "model-badge--v0.2.0"
+  },
+  "category": "band"
+}

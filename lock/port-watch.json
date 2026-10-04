@@ -1,0 +1,43 @@
+{
+  "name": "port-watch",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "port-watch--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start",
+    "ui.close{id=?}",
+    "ui.render{component=Pane, requestId=?}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.command.register",
+    "$.process.run",
+    "$.session.cwd",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.close",
+    "$.ui.log",
+    "$.ui.open",
+    "$.ui.panes",
+    "$.ui.resolve"
+  ],
+  "testCount": 21,
+  "manifest": {
+    "description": "A live side pane of the local TCP ports that listen, with the process name and pid, refreshed every 10 seconds while open. Reads lsof (macOS, most Linux). Open it with /ports.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

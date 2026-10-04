@@ -1,0 +1,10 @@
+{
+  "name": "cost-pane",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/cost-pane",
+    "ref": "cost-pane--v0.2.0"
+  },
+  "category": "pane"
+}

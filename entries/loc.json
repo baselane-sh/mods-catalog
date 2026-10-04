@@ -1,0 +1,10 @@
+{
+  "name": "loc",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/loc",
+    "ref": "loc--v0.2.0"
+  },
+  "category": "command"
+}

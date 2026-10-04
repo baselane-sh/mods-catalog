@@ -1,0 +1,10 @@
+{
+  "name": "todo-pane",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/todo-pane",
+    "ref": "todo-pane--v0.2.0"
+  },
+  "category": "pane"
+}

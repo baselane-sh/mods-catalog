@@ -1,0 +1,10 @@
+{
+  "name": "lifecycle-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/lifecycle-pack",
+    "ref": "lifecycle-pack--v0.2.0"
+  },
+  "category": "lifecycle"
+}

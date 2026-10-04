@@ -1,0 +1,10 @@
+{
+  "name": "sounds-scifi",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sounds-scifi",
+    "ref": "sounds-scifi--v0.2.0"
+  },
+  "category": "sound"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "typecheck-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/typecheck-nudge",
+    "ref": "typecheck-nudge--v0.2.0"
+  },
+  "category": "nudge"
+}

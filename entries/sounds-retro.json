@@ -1,0 +1,10 @@
+{
+  "name": "sounds-retro",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sounds-retro",
+    "ref": "sounds-retro--v0.2.0"
+  },
+  "category": "sound"
+}

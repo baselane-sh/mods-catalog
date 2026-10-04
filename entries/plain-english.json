@@ -1,0 +1,10 @@
+{
+  "name": "plain-english",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/plain-english",
+    "ref": "plain-english--v0.2.0"
+  },
+  "category": "style"
+}

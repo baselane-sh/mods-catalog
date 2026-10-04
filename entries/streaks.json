@@ -1,0 +1,10 @@
+{
+  "name": "streaks",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/streaks",
+    "ref": "streaks--v0.2.0"
+  },
+  "category": "stats"
+}

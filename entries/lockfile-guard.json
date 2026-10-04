@@ -1,0 +1,10 @@
+{
+  "name": "lockfile-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/lockfile-guard",
+    "ref": "lockfile-guard--v0.2.0"
+  },
+  "category": "guard"
+}

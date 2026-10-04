@@ -1,0 +1,40 @@
+{
+  "name": "command-pack",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "command-pack--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "ui.render{component=CommandOutput, props has {command=?}}"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.fs.exists",
+    "$.fs.write",
+    "$.process.run",
+    "$.session.cwd",
+    "$.session.turns",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 61,
+  "manifest": {
+    "description": "Every slash command in one mod: /receipt, /standup, /changelog, /pr-description and /handoff.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

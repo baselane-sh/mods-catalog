@@ -1,0 +1,10 @@
+{
+  "name": "clippy",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/clippy",
+    "ref": "clippy--v0.2.0"
+  },
+  "category": "nudge"
+}

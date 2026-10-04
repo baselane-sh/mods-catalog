@@ -1,0 +1,10 @@
+{
+  "name": "tool-counter",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/tool-counter",
+    "ref": "tool-counter--v0.2.0"
+  },
+  "category": "band"
+}

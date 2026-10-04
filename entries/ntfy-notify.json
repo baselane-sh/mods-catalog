@@ -1,0 +1,10 @@
+{
+  "name": "ntfy-notify",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ntfy-notify",
+    "ref": "ntfy-notify--v0.2.0"
+  },
+  "category": "lifecycle"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "hotspots",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/hotspots",
+    "ref": "hotspots--v0.2.0"
+  },
+  "category": "command"
+}

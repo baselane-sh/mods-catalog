@@ -1,0 +1,10 @@
+{
+  "name": "pr-description",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/pr-description",
+    "ref": "pr-description--v0.2.0"
+  },
+  "category": "command"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "quality-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/quality-pack",
+    "ref": "quality-pack--v0.2.0"
+  },
+  "category": "nudge"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "migration-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/migration-nudge",
+    "ref": "migration-nudge--v0.2.0"
+  },
+  "category": "nudge"
+}

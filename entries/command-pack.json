@@ -1,0 +1,10 @@
+{
+  "name": "command-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/command-pack",
+    "ref": "command-pack--v0.2.0"
+  },
+  "category": "command"
+}

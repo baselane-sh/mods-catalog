@@ -1,0 +1,10 @@
+{
+  "name": "no-verify-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/no-verify-guard",
+    "ref": "no-verify-guard--v0.2.0"
+  },
+  "category": "guard"
+}

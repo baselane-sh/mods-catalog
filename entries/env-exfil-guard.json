@@ -1,0 +1,10 @@
+{
+  "name": "env-exfil-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/env-exfil-guard",
+    "ref": "env-exfil-guard--v0.2.0"
+  },
+  "category": "guard"
+}

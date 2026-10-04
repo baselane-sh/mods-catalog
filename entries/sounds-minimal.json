@@ -1,0 +1,10 @@
+{
+  "name": "sounds-minimal",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sounds-minimal",
+    "ref": "sounds-minimal--v0.2.0"
+  },
+  "category": "sound"
+}

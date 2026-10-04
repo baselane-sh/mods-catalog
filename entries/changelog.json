@@ -1,0 +1,10 @@
+{
+  "name": "changelog",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/changelog",
+    "ref": "changelog--v0.2.0"
+  },
+  "category": "command"
+}

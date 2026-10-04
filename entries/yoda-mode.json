@@ -1,0 +1,10 @@
+{
+  "name": "yoda-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/yoda-mode",
+    "ref": "yoda-mode--v0.2.0"
+  },
+  "category": "style"
+}

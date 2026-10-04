@@ -1,0 +1,10 @@
+{
+  "name": "docs-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/docs-nudge",
+    "ref": "docs-nudge--v0.2.0"
+  },
+  "category": "nudge"
+}

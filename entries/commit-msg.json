@@ -1,0 +1,10 @@
+{
+  "name": "commit-msg",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/commit-msg",
+    "ref": "commit-msg--v0.2.0"
+  },
+  "category": "command"
+}

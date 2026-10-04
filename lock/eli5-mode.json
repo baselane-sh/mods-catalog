@@ -1,0 +1,22 @@
+{
+  "name": "eli5-mode",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "eli5-mode--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 8,
+  "manifest": {
+    "description": "Explains like the reader is new: analogies first, no jargon without a one-line definition.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

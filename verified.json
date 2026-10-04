@@ -1,0 +1,590 @@
+[
+  {
+    "name": "achievements",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "agent-firewall",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "auto-format",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "big-diff-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "branch-band",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "branches",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "break-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "caveman-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "changelog",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "clippy",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "code-only",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "command-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "commit-msg",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "commit-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "context-meter",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "conventional-commits",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "cost-meter",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "cost-pane",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "ctx-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "curl-pipe-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "daily-spend",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "debug-print-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "dev-band",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "diff-stats",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "docs-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "eli5-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "env-exfil-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "error-meter",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "file-links",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "focus-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "fun-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "git-pane",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "gitignore-check",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "gitmoji-commits",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "guard-essentials",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "guard-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "haiku-commits",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "handoff",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "hotspots",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "infra-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "junior-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "latte-meter",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "lifecycle-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "loc",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "lockfile-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "lockfile-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "long-run-notify",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "migration-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "model-badge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "mood-ring",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "night-owl",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "no-em-dash",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "no-sycophancy",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "no-verify-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "ntfy-notify",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "nudge-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "package-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "path-jail",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "pirate-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "plain-english",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "port-watch",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "pr-description",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "prod-db-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "protect-main",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "quality-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "receipt",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "render-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "reply-language",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "repo-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-commit-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-filename-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-output-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "security-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "session-clock",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "session-journal",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "shakespeare-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-minimal",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-nature",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-office",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-retro",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-scifi",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "standup",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "stats-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "ste-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "streaks",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sudo-guard",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "tdd-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "team-pack",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "terse-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "test-reminder",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "todo-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "todo-pane",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "todos",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "tool-counter",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "typecheck-nudge",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "wrapped",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "yoda-mode",
+    "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  }
+]

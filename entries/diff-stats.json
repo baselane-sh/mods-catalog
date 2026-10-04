@@ -1,0 +1,10 @@
+{
+  "name": "diff-stats",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/diff-stats",
+    "ref": "diff-stats--v0.2.0"
+  },
+  "category": "render"
+}

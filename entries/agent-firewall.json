@@ -1,0 +1,10 @@
+{
+  "name": "agent-firewall",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/agent-firewall",
+    "ref": "agent-firewall--v0.2.0"
+  },
+  "category": "guard"
+}

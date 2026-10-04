@@ -1,0 +1,26 @@
+{
+  "name": "sounds-minimal",
+  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+  "ref": "sounds-minimal--v0.2.0",
+  "version": "0.2.0",
+  "hooks": [
+    "tool.call",
+    "turn.complete"
+  ],
+  "calls": [
+    "$.audio.play",
+    "$.ui.log"
+  ],
+  "testCount": 17,
+  "manifest": {
+    "description": "Very short, quiet clicks and ticks for a subtle signal: a tick when tests pass, two low ticks when they fail, a click when a call is blocked, a soft tick when a turn ends.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-04",
+  "updatedAt": "2026-10-04"
+}

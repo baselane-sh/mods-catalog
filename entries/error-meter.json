@@ -1,0 +1,10 @@
+{
+  "name": "error-meter",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/error-meter",
+    "ref": "error-meter--v0.2.0"
+  },
+  "category": "band"
+}

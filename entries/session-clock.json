@@ -1,0 +1,10 @@
+{
+  "name": "session-clock",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/session-clock",
+    "ref": "session-clock--v0.2.0"
+  },
+  "category": "band"
+}

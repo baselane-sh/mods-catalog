@@ -1,0 +1,10 @@
+{
+  "name": "guard-essentials",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/guard-essentials",
+    "ref": "guard-essentials--v0.2.0"
+  },
+  "category": "guard"
+}
