@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00Z",
+  "title": "Design System: Baselane mods gallery",
+  "extensions": {
+    "colorMeta": {
+      "cable-orange": { "role": "primary", "displayName": "Cable Orange", "canonical": "#ff6a13", "tonalRamp": ["#4d1f00", "#802f00", "#b24400", "#e65a0a", "#ff6a13", "#ff8d47", "#ffb78a", "#ffe2d1"] },
+      "caution-amber": { "role": "secondary", "displayName": "Caution Amber", "canonical": "#f2c200", "tonalRamp": ["#3d3000", "#6b5600", "#9a7c00", "#c9a200", "#f2c200", "#f7d54d", "#fbe68f", "#fdf5d1"] },
+      "panel": { "role": "neutral", "displayName": "Brushed Aluminium (dark theme #1b1c1e, black anodized)", "canonical": "#dcded9", "tonalRamp": ["#2a2c2f", "#4a4d52", "#6c706b", "#9a9d98", "#b5b8b2", "#c9cbc5", "#dcded9", "#eceee9"] },
+      "rail": { "role": "neutral", "displayName": "Anodized Rail", "canonical": "#2a2c2f", "tonalRamp": ["#0c0d0e", "#1b1c1e", "#2a2c2f", "#3a3d41", "#4a4d52", "#6c706b", "#9a9d98", "#c7c9c3"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Mod page and prose page h1, Barlow Condensed 700 uppercase." },
+      "headline": { "displayName": "Headline", "purpose": "h2 section titles, uppercase with +0.02em tracking." },
+      "title": { "displayName": "Name legend", "purpose": "Faceplate name, 1.05rem rack and 1.6rem on the big plate." },
+      "body": { "displayName": "Body", "purpose": "Barlow 400 running text, 72ch to 75ch measure." },
+      "label": { "displayName": "Silk label", "purpose": "Stripe, IN and OUT legends, jack labels, facts terms, table heads." },
+      "code": { "displayName": "Code", "purpose": "Install lines, raw capability names, README code." }
+    },
+    "shadows": [
+      { "name": "panel-rest", "value": "0 1px 0 rgb(255 255 255 / .25) inset, 0 2px 4px rgb(0 0 0 / .35)", "purpose": "Every faceplate at rest." },
+      { "name": "panel-lift", "value": "0 1px 0 rgb(255 255 255 / .25) inset, 0 8px 18px rgb(0 0 0 / .4)", "purpose": "Rack panel link on hover or focus, with translateY(-2px)." },
+      { "name": "case-well", "value": "inset 0 2px 6px rgb(0 0 0 / .35)", "purpose": "Recess behind panels in the rack." },
+      { "name": "palette", "value": "0 24px 60px rgb(0 0 0 / .45)", "purpose": "Cmd+K dialog." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Expo-out on every transition." },
+      { "name": "duration-fast", "value": "0.15s to 0.2s", "purpose": "Button filter, tab, tooltip, palette." },
+      { "name": "duration-panel", "value": "0.35s", "purpose": "Faceplate lift." },
+      { "name": "duration-cable", "value": "0.7s draw, 0.5s fade", "purpose": "Patch cable on copy; removed at 1.7s; skipped under reduced motion." },
+      { "name": "reduced-motion", "value": ".01ms", "purpose": "All transition and animation durations under prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "capability-columns", "value": "720px" },
+      { "name": "mod-page-two-column", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Faceplate",
+      "kind": "card",
+      "refersTo": "faceplate",
+      "description": "A 3U module panel: screws, LED, name legend, category stripe, silk text, IN and OUT jacks, foot. 8 HP shown.",
+      "html": "<div class=\"ds-plate\"><span class=\"ds-led\"></span><span class=\"ds-name\">DAMPER</span><span class=\"ds-stripe\">Guard</span><span class=\"ds-silk\">Blocks risky shell commands before they run.</span><span class=\"ds-io\">IN</span><span class=\"ds-jacks\"><span class=\"ds-jack\"><i></i><b>PRE</b></span><span class=\"ds-jack\"><i></i><b>CMD</b></span></span><span class=\"ds-io\">OUT</span><span class=\"ds-jacks\"><span class=\"ds-jack\"><i></i><b>DENY</b></span></span><span class=\"ds-foot\"><span>v1.0.0</span><span class=\"ds-seal\">VERIFIED</span></span></div>",
+      "css": ".ds-plate { width: 176px; height: 352px; display: flex; flex-direction: column; gap: 10px; padding: 22px 10px 20px; box-sizing: border-box; overflow: hidden; background: linear-gradient(100deg, var(--panel-hi, #eceee9), var(--panel, #dcded9) 45%, var(--panel-lo, #c9cbc5)); border-radius: 2px; box-shadow: 0 1px 0 rgb(255 255 255 / .25) inset, 0 2px 4px rgb(0 0 0 / .35); color: var(--ink, #141517); font-family: 'Barlow', system-ui, sans-serif; transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s cubic-bezier(.16,1,.3,1); } .ds-plate:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgb(255 255 255 / .25) inset, 0 8px 18px rgb(0 0 0 / .4); } .ds-led { width: 8px; height: 8px; border-radius: 50%; background: var(--led-off, #5a2a14); } .ds-name { font: 700 1.05rem/1 'Barlow Condensed', sans-serif; letter-spacing: .05em; text-transform: uppercase; } .ds-stripe { display: block; margin: 0 -10px; padding: 4px 6px; background: #b3261e; color: #fff; font: 700 .72rem/1 'Barlow Condensed', sans-serif; letter-spacing: .14em; text-transform: uppercase; } .ds-silk { font-size: .8rem; line-height: 1.35; color: var(--silk, #3b3e42); } .ds-io { margin-top: auto; font: 700 .7rem/1 'Barlow Condensed', sans-serif; letter-spacing: .16em; color: var(--muted, #55595e); } .ds-jacks { display: flex; gap: 4px; min-height: 40px; } .ds-jack { display: grid; justify-items: center; gap: 3px; width: 42px; } .ds-jack i { width: 24px; height: 24px; border-radius: 50%; background: radial-gradient(circle, var(--hole, #0c0d0e) 0 36%, var(--nut-hi, #e6e8e3) 37% 62%, var(--nut, #9a9d98) 63%); } .ds-jack b { font: 700 .7rem/1 'Barlow Condensed', sans-serif; letter-spacing: .06em; } .ds-foot { display: flex; justify-content: space-between; align-items: center; font: 500 .72rem 'Barlow Condensed', sans-serif; letter-spacing: .08em; color: var(--muted, #55595e); } .ds-seal { font-weight: 700; color: var(--ink, #141517); border: 1px solid currentColor; padding: 1px 4px; border-radius: 2px; }"
+    },
+    {
+      "name": "UNREVIEWED Sticker",
+      "kind": "chip",
+      "refersTo": "unreviewed-sticker",
+      "description": "Amber caution sticker on the foot of an unverified faceplate.",
+      "html": "<span class=\"ds-sticker\">UNREVIEWED</span>",
+      "css": ".ds-sticker { display: inline-block; font: 700 .72rem 'Barlow Condensed', sans-serif; letter-spacing: .08em; color: #141517; background: #f2c200; padding: 2px 5px; transform: rotate(-3deg); }"
+    },
+    {
+      "name": "Install Button",
+      "kind": "button",
+      "refersTo": "install-button",
+      "description": "The only orange control. Copies one install line.",
+      "html": "<button class=\"ds-copy\">Copy</button>",
+      "css": ".ds-copy { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 0; border-radius: 3px; cursor: pointer; font: 700 .95rem 'Barlow Condensed', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #141517; background: #ff6a13; transition: filter .15s cubic-bezier(.16,1,.3,1), box-shadow .15s cubic-bezier(.16,1,.3,1); } .ds-copy:hover { filter: brightness(1.08); } .ds-copy:active { box-shadow: inset 0 0 0 2px rgb(0 0 0 / .35); } .ds-copy:focus-visible { outline: 2px solid #1f6feb; outline-offset: 2px; }"
+    },
+    {
+      "name": "Install Line",
+      "kind": "custom",
+      "refersTo": "install-button",
+      "description": "Monospace command in a well, joined to the orange Copy button.",
+      "html": "<div class=\"ds-line\"><code>/plugin install damper@baselane-mods</code><button class=\"ds-copy2\">Copy</button></div>",
+      "css": ".ds-line { display: flex; align-items: stretch; border: 1px solid #b5b8b2; border-radius: 4px; background: #f4f5f1; } .ds-line code { flex: 1; padding: 10px 12px; white-space: nowrap; overflow-x: auto; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .9em; color: #141517; } .ds-copy2 { min-height: 40px; padding: 0 14px; border: 0; border-radius: 0 3px 3px 0; cursor: pointer; font: 700 .95rem 'Barlow Condensed', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #141517; background: #ff6a13; } .ds-copy2:hover { filter: brightness(1.08); }"
+    },
+    {
+      "name": "Category Tab",
+      "kind": "chip",
+      "refersTo": "tab",
+      "description": "Square tab with a category-coloured bottom edge; selected fills with the hue and rises 3px.",
+      "html": "<button class=\"ds-tab\">Guard <span>12</span></button> <button class=\"ds-tab ds-on\">Pane <span>9</span></button>",
+      "css": ".ds-tab { min-height: 40px; padding: 6px 12px; cursor: pointer; font: 700 .95rem 'Barlow Condensed', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #141517; background: #dcded9; border: 1px solid #b5b8b2; border-bottom: 3px solid #1f5fb0; border-radius: 0; white-space: nowrap; transition: background .2s cubic-bezier(.16,1,.3,1), transform .2s cubic-bezier(.16,1,.3,1); } .ds-tab:hover { background: #eceee9; } .ds-tab span { margin-left: 4px; font-weight: 500; color: #55595e; } .ds-on { background: #1f5fb0; color: #fff; transform: translateY(-3px); } .ds-on span { color: inherit; } .ds-tab:focus-visible { outline: 2px solid #1f6feb; outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "48px search well; border turns focus blue on focus-within.",
+      "html": "<label class=\"ds-search\"><input placeholder=\"Search mods\" /></label>",
+      "css": ".ds-search { display: flex; align-items: center; min-height: 48px; padding: 0 14px; background: #f4f5f1; border: 1px solid #b5b8b2; border-radius: 4px; } .ds-search:focus-within { border-color: #1f6feb; } .ds-search input { flex: 1; border: 0; background: transparent; color: #141517; font: 400 1.05rem 'Barlow', system-ui, sans-serif; outline: none; }"
+    },
+    {
+      "name": "Top Rail Nav",
+      "kind": "nav",
+      "refersTo": "top-rail",
+      "description": "Anodized header rail with brand LED, condensed capital links and palette button.",
+      "html": "<header class=\"ds-rail\"><span class=\"ds-brand\">BASELANE <em>MODS</em></span><a href=\"#\" aria-current=\"page\">Browse</a><a href=\"#\">Submit</a></header>",
+      "css": ".ds-rail { display: flex; align-items: center; gap: 24px; padding: 10px 16px; background: #2a2c2f; border-top: 2px solid #4a4d52; border-bottom: 2px solid #000; color: #eef0ea; } .ds-brand { font: 700 1.15rem 'Barlow Condensed', sans-serif; letter-spacing: .12em; } .ds-brand em { font-style: normal; font-weight: 500; color: #a9aca7; } .ds-rail a { color: #c9ccc6; text-decoration: none; font: 500 1.05rem 'Barlow Condensed', sans-serif; letter-spacing: .04em; text-transform: uppercase; border-bottom: 2px solid transparent; padding: 4px 0; } .ds-rail a:hover, .ds-rail a[aria-current] { color: #fff; border-bottom-color: currentColor; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Eurorack Case",
+    "overview": "The gallery is a modular synth case. Black anodized rails hold rows of 3U faceplates. Each mod is a flat screen-printed panel with a name legend, a category stripe, silk text, a row of input jacks (hooks) and a row of output jacks (calls), and a foot with version and trust mark. Light theme is brushed aluminium, dark theme is black anodized. Legends are Barlow Condensed capitals; body is Barlow. Colour is rationed: neutral chrome, one category hue per panel stripe, risk as text colour, and cable orange held for the action path.",
+    "keyCharacteristics": [
+      "Panel width follows jack count in HP (6, 8, 10, 12 by the longer jack row, 22px per HP).",
+      "Fixed 352px 3U panel height between 14px rails; 380px rack rows.",
+      "One LED per panel; it lights orange only on a completed copy.",
+      "Ten category hues, shown only on the stripe, tab and tab underline.",
+      "Soft panel lift only on hover or focus; no neon, glass or hard offset shadows."
+    ],
+    "rules": [
+      { "name": "The Cable Orange Rule", "body": "Orange (#ff6a13) appears on install controls and the lit LED, and on the patch cable between them. Nowhere else: not on links, category, risk, hover or focus.", "section": "colors" },
+      { "name": "The Amber Is Caution Rule", "body": "Unreviewed means amber sticker, tilted -3deg, never orange and never red. Verified is a plain outlined Ink seal.", "section": "colors" },
+      { "name": "The Stripe Carries Category Rule", "body": "Category hue appears only on the panel stripe, the active tab, the tab underline and a hover-lit LED.", "section": "colors" },
+      { "name": "The Silk-Screen Rule", "body": "Every legend is Barlow Condensed in capitals with tracking. Sentences are Barlow sentence case.", "section": "typography" },
+      { "name": "The Plain Words Rule", "body": "A jack label is a short code; its meaning is spoken in plain words on hover or focus.", "section": "typography" },
+      { "name": "The Lift On Response Rule", "body": "A panel rises only on hover or focus. Shadows are soft and below the object; no hard offset shadows.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep cable orange (#ff6a13) to install controls, the lit LED and the cable between them.",
+      "Do size a new panel by its longer jack row into 6, 8, 10 or 12 HP, using the hp-N classes.",
+      "Do keep every rack panel at 352px tall between 14px rails, with the anatomy in order: screws, LED, name, stripe, silk text, IN, OUT, foot.",
+      "Do colour the stripe, the active tab and the tab underline by the category hue, via the cat-* class custom property.",
+      "Do set legends in Barlow Condensed capitals with tracking, and sentences in Barlow.",
+      "Do mark unreviewed mods with the tilted amber sticker and say so in plain words on the mod page.",
+      "Do keep the page keyboard operable: 2px Focus Blue outline with 2px offset, 40px minimum control height, jacks focusable on the big plate only.",
+      "Do keep everything as CSS custom properties on :root with the dark overrides in the prefers-color-scheme: dark block.",
+      "Do use the SVG sprite for icons; draw hardware, do not import icon fonts.",
+      "Do avoid em-dashes in all UI text."
+    ],
+    "donts": [
+      "Don't use orange for links, hover, focus, selection, category, risk or decoration.",
+      "Don't turn the gallery into a grid of same-size rounded cards with an icon, title and star count.",
+      "Don't put a focusable element inside a rack panel link; rack jacks stay plain.",
+      "Don't use inline styles or inline scripts; the CSP forbids them. Widths come from classes.",
+      "Don't show category colour as a background or text colour outside the stripe and tab.",
+      "Don't rank or badge-cloud panels; catalog order and a printed version legend are the finish.",
+      "Don't add hard offset shadows, glows, glass or gradients other than the panel brushing and the LED sheen.",
+      "Don't change the Verified seal into a colour badge; it stays an outlined Ink seal.",
+      "Don't add system display faces for legends; condensed legends come from the self-hosted Barlow Condensed."
+    ]
+  }
+}
