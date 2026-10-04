@@ -169,11 +169,13 @@ Steps:
 6. Run `git ls-remote` on the mod's repo and check that the tag still resolves to the SHA in the artifact.
 7. Squash-merge the PR.
 8. Commit `lock/<name>.json`. Set `submitter` and `listedAt` on a new entry. Set `updatedAt` on every merge.
-9. Call `publish.yml` as a reusable workflow. A push made with the built-in `GITHUB_TOKEN` does not start other workflows, so a plain push trigger would not fire.
+9. The push of the merge and the lock commit starts `publish.yml` through its `push` trigger. `merge.yml` does not call `publish.yml` directly, so publish runs once.
+
+`merge.yml` and `publish.yml` commit and merge with a token from the Baselane catalog GitHub App (4.5), not with the built-in `GITHUB_TOKEN`. Branch protection blocks the built-in token. The app key is a repo secret. Only these two trusted workflows read it. `check.yml` has no secrets.
 
 ### 4.3 `publish.yml`
 
-- Triggers: `workflow_call` (from merge), `push` to `main` (maintainer commits), `schedule` daily at 03:00 UTC, and `workflow_dispatch`.
+- Triggers: `push` to `main` (bot merges and maintainer commits), `schedule` daily at 03:00 UTC, and `workflow_dispatch`. A push that changes only `.claude-plugin/marketplace.json` does not start it again (`paths-ignore`).
 - Permissions: `contents: write`, `pages: write`, `id-token: write`.
 
 Steps:
@@ -191,7 +193,13 @@ A maintainer PR that changes more than one file (for example the launch seed) do
 
 ### 4.5 Repo settings
 
-- Branch protection on `main`: PRs required for non-maintainers, the `check` status required, no force push.
+- A ruleset on `main`:
+  - Require a pull request. Required approvals: 0, so the bot can merge a passing PR.
+  - Require review from Code Owners. `CODEOWNERS` gives maintainers everything except `entries/`, so a PR that touches `verified.json`, `lock/`, `schema/`, `site/` or `.github/` needs a maintainer approval.
+  - Require the `check` status.
+  - No force push, no branch deletion.
+  - Bypass list: the Baselane catalog GitHub App and the maintainers, so they can commit locks, `marketplace.json` and emergency takedowns.
+- The Baselane catalog GitHub App: installed on this repo only, with contents and pull requests write.
 - Fork PR workflow approval: "Require approval for first-time contributors" (D8). A maintainer reads the entry and the linked repo before they click "Approve and run".
 - GitHub private vulnerability reporting: on.
 
@@ -229,7 +237,7 @@ Search runs in the browser over `index.json`. It matches name, description and t
 7. Version history from the lock file's git log: version, date, SHA link.
 8. Links: source at the locked SHA, and "Report this mod" (a prefilled GitHub issue with the `report` label).
 
-An entry that is in `health.json` for 3 or more days shows "Source missing" and does not appear on `/`.
+An entry that is in `health.json` for 3 or more days shows "Source missing" and does not appear on `/`. It stays in `marketplace.json`. Removal from `marketplace.json` uninstalls a mod from every user (`forceRemoveDeletedPlugins`), and only a takedown (6.1) does that.
 
 ### 5.3 Safety of author content
 
@@ -337,3 +345,4 @@ These are tasks in the plan, not open decisions:
 2. Build the capability word table from the mods reference (`calls` and `hooks` names).
 3. Choose and pin the markdown library, and confirm that it can escape raw HTML.
 4. Confirm the exact name and the default of the GitHub fork PR approval setting.
+5. Confirm on a test repo that a ruleset bypass actor (the GitHub App) can push to `main` directly while the ruleset requires a PR and the `check` status. GitHub docs confirm that 0 approvals and Code Owner review can be set together. They do not state the direct push case.
