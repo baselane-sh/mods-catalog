@@ -3,3 +3,5 @@ _site/
 check-report.json
 report/
 .impeccable/config.local.json
+test-results/
+playwright-report/
