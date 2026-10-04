@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 6,
   "manifest": {
     "description": "No flattery or filler. Disagreement is stated plainly, with the reason.",

@@ -6,12 +6,10 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 10,
   "manifest": {
-    "description": "Commit messages start with the matching gitmoji (✨ feat, 🐛 fix). Composes with conventional-commits: emoji goes before the type.",
+    "description": "Commit messages start with the matching gitmoji (\u2728 feat, \ud83d\udc1b fix). Composes with conventional-commits: emoji goes before the type.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 9,
   "manifest": {
     "description": "Speaks like Yoda in prose. Code, commands and commit messages stay normal.",

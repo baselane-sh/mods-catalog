@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 15,
   "manifest": {
     "description": "Fun habits in one install: caveman prose and gitmoji commit messages. They compose: caveman never touches commit messages.",

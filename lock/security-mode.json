@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 9,
   "manifest": {
     "description": "Checks each change for injection, secrets, authorization and unsafe input, and states the risks it checked.",

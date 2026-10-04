@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 6,
   "manifest": {
     "description": "Explains each step and why, and defines jargon once, for a learner.",

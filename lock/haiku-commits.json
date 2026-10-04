@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 9,
   "manifest": {
     "description": "Commit messages get a normal conventional-commit first line, then a 5-7-5 haiku about the change in the body.",

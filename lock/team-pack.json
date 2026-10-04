@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 19,
   "manifest": {
     "description": "Team habits in one install: Conventional Commits, test-first work and a security check on every change.",

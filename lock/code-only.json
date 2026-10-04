@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 8,
   "manifest": {
     "description": "Replies with the code or command first and at most two short sentences of prose, unless asked to explain.",

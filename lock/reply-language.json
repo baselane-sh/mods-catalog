@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 8,
   "manifest": {
     "description": "Answers in the language you set (English by default). Code, identifiers and commands stay as they are.",

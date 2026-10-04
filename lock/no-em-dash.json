@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 7,
   "manifest": {
     "description": "Never writes the em-dash character. Uses a comma, colon, period or parentheses.",

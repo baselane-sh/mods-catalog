@@ -6,9 +6,7 @@
   "hooks": [
     "prompt.compose"
   ],
-  "calls": [
-    "nothing on $"
-  ],
+  "calls": [],
   "testCount": 8,
   "manifest": {
     "description": "Explains like the reader is new: analogies first, no jargon without a one-line definition.",

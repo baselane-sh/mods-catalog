@@ -335,9 +335,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/caveman-mode/"
       }
     },
@@ -451,9 +449,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/code-only/"
       }
     },
@@ -662,9 +658,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/conventional-commits/"
       }
     },
@@ -1072,9 +1066,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/eli5-mode/"
       }
     },
@@ -1260,9 +1252,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/fun-pack/"
       }
     },
@@ -1376,9 +1366,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/gitmoji-commits/"
       }
     },
@@ -1477,9 +1465,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/haiku-commits/"
       }
     },
@@ -1637,9 +1623,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/junior-mode/"
       }
     },
@@ -2101,9 +2085,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/no-em-dash/"
       }
     },
@@ -2132,9 +2114,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/no-sycophancy/"
       }
     },
@@ -2349,9 +2329,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/pirate-mode/"
       }
     },
@@ -2380,9 +2358,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/plain-english/"
       }
     },
@@ -2699,9 +2675,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/reply-language/"
       }
     },
@@ -2917,9 +2891,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/security-mode/"
       }
     },
@@ -3039,9 +3011,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/shakespeare-mode/"
       }
     },
@@ -3327,9 +3297,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/ste-mode/"
       }
     },
@@ -3438,9 +3406,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/tdd-mode/"
       }
     },
@@ -3469,9 +3435,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/team-pack/"
       }
     },
@@ -3500,9 +3464,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/terse-mode/"
       }
     },
@@ -3835,9 +3797,7 @@
         "hooks": [
           "prompt.compose"
         ],
-        "calls": [
-          "nothing on $"
-        ],
+        "calls": [],
         "gallery": "https://mods.baselane.sh/mods/yoda-mode/"
       }
     }
