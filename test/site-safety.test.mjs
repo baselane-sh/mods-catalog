@@ -48,6 +48,14 @@ test('an unknown call shows as raw text with medium risk', () => {
   assert.deepEqual(outputs, [{ kind: 'call', label: 'THING', words: '$.future.thing', risk: 'medium', known: false, raw: ['$.future.thing'] }])
 })
 
+test('a call made through a helper keeps its risk and words', () => {
+  const { outputs } = capabilities({ hooks: [], calls: ['$.process.run (via liveOf)', '$.session.cwd (via liveOf)'] })
+  assert.deepEqual(outputs.map(group => [group.label, group.words, group.risk, group.raw]), [
+    ['RUN', 'Starts programs on your machine', 'high', ['$.process.run (via liveOf)']],
+    ['SESS', 'Reads session details: folder, model, usage and turns', 'low', ['$.session.cwd (via liveOf)']],
+  ])
+})
+
 test('topRisk is the highest risk across inputs and outputs', () => {
   assert.equal(topRisk(capabilities({ hooks: ['session.start'], calls: ['$.http.fetch'] })), 'high')
   assert.equal(topRisk(capabilities({ hooks: [], calls: [] })), 'info')
