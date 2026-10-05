@@ -84,6 +84,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+/* Author display rules (.module is flex) must not undo the hidden attribute that filters set. */
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
