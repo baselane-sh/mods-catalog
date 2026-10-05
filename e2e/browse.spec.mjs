@@ -66,7 +66,7 @@ test('empty state offers Clear the filters, which restores everything', async ({
 
 test('Verified toggle keeps only verified modules and sets the URL', async ({ page }) => {
   const total = Number(await count(page).textContent())
-  const verifiedTotal = (await visible(page).evaluateAll(els => els.filter(el => el.dataset.verified === '1'))).length
+  const verifiedTotal = await visible(page).evaluateAll(els => els.filter(el => el.dataset.verified === '1').length)
   await page.locator('label.switch').click()
   await expect(page.locator('[data-filter="verified"]')).toBeChecked()
   await expect(page).toHaveURL(/verified=1/)
