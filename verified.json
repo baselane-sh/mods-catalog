@@ -24,12 +24,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "authors",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "auto-format",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -42,18 +36,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "auto-lint",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "band-pack",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "big-diff-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -61,12 +43,6 @@
   },
   {
     "name": "big-diff-nudge",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "big-file-guard",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -127,18 +103,6 @@
   },
   {
     "name": "changelog",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "chmod-guard",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "ci-config-guard",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -300,18 +264,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "deps",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "desktop-notify",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "dev-band",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -331,18 +283,6 @@
   },
   {
     "name": "diff-stats",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "discord-notify",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "docker-guard",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -372,18 +312,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "env-check",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "env-example-nudge",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "env-exfil-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -403,18 +331,6 @@
   },
   {
     "name": "error-meter",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "exit-badge",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "explore-pack",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -456,12 +372,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "git-history-guard",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "git-pane",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -493,12 +403,6 @@
   },
   {
     "name": "gitmoji-commits",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "guard-devops",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -576,12 +480,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "json-pretty",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "junior-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -589,12 +487,6 @@
   },
   {
     "name": "junior-mode",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "k8s-guard",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -667,12 +559,6 @@
   },
   {
     "name": "long-run-notify",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "migration-guard",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -762,12 +648,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "notify-pack",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "ntfy-notify",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -816,12 +696,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "personal-bests",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "pirate-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -841,12 +715,6 @@
   },
   {
     "name": "plain-english",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "pomodoro",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -936,12 +804,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "render-plus",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "reply-language",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -961,18 +823,6 @@
   },
   {
     "name": "repo-pack",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "say-done",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "scripts",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -1074,18 +924,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "size-badge",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "slack-notify",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "sounds-minimal",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -1141,12 +979,6 @@
   },
   {
     "name": "sounds-scifi",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "sports-narrator",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -1248,12 +1080,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "test-pane",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "test-reminder",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -1261,12 +1087,6 @@
   },
   {
     "name": "test-reminder",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "time-badge",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
@@ -1320,12 +1140,6 @@
     "date": "2026-10-05"
   },
   {
-    "name": "tree",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
     "name": "typecheck-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
     "reviewer": "mohammad0omar",
@@ -1333,12 +1147,6 @@
   },
   {
     "name": "typecheck-nudge",
-    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-    "reviewer": "mohammad0omar",
-    "date": "2026-10-05"
-  },
-  {
-    "name": "url-links",
     "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
