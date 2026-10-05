@@ -1,0 +1,10 @@
+{
+  "name": "slack-notify",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/slack-notify",
+    "ref": "slack-notify--v0.3.0"
+  },
+  "category": "lifecycle"
+}

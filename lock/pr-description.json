@@ -1,8 +1,8 @@
 {
   "name": "pr-description",
-  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
-  "ref": "pr-description--v0.2.0",
-  "version": "0.2.0",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "pr-description--v0.3.0",
+  "version": "0.3.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -14,6 +14,7 @@
     "$.clock.now",
     "$.command.register",
     "$.fs.exists",
+    "$.fs.read",
     "$.fs.write",
     "$.process.run",
     "$.session.cwd",
@@ -25,7 +26,7 @@
     "$.ui.log",
     "$.ui.resolve"
   ],
-  "testCount": 21,
+  "testCount": 23,
   "manifest": {
     "description": "Adds /pr-description: title, summary, diff totals and a test plan stub for the current branch against main or master.",
     "author": {
@@ -36,5 +37,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-04"
+  "updatedAt": "2026-10-05"
 }

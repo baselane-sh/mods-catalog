@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/file-links",
-    "ref": "file-links--v0.2.0"
+    "ref": "file-links--v0.3.0"
   },
   "category": "render"
 }

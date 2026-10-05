@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/debug-print-nudge",
-    "ref": "debug-print-nudge--v0.2.0"
+    "ref": "debug-print-nudge--v0.3.0"
   },
   "category": "nudge"
 }

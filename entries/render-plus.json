@@ -1,0 +1,10 @@
+{
+  "name": "render-plus",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/render-plus",
+    "ref": "render-plus--v0.3.0"
+  },
+  "category": "render"
+}

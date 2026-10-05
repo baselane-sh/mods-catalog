@@ -1,0 +1,10 @@
+{
+  "name": "big-file-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/big-file-guard",
+    "ref": "big-file-guard--v0.3.0"
+  },
+  "category": "guard"
+}

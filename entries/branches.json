@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/branches",
-    "ref": "branches--v0.2.0"
+    "ref": "branches--v0.3.0"
   },
   "category": "command"
 }

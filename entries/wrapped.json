@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/wrapped",
-    "ref": "wrapped--v0.2.0"
+    "ref": "wrapped--v0.3.0"
   },
   "category": "stats"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "notify-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/notify-pack",
+    "ref": "notify-pack--v0.3.0"
+  },
+  "category": "lifecycle"
+}

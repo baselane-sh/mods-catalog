@@ -1,0 +1,10 @@
+{
+  "name": "docker-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/docker-guard",
+    "ref": "docker-guard--v0.3.0"
+  },
+  "category": "guard"
+}

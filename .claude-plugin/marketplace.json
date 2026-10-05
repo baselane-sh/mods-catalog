@@ -13,8 +13,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/achievements",
-        "ref": "achievements--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "achievements--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Unlocks eight badges once each (first session, first green test run, 100 and 1,000 tool calls, 7-day streak, 10 blocked calls, a 2 hour session, night owl), with a toast and /achievements.",
       "author": {
@@ -26,7 +26,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "stats",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -58,8 +58,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/agent-firewall",
-        "ref": "agent-firewall--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "agent-firewall--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A live pane of every tool call the agent makes: green when it ran, red when it was blocked, with counters. Open it with /firewall.",
       "author": {
@@ -71,7 +71,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -97,13 +97,61 @@
       }
     },
     {
+      "name": "authors",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/authors",
+        "ref": "authors--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Adds /authors: the top 15 contributors by commit count with their last commit date. Names only, never email addresses. Read-only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/authors/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/authors/"
+      }
+    },
+    {
       "name": "auto-format",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/auto-format",
-        "ref": "auto-format--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "auto-format--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Runs your project's own formatter on each file Claude writes or edits, only when the project has a formatter config, and tells Claude to re-read the file.",
       "author": {
@@ -115,13 +163,14 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "lifecycle",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "classic.Notification",
           "classic.SessionEnd",
-          "tool.call"
+          "tool.call",
+          "turn.complete"
         ],
         "calls": [
           "$.clock.now",
@@ -134,9 +183,105 @@
           "$.http.fetch",
           "$.process.run",
           "$.session.cwd",
+          "$.session.root",
           "$.ui.log"
         ],
         "gallery": "https://mods.baselane.sh/mods/auto-format/"
+      }
+    },
+    {
+      "name": "auto-lint",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/auto-lint",
+        "ref": "auto-lint--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Runs your project's own linter fix (eslint, ruff or golangci-lint) on each file Claude writes or edits, only when the project has that linter's config, and tells Claude what is left.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/auto-lint/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/auto-lint/"
+      }
+    },
+    {
+      "name": "band-pack",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/band-pack",
+        "ref": "band-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Every Baselane band meter in one row above the prompt: session cost, lattes, context bar, today's spend, the focus timer and the mood ring.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/band-pack/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "band",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "turn.complete",
+          "turn.start",
+          "ui.render{component=AbovePrompt}"
+        ],
+        "calls": [
+          "$.clock.after",
+          "$.clock.every",
+          "$.clock.now",
+          "$.command.register",
+          "$.process.run",
+          "$.session.model",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.store.get",
+          "$.store.set",
+          "$.ui.log",
+          "$.ui.resolve",
+          "$.ui.toast"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/band-pack/"
       }
     },
     {
@@ -145,8 +290,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/big-diff-nudge",
-        "ref": "big-diff-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "big-diff-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Suggests splitting the change once your edits added or removed more than 500 lines since the last git commit. A successful commit resets the count.",
       "author": {
@@ -158,7 +303,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -170,6 +315,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -178,13 +324,48 @@
       }
     },
     {
+      "name": "big-file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/big-file-guard",
+        "ref": "big-file-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before a Write creates content over 1 MB, or git add names a file over 5 MB.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/big-file-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/big-file-guard/"
+      }
+    },
+    {
       "name": "branch-band",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/branch-band",
-        "ref": "branch-band--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "branch-band--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with the git branch and the count of changed files, refreshed after each Bash call and file edit.",
       "author": {
@@ -196,11 +377,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -208,6 +390,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -231,8 +414,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/branches",
-        "ref": "branches--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "branches--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /branches: local branches merged into the default branch or idle for 30 days, as a cleanup list. Never deletes.",
       "author": {
@@ -244,7 +427,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -258,6 +441,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -278,8 +462,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/break-nudge",
-        "ref": "break-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "break-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Suggests a short break once the session has run 90 minutes, and again every 90 minutes after that.",
       "author": {
@@ -291,7 +475,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -303,6 +487,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -316,8 +501,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/caveman-mode",
-        "ref": "caveman-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "caveman-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Prose in short caveman speech (\"Fix bug. Test pass.\"), still accurate. Code and commands stay exact.",
       "author": {
@@ -329,7 +514,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -345,8 +530,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/changelog",
-        "ref": "changelog--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "changelog--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /changelog: commits since the last tag (or the last 30), grouped by conventional-commit type, as Markdown.",
       "author": {
@@ -358,7 +543,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -372,6 +557,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -387,13 +573,83 @@
       }
     },
     {
+      "name": "chmod-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/chmod-guard",
+        "ref": "chmod-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before chmod makes files world-writable (777, a+w, o+w) or chmod or chown runs recursively on a broad path (/, a system folder, a home folder).",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/chmod-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/chmod-guard/"
+      }
+    },
+    {
+      "name": "ci-config-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/ci-config-guard",
+        "ref": "ci-config-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before Write or Edit changes CI config: .github/workflows, .gitlab-ci.yml or .circleci/config.yml.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/ci-config-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/ci-config-guard/"
+      }
+    },
+    {
       "name": "clippy",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/clippy",
-        "ref": "clippy--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "clippy--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "One helpful toast per session per trigger, in the classic paperclip voice: when you edit a migrations folder, a Dockerfile or a GitHub workflow, or run rm -rf. At most one toast per turn.",
       "author": {
@@ -405,7 +661,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -417,6 +673,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -430,8 +687,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/code-only",
-        "ref": "code-only--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "code-only--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Replies with the code or command first and at most two short sentences of prose, unless asked to explain.",
       "author": {
@@ -443,7 +700,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -459,8 +716,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/command-pack",
-        "ref": "command-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "command-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every slash command in one mod: /receipt, /standup, /changelog, /pr-description and /handoff.",
       "author": {
@@ -472,7 +729,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -486,6 +743,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -506,8 +764,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/commit-msg",
-        "ref": "commit-msg--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "commit-msg--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /commit-msg: a Conventional Commits message proposed from the staged diff. Heuristic, no model call, writes nothing.",
       "author": {
@@ -519,7 +777,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -533,6 +791,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -553,8 +812,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/commit-nudge",
-        "ref": "commit-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "commit-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Suggests a commit at turn end after 8 or more file edits since the last git commit. One toast per batch of edits; a successful git commit resets the count.",
       "author": {
@@ -566,7 +825,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -578,6 +837,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -591,8 +851,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/context-meter",
-        "ref": "context-meter--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "context-meter--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with a 10 cell bar of the context window used, yellow from 60 percent, red from 80.",
       "author": {
@@ -604,11 +864,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -616,6 +877,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -639,8 +901,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/conventional-commits",
-        "ref": "conventional-commits--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "conventional-commits--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Commit messages follow Conventional Commits: type(scope): subject, imperative, under 72 characters.",
       "author": {
@@ -652,7 +914,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -668,8 +930,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/cost-meter",
-        "ref": "cost-meter--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "cost-meter--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with the session cost so far and what the last turn cost.",
       "author": {
@@ -681,11 +943,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -693,6 +956,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -716,8 +980,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/cost-pane",
-        "ref": "cost-pane--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "cost-pane--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A live side pane with the session cost, the cost of each of the last 10 turns as a bar, and the average per turn. Open it with /cost-pane.",
       "author": {
@@ -729,7 +993,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "pane",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -766,8 +1030,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/ctx-nudge",
-        "ref": "ctx-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "ctx-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Reminds you to /clear or /compact when the context window passes 75 percent.",
       "author": {
@@ -779,7 +1043,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -791,6 +1055,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -804,8 +1069,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/curl-pipe-guard",
-        "ref": "curl-pipe-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "curl-pipe-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a download is piped into a shell or interpreter (curl | sh, wget -O- | bash, bash <(curl ...)).",
       "author": {
@@ -817,7 +1082,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -839,8 +1104,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/daily-spend",
-        "ref": "daily-spend--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "daily-spend--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with today's total cost across all your sessions.",
       "author": {
@@ -852,11 +1117,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -864,6 +1130,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -887,8 +1154,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/debug-print-nudge",
-        "ref": "debug-print-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "debug-print-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast naming the count of console.log, print(, debugger and dbg! lines your edits added this turn. Only code files count.",
       "author": {
@@ -900,7 +1167,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -912,6 +1179,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -920,13 +1188,106 @@
       }
     },
     {
+      "name": "deps",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/deps",
+        "ref": "deps--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Adds /deps: direct dependencies with versions from package.json, pyproject.toml, requirements.txt, go.mod and Cargo.toml at the repo root. No network, no audit. Read-only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/deps/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/deps/"
+      }
+    },
+    {
+      "name": "desktop-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/desktop-notify",
+        "ref": "desktop-notify--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Shows a desktop notification when Claude Code needs your input: osascript on macOS, notify-send elsewhere when it is installed. The text is the project name and a short status only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/desktop-notify/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/desktop-notify/"
+      }
+    },
+    {
       "name": "dev-band",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/dev-band",
-        "ref": "dev-band--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "dev-band--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "The developer band in one row above the prompt: git branch and changed files, wall clock and session age, tool counts, and failed tool calls.",
       "author": {
@@ -938,11 +1299,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -950,6 +1312,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -973,8 +1336,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/diff-stats",
-        "ref": "diff-stats--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "diff-stats--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Edit and Write rows show a compact +12 -3 bar beside the file name: green for lines added, red for lines removed, up to 20 cells.",
       "author": {
@@ -986,21 +1349,106 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "render",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
           "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
           "ui.render{component=ToolUse}"
         ],
         "calls": [
           "$.fs.stat",
           "$.prompt.fill",
           "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
           "$.ui.log",
           "$.ui.resolve"
         ],
         "gallery": "https://mods.baselane.sh/mods/diff-stats/"
+      }
+    },
+    {
+      "name": "discord-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/discord-notify",
+        "ref": "discord-notify--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Posts to a Discord webhook when Claude Code needs your input. Sends the project name and a short status only. Does nothing until you set a webhook URL.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/discord-notify/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/discord-notify/"
+      }
+    },
+    {
+      "name": "docker-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/docker-guard",
+        "ref": "docker-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before Docker commands that delete data: system, volume or image prune, rm -f, volume rm and compose down -v.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/docker-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/docker-guard/"
       }
     },
     {
@@ -1009,8 +1457,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/docs-nudge",
-        "ref": "docs-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "docs-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast when edits added exported code (an export statement in .ts or .js, or a public function signature) and no README or docs file was edited this session.",
       "author": {
@@ -1022,7 +1470,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1034,6 +1482,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -1047,8 +1496,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/eli5-mode",
-        "ref": "eli5-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "eli5-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Explains like the reader is new: analogies first, no jargon without a one-line definition.",
       "author": {
@@ -1060,7 +1509,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1071,13 +1520,100 @@
       }
     },
     {
+      "name": "env-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/env-check",
+        "ref": "env-check--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Adds /env-check: variable names in .env.example against .env, listing missing and extra names. Reads names only, never a value. Read-only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/env-check/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/env-check/"
+      }
+    },
+    {
+      "name": "env-example-nudge",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/env-example-nudge",
+        "ref": "env-example-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "At turn end, one toast when edits add a reference to an environment variable (process.env, os.environ, os.getenv, Deno.env) that .env.example does not list. Reads only .env.example names, never .env.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/env-example-nudge/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "nudge",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Stop",
+          "tool.call"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.model.complete",
+          "$.session.cwd",
+          "$.session.usage",
+          "$.ui.log",
+          "$.ui.toast"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/env-example-nudge/"
+      }
+    },
+    {
       "name": "env-exfil-guard",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/env-exfil-guard",
-        "ref": "env-exfil-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "env-exfil-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a command prints your environment, echoes a secret variable or sends local data to a remote host.",
       "author": {
@@ -1089,7 +1625,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1111,8 +1647,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/error-meter",
-        "ref": "error-meter--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "error-meter--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with how many tool calls failed this session (an error or a deny) and which tool failed last. Red from the first failure.",
       "author": {
@@ -1124,11 +1660,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -1136,6 +1673,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -1154,13 +1692,102 @@
       }
     },
     {
+      "name": "exit-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/exit-badge",
+        "ref": "exit-badge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "A failed Bash row shows a small red badge with its exit code, for example exit 2.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/exit-badge/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/exit-badge/"
+      }
+    },
+    {
+      "name": "explore-pack",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/explore-pack",
+        "ref": "explore-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Five read-only repo exploration commands in one mod: /tree, /deps, /authors, /scripts and /env-check.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/explore-pack/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/explore-pack/"
+      }
+    },
+    {
       "name": "file-links",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/file-links",
-        "ref": "file-links--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "file-links--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "In Claude's replies, path/to/file.ts:42 references to files in your project become links. Click one to put @path/to/file.ts in the prompt.",
       "author": {
@@ -1172,17 +1799,22 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "render",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
           "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
           "ui.render{component=ToolUse}"
         ],
         "calls": [
           "$.fs.stat",
           "$.prompt.fill",
           "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
           "$.ui.log",
           "$.ui.resolve"
         ],
@@ -1195,8 +1827,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/focus-pack",
-        "ref": "focus-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "focus-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Three quiet nudges in one mod: commit after 8 edits, TODO/FIXME/HACK lines added, and debug prints added.",
       "author": {
@@ -1208,7 +1840,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1220,6 +1852,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -1233,8 +1866,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/fun-pack",
-        "ref": "fun-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "fun-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Fun habits in one install: caveman prose and gitmoji commit messages. They compose: caveman never touches commit messages.",
       "author": {
@@ -1246,7 +1879,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1257,13 +1890,48 @@
       }
     },
     {
+      "name": "git-history-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/git-history-guard",
+        "ref": "git-history-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before git commands that throw away work or rewrite history: reset --hard, clean, rebase, filter-branch, filter-repo, push --delete, branch -D and stash clear.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/git-history-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/git-history-guard/"
+      }
+    },
+    {
       "name": "git-pane",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/git-pane",
-        "ref": "git-pane--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "git-pane--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A live side pane with the branch, ahead and behind its upstream, changed files (staged and unstaged) and the last 5 commits. It refreshes after git commands and file edits. Open it with /git.",
       "author": {
@@ -1275,7 +1943,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "pane",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1312,8 +1980,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/gitignore-check",
-        "ref": "gitignore-check--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "gitignore-check--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before git add or commit when secret-looking files are not ignored or are already tracked.",
       "author": {
@@ -1325,7 +1993,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1347,8 +2015,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/gitmoji-commits",
-        "ref": "gitmoji-commits--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "gitmoji-commits--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Commit messages start with the matching gitmoji (✨ feat, 🐛 fix). Composes with conventional-commits: emoji goes before the type.",
       "author": {
@@ -1360,7 +2028,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1371,13 +2039,48 @@
       }
     },
     {
+      "name": "guard-devops",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/guard-devops",
+        "ref": "guard-devops--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before harsh DevOps commands: destructive Docker, Kubernetes and Helm calls, CI config edits, broad chmod and chown, and git commands that lose work. Add infra-guard for plain kubectl delete.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/guard-devops/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/guard-devops/"
+      }
+    },
+    {
       "name": "guard-essentials",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/guard-essentials",
-        "ref": "guard-essentials--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "guard-essentials--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks only before harsh or disaster commands: destructive infra, git and SQL, piping downloads into a shell, sudo, leaking or committing secrets. The quiet choice for daily work.",
       "author": {
@@ -1389,7 +2092,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1411,8 +2114,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/guard-pack",
-        "ref": "guard-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "guard-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every Baselane guard in one mod.",
       "author": {
@@ -1424,7 +2127,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1446,8 +2149,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/haiku-commits",
-        "ref": "haiku-commits--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "haiku-commits--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Commit messages get a normal conventional-commit first line, then a 5-7-5 haiku about the change in the body.",
       "author": {
@@ -1459,7 +2162,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1475,8 +2178,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/handoff",
-        "ref": "handoff--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "handoff--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /handoff: writes a session summary to .claude/handoff.md (never overwriting) and answers with the path.",
       "author": {
@@ -1488,7 +2191,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1502,6 +2205,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -1522,8 +2226,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/hotspots",
-        "ref": "hotspots--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "hotspots--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /hotspots: the 10 files changed most often in the last 90 days, with change counts. Read-only.",
       "author": {
@@ -1535,7 +2239,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1549,6 +2253,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -1569,8 +2274,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/infra-guard",
-        "ref": "infra-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "infra-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before terraform destroy, kubectl delete, force-push, DROP TABLE or rm -rf.",
       "author": {
@@ -1582,7 +2287,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1599,13 +2304,54 @@
       }
     },
     {
+      "name": "json-pretty",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/json-pretty",
+        "ref": "json-pretty--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Bash output that is one long line of JSON is drawn pretty-printed, folded after 30 lines. Display only: Claude reads the output as it was.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/json-pretty/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/json-pretty/"
+      }
+    },
+    {
       "name": "junior-mode",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/junior-mode",
-        "ref": "junior-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "junior-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Explains each step and why, and defines jargon once, for a learner.",
       "author": {
@@ -1617,7 +2363,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1628,13 +2374,48 @@
       }
     },
     {
+      "name": "k8s-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/k8s-guard",
+        "ref": "k8s-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before kubectl apply or replace with --force, kubectl drain, helm uninstall, and kubectl delete behind global flags (plain kubectl delete is infra-guard's).",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/k8s-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/k8s-guard/"
+      }
+    },
+    {
       "name": "latte-meter",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/latte-meter",
-        "ref": "latte-meter--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "latte-meter--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt that counts the session cost in lattes. Set the latte price in the plugin options.",
       "author": {
@@ -1646,11 +2427,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -1658,6 +2440,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -1681,8 +2464,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/lifecycle-pack",
-        "ref": "lifecycle-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "lifecycle-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every Baselane lifecycle mod in one: auto-format, long-run and input pushes, and the session journal.",
       "author": {
@@ -1694,13 +2477,14 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "lifecycle",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "classic.Notification",
           "classic.SessionEnd",
-          "tool.call"
+          "tool.call",
+          "turn.complete"
         ],
         "calls": [
           "$.clock.now",
@@ -1713,6 +2497,7 @@
           "$.http.fetch",
           "$.process.run",
           "$.session.cwd",
+          "$.session.root",
           "$.ui.log"
         ],
         "gallery": "https://mods.baselane.sh/mods/lifecycle-pack/"
@@ -1724,8 +2509,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/loc",
-        "ref": "loc--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "loc--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /loc: lines of tracked text files by language, sorted, with a total. Skips lockfiles and binaries. Read-only.",
       "author": {
@@ -1737,7 +2522,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1751,6 +2536,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -1771,8 +2557,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/lockfile-guard",
-        "ref": "lockfile-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "lockfile-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a lockfile is written or edited by hand; the package manager should change it.",
       "author": {
@@ -1784,7 +2570,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1806,8 +2592,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/lockfile-nudge",
-        "ref": "lockfile-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "lockfile-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast when dependencies in package.json, pyproject.toml, Cargo.toml or go.mod changed and neither the matching lockfile was edited nor an install command ran.",
       "author": {
@@ -1819,7 +2605,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1831,6 +2617,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -1844,8 +2631,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/long-run-notify",
-        "ref": "long-run-notify--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "long-run-notify--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Sends a phone push through ntfy.sh when a Bash command ran longer than a threshold (60 seconds by default). Sends the project name and the seconds only. Does nothing until you set an ntfy topic.",
       "author": {
@@ -1857,13 +2644,14 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "lifecycle",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "classic.Notification",
           "classic.SessionEnd",
-          "tool.call"
+          "tool.call",
+          "turn.complete"
         ],
         "calls": [
           "$.clock.now",
@@ -1876,9 +2664,45 @@
           "$.http.fetch",
           "$.process.run",
           "$.session.cwd",
+          "$.session.root",
           "$.ui.log"
         ],
         "gallery": "https://mods.baselane.sh/mods/long-run-notify/"
+      }
+    },
+    {
+      "name": "migration-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/migration-guard",
+        "ref": "migration-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Asks before Write or Edit changes a migration that already exists; new migration files pass.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/migration-guard/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "guard",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PreToolUse",
+          "prompt.submit",
+          "tool.call"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.process.run",
+          "$.session.cwd"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/migration-guard/"
       }
     },
     {
@@ -1887,8 +2711,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/migration-nudge",
-        "ref": "migration-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "migration-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast when a schema file changed (schema.prisma, models.py, SQL under schema/, a drizzle schema) and no migration file was created this session.",
       "author": {
@@ -1900,7 +2724,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -1912,6 +2736,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -1925,8 +2750,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/model-badge",
-        "ref": "model-badge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "model-badge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with the current model name and the context percent (opus-4-1 · 62%).",
       "author": {
@@ -1938,11 +2763,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -1950,6 +2776,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -1973,8 +2800,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/mood-ring",
-        "ref": "mood-ring--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "mood-ring--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with a colored dot and a word for the error and block rate of your last 20 tool calls: calm (green) under 10 percent, tense (yellow) under 30, stormy (red) from 30.",
       "author": {
@@ -1986,11 +2813,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -1998,6 +2826,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -2021,8 +2850,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/night-owl",
-        "ref": "night-owl--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "night-owl--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Records the hour of each prompt across sessions and adds /hours: a 24-hour histogram of when you work, naming your peak hour.",
       "author": {
@@ -2034,7 +2863,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "stats",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2066,8 +2895,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/no-em-dash",
-        "ref": "no-em-dash--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "no-em-dash--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Never writes the em-dash character. Uses a comma, colon, period or parentheses.",
       "author": {
@@ -2079,7 +2908,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2095,8 +2924,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/no-sycophancy",
-        "ref": "no-sycophancy--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "no-sycophancy--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "No flattery or filler. Disagreement is stated plainly, with the reason.",
       "author": {
@@ -2108,7 +2937,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2124,8 +2953,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/no-verify-guard",
-        "ref": "no-verify-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "no-verify-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before git hooks are skipped (--no-verify, commit -n, HUSKY=0, core.hooksPath=/dev/null).",
       "author": {
@@ -2137,7 +2966,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2154,31 +2983,32 @@
       }
     },
     {
-      "name": "ntfy-notify",
+      "name": "notify-pack",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
-        "path": "plugins/ntfy-notify",
-        "ref": "ntfy-notify--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "path": "plugins/notify-pack",
+        "ref": "notify-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
-      "description": "Sends a phone push through ntfy.sh when Claude Code needs your input. The message is generic. Does nothing until you set an ntfy topic.",
+      "description": "Local alerts in one: a desktop notification when Claude Code needs your input, and a spoken line on macOS when a long turn ends.",
       "author": {
         "name": "Baselane",
         "url": "https://baselane.sh"
       },
       "license": "MIT",
-      "homepage": "https://mods.baselane.sh/mods/ntfy-notify/",
+      "homepage": "https://mods.baselane.sh/mods/notify-pack/",
       "repository": "https://github.com/baselane-sh/mods",
       "category": "lifecycle",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "classic.Notification",
           "classic.SessionEnd",
-          "tool.call"
+          "tool.call",
+          "turn.complete"
         ],
         "calls": [
           "$.clock.now",
@@ -2191,6 +3021,52 @@
           "$.http.fetch",
           "$.process.run",
           "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/notify-pack/"
+      }
+    },
+    {
+      "name": "ntfy-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/ntfy-notify",
+        "ref": "ntfy-notify--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Sends a phone push through ntfy.sh when Claude Code needs your input. The message is generic. Does nothing until you set an ntfy topic.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/ntfy-notify/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
           "$.ui.log"
         ],
         "gallery": "https://mods.baselane.sh/mods/ntfy-notify/"
@@ -2202,8 +3078,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/nudge-pack",
-        "ref": "nudge-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "nudge-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every Baselane turn-end reminder in one mod.",
       "author": {
@@ -2215,7 +3091,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2227,6 +3103,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -2240,8 +3117,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/package-guard",
-        "ref": "package-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "package-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a new dependency is installed (npm, pnpm, yarn, bun, pip, uv, poetry, cargo, go, gem) and names the packages.",
       "author": {
@@ -2253,7 +3130,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2275,8 +3152,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/path-jail",
-        "ref": "path-jail--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "path-jail--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before Write, Edit or NotebookEdit changes a file outside the working directory, by real path.",
       "author": {
@@ -2288,7 +3165,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2305,13 +3182,58 @@
       }
     },
     {
+      "name": "personal-bests",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/personal-bests",
+        "ref": "personal-bests--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Tracks your records across sessions (longest session, most tool calls in a session, most files edited in a day, cheapest session over 30 minutes), toasts a new one, and lists them with /bests.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/personal-bests/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "stats",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "turn.complete",
+          "turn.start"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.store.get",
+          "$.store.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.toast"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/personal-bests/"
+      }
+    },
+    {
       "name": "pirate-mode",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/pirate-mode",
-        "ref": "pirate-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "pirate-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Talks like a pirate in prose, never inside code, commands or file contents.",
       "author": {
@@ -2323,7 +3245,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2339,8 +3261,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/plain-english",
-        "ref": "plain-english--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "plain-english--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Writes in ASD-STE-100 Simplified Technical English: short sentences, active voice, simple words.",
       "author": {
@@ -2352,7 +3274,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2363,13 +3285,63 @@
       }
     },
     {
+      "name": "pomodoro",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/pomodoro",
+        "ref": "pomodoro--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "A band above the prompt with a 25/5 focus timer (focus 18:42, break 03:10). Start and stop it with /pomodoro; a toast marks each switch.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/pomodoro/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "band",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "turn.complete",
+          "turn.start",
+          "ui.render{component=AbovePrompt}"
+        ],
+        "calls": [
+          "$.clock.after",
+          "$.clock.every",
+          "$.clock.now",
+          "$.command.register",
+          "$.process.run",
+          "$.session.model",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.store.get",
+          "$.store.set",
+          "$.ui.log",
+          "$.ui.resolve",
+          "$.ui.toast"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/pomodoro/"
+      }
+    },
+    {
       "name": "port-watch",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/port-watch",
-        "ref": "port-watch--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "port-watch--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A live side pane of the local TCP ports that listen, with the process name and pid, refreshed every 10 seconds while open. Reads lsof (macOS, most Linux). Open it with /ports.",
       "author": {
@@ -2381,7 +3353,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "pane",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2418,8 +3390,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/pr-description",
-        "ref": "pr-description--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "pr-description--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /pr-description: title, summary, diff totals and a test plan stub for the current branch against main or master.",
       "author": {
@@ -2431,7 +3403,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2445,6 +3417,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -2465,8 +3438,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/prod-db-guard",
-        "ref": "prod-db-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "prod-db-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before destructive SQL runs in a command: TRUNCATE, DELETE or UPDATE with no WHERE.",
       "author": {
@@ -2478,7 +3451,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2500,8 +3473,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/protect-main",
-        "ref": "protect-main--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "protect-main--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a commit, push or merge while you are on main or master.",
       "author": {
@@ -2513,7 +3486,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2535,8 +3508,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/quality-pack",
-        "ref": "quality-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "quality-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Three quiet nudges in one mod: type check after TypeScript edits, lockfile after dependency edits, and a split suggestion past 500 changed lines.",
       "author": {
@@ -2548,7 +3521,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2560,6 +3533,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -2573,8 +3547,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/receipt",
-        "ref": "receipt--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "receipt--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /receipt: a shareable receipt of the session (tools, files, commands, blocks, context, cost), printed and copied.",
       "author": {
@@ -2586,7 +3560,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2600,6 +3574,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -2620,8 +3595,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/render-pack",
-        "ref": "render-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "render-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every rendering mod in one: diff-stats bars on Edit and Write rows, and file-links in Claude's replies.",
       "author": {
@@ -2633,21 +3608,67 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "render",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
           "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
           "ui.render{component=ToolUse}"
         ],
         "calls": [
           "$.fs.stat",
           "$.prompt.fill",
           "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
           "$.ui.log",
           "$.ui.resolve"
         ],
         "gallery": "https://mods.baselane.sh/mods/render-pack/"
+      }
+    },
+    {
+      "name": "render-plus",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/render-plus",
+        "ref": "render-plus--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Three row badges in one: time-badge, exit-badge and size-badge.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/render-plus/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/render-plus/"
       }
     },
     {
@@ -2656,8 +3677,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/reply-language",
-        "ref": "reply-language--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "reply-language--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Answers in the language you set (English by default). Code, identifiers and commands stay as they are.",
       "author": {
@@ -2669,7 +3690,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2685,8 +3706,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/repo-pack",
-        "ref": "repo-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "repo-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Five read-only repo commands in one mod: /todos, /loc, /hotspots, /commit-msg and /branches.",
       "author": {
@@ -2698,7 +3719,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2712,6 +3733,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -2727,13 +3749,106 @@
       }
     },
     {
+      "name": "say-done",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/say-done",
+        "ref": "say-done--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "On macOS, says \"Claude is done\" when a turn ends after more than 30 seconds. Does nothing on other platforms.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/say-done/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/say-done/"
+      }
+    },
+    {
+      "name": "scripts",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/scripts",
+        "ref": "scripts--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Adds /scripts: runnable tasks from package.json scripts, Makefile targets, justfile recipes and pyproject scripts. Read-only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/scripts/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/scripts/"
+      }
+    },
+    {
       "name": "secret-commit-guard",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/secret-commit-guard",
-        "ref": "secret-commit-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "secret-commit-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a git commit that would record a credential or a secret-named file.",
       "author": {
@@ -2745,7 +3860,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2767,8 +3882,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/secret-filename-guard",
-        "ref": "secret-filename-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "secret-filename-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a Bash command touches a secret-looking file (.env, private keys, credentials).",
       "author": {
@@ -2780,7 +3895,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2802,8 +3917,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/secret-guard",
-        "ref": "secret-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "secret-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before a live API key, token or private key is written, edited or run.",
       "author": {
@@ -2815,7 +3930,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2837,8 +3952,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/secret-output-guard",
-        "ref": "secret-output-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "secret-output-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Tells Claude not to repeat a credential that showed up in command or file output, and names the source to rotate.",
       "author": {
@@ -2850,7 +3965,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2872,8 +3987,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/security-mode",
-        "ref": "security-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "security-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Checks each change for injection, secrets, authorization and unsafe input, and states the risks it checked.",
       "author": {
@@ -2885,7 +4000,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -2901,8 +4016,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/session-clock",
-        "ref": "session-clock--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "session-clock--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with the wall clock and how long the session has run (14:05 · 1h 12m).",
       "author": {
@@ -2914,11 +4029,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -2926,6 +4042,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -2949,8 +4066,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/session-journal",
-        "ref": "session-journal--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "session-journal--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Appends one line per session end (time, directory, reason) to ~/.claude/journal.log.",
       "author": {
@@ -2962,13 +4079,14 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "lifecycle",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "classic.Notification",
           "classic.SessionEnd",
-          "tool.call"
+          "tool.call",
+          "turn.complete"
         ],
         "calls": [
           "$.clock.now",
@@ -2981,6 +4099,7 @@
           "$.http.fetch",
           "$.process.run",
           "$.session.cwd",
+          "$.session.root",
           "$.ui.log"
         ],
         "gallery": "https://mods.baselane.sh/mods/session-journal/"
@@ -2992,8 +4111,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/shakespeare-mode",
-        "ref": "shakespeare-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "shakespeare-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Prose in Early Modern English flair. Code, commands, commit messages and error text stay exact.",
       "author": {
@@ -3005,7 +4124,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3016,13 +4135,99 @@
       }
     },
     {
+      "name": "size-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/size-badge",
+        "ref": "size-badge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Read and Write rows show how much was read or written: the line count, for example 312 lines, or the file size for images and PDFs.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/size-badge/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/size-badge/"
+      }
+    },
+    {
+      "name": "slack-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/slack-notify",
+        "ref": "slack-notify--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Posts to a Slack incoming webhook when Claude Code needs your input. Sends the project name and a short status only. Does nothing until you set a webhook URL.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/slack-notify/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "lifecycle",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Notification",
+          "classic.SessionEnd",
+          "tool.call",
+          "turn.complete"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.clock.sleep",
+          "$.env.get",
+          "$.fs.exists",
+          "$.fs.list",
+          "$.fs.read",
+          "$.fs.write",
+          "$.http.fetch",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.root",
+          "$.ui.log"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/slack-notify/"
+      }
+    },
+    {
       "name": "sounds-minimal",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sounds-minimal",
-        "ref": "sounds-minimal--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sounds-minimal--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Very short, quiet clicks and ticks for a subtle signal: a tick when tests pass, two low ticks when they fail, a click when a call is blocked, a soft tick when a turn ends.",
       "author": {
@@ -3034,7 +4239,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "sound",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3054,8 +4259,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sounds-nature",
-        "ref": "sounds-nature--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sounds-nature--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Soft nature sounds: a bird chirp when tests pass, a plunk into water when they fail, a gust of wind when a call is blocked, a water drop when a turn ends.",
       "author": {
@@ -3067,7 +4272,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "sound",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3087,8 +4292,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sounds-office",
-        "ref": "sounds-office--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sounds-office--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Quiet office sounds: a soft click when tests pass, a low thud when they fail, paper when a call is blocked.",
       "author": {
@@ -3100,7 +4305,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "sound",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3120,8 +4325,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sounds-retro",
-        "ref": "sounds-retro--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sounds-retro--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "8-bit sounds: a coin when tests pass, a buzz when they fail, a chime when a turn ends.",
       "author": {
@@ -3133,7 +4338,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "sound",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3153,8 +4358,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sounds-scifi",
-        "ref": "sounds-scifi--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sounds-scifi--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Sci-fi console sounds: a beep when tests pass, an alarm when they fail, a warp when a turn ends.",
       "author": {
@@ -3166,7 +4371,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "sound",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3181,13 +4386,52 @@
       }
     },
     {
+      "name": "sports-narrator",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/sports-narrator",
+        "ref": "sports-narrator--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "One line of sports play-by-play at turn end. OFF by default: one haiku call per turn with tools. Turn on the enabled option. Sends tool names, file names and the first two words of each command.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/sports-narrator/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "nudge",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.Stop",
+          "tool.call"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.model.complete",
+          "$.session.cwd",
+          "$.session.usage",
+          "$.ui.log",
+          "$.ui.toast"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/sports-narrator/"
+      }
+    },
+    {
       "name": "standup",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/standup",
-        "ref": "standup--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "standup--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /standup: Yesterday, Today and Blockers from your git log and this session's record, printed and copied.",
       "author": {
@@ -3199,7 +4443,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3213,6 +4457,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -3233,8 +4478,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/stats-pack",
-        "ref": "stats-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "stats-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Every Baselane stats mod in one: /wrapped, streaks and achievements on one shared daily rollup.",
       "author": {
@@ -3246,7 +4491,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "stats",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3278,8 +4523,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/ste-mode",
-        "ref": "ste-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "ste-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Replies in ASD-STE100 Simplified Technical English: approved words, short sentences, one instruction each, active voice.",
       "author": {
@@ -3291,7 +4536,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3307,8 +4552,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/streaks",
-        "ref": "streaks--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "streaks--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Counts consecutive days you used Claude Code: a Day N streak toast at session start, and /streak to ask.",
       "author": {
@@ -3320,7 +4565,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "stats",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3352,8 +4597,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/sudo-guard",
-        "ref": "sudo-guard--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "sudo-guard--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Asks before sudo, doas or su -c runs a command with elevated rights.",
       "author": {
@@ -3365,7 +4610,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "guard",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3387,8 +4632,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/tdd-mode",
-        "ref": "tdd-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "tdd-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Writes a failing test first, watches it fail, then implements.",
       "author": {
@@ -3400,7 +4645,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3416,8 +4661,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/team-pack",
-        "ref": "team-pack--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "team-pack--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Team habits in one install: Conventional Commits, test-first work and a security check on every change.",
       "author": {
@@ -3429,7 +4674,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3445,8 +4690,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/terse-mode",
-        "ref": "terse-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "terse-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Short answers: no preamble, no recap.",
       "author": {
@@ -3458,7 +4703,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3469,13 +4714,63 @@
       }
     },
     {
+      "name": "test-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/test-pane",
+        "ref": "test-pane--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "A live side pane with the last test run (vitest, jest, pytest, go test, cargo test, bun test, claude plugin test): runner, pass, fail and skip counts, duration and first failures. Open it with /tests.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/test-pane/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "pane",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.start",
+          "tool.call",
+          "turn.complete",
+          "turn.start",
+          "ui.close{id=?}",
+          "ui.render{component=Pane, requestId=?}"
+        ],
+        "calls": [
+          "$.clock.after",
+          "$.clock.every",
+          "$.clock.now",
+          "$.command.register",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.close",
+          "$.ui.log",
+          "$.ui.open",
+          "$.ui.panes",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/test-pane/"
+      }
+    },
+    {
       "name": "test-reminder",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/test-reminder",
-        "ref": "test-reminder--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "test-reminder--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Reminds you at turn end when source files changed but no test command ran since.",
       "author": {
@@ -3487,7 +4782,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3499,6 +4794,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -3507,13 +4803,54 @@
       }
     },
     {
+      "name": "time-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/time-badge",
+        "ref": "time-badge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Tool rows show how long the call ran, for example 2.4s, when it took over one second. The time is the tool's own run time, without permission prompts.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/time-badge/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/time-badge/"
+      }
+    },
+    {
       "name": "todo-nudge",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/todo-nudge",
-        "ref": "todo-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "todo-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast with the count of TODO, FIXME and HACK lines your edits added this turn. Quiet when none were added.",
       "author": {
@@ -3525,7 +4862,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3537,6 +4874,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -3550,8 +4888,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/todo-pane",
-        "ref": "todo-pane--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "todo-pane--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A live side pane of the TODO, FIXME and HACK lines in tracked files (git grep), grouped by file and capped at 30. It refreshes after file edits while open. Open it with /todo-pane.",
       "author": {
@@ -3563,7 +4901,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "pane",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3600,8 +4938,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/todos",
-        "ref": "todos--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "todos--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /todos: TODO, FIXME and HACK lines in tracked files, grouped by file (50 lines at most). Read-only.",
       "author": {
@@ -3613,7 +4951,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "command",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3627,6 +4965,7 @@
           "$.clock.now",
           "$.command.register",
           "$.fs.exists",
+          "$.fs.read",
           "$.fs.write",
           "$.process.run",
           "$.session.cwd",
@@ -3647,8 +4986,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/tool-counter",
-        "ref": "tool-counter--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "tool-counter--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "A band above the prompt with your tool calls this session, the top three by tool (Bash 41 · Edit 18 · Read 12).",
       "author": {
@@ -3660,11 +4999,12 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "band",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
           "command.run{command=?}",
+          "session.end",
           "session.start",
           "tool.call",
           "turn.complete",
@@ -3672,6 +5012,7 @@
           "ui.render{component=AbovePrompt}"
         ],
         "calls": [
+          "$.clock.after",
           "$.clock.every",
           "$.clock.now",
           "$.command.register",
@@ -3690,13 +5031,61 @@
       }
     },
     {
+      "name": "tree",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/tree",
+        "ref": "tree--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "Adds /tree: tracked files as a tree, 2 levels deep, folders with file counts (80 lines at most). Read-only.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/tree/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "command",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "command.run{command=?}",
+          "session.end",
+          "session.start",
+          "tool.call",
+          "ui.render{component=CommandOutput, props has {command=?}}"
+        ],
+        "calls": [
+          "$.clock.now",
+          "$.command.register",
+          "$.fs.exists",
+          "$.fs.read",
+          "$.fs.write",
+          "$.process.run",
+          "$.session.cwd",
+          "$.session.turns",
+          "$.session.usage",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.copy",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/tree/"
+      }
+    },
+    {
       "name": "typecheck-nudge",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/typecheck-nudge",
-        "ref": "typecheck-nudge--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "typecheck-nudge--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "At turn end, one toast when .ts or .tsx files were edited and no type check (tsc, vue-tsc, a typecheck script or a build) ran since the last edit.",
       "author": {
@@ -3708,7 +5097,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "nudge",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3720,6 +5109,7 @@
           "$.fs.exists",
           "$.fs.read",
           "$.model.complete",
+          "$.session.cwd",
           "$.session.usage",
           "$.ui.log",
           "$.ui.toast"
@@ -3728,13 +5118,54 @@
       }
     },
     {
+      "name": "url-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "baselane-sh/mods",
+        "path": "plugins/url-links",
+        "ref": "url-links--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
+      },
+      "description": "https links (and http://localhost) in tool output are listed as clickable links under the result, up to five. Display only: Claude reads the output as it was.",
+      "author": {
+        "name": "Baselane",
+        "url": "https://baselane.sh"
+      },
+      "license": "MIT",
+      "homepage": "https://mods.baselane.sh/mods/url-links/",
+      "repository": "https://github.com/baselane-sh/mods",
+      "category": "render",
+      "metadata": {
+        "version": "0.3.0",
+        "submitter": "mohammad0omar",
+        "verified": true,
+        "hooks": [
+          "classic.PostToolUse",
+          "classic.PostToolUseFailure",
+          "ui.render{component=AssistantMessage}",
+          "ui.render{component=ToolResult}",
+          "ui.render{component=ToolUse}"
+        ],
+        "calls": [
+          "$.fs.stat",
+          "$.prompt.fill",
+          "$.session.cwd",
+          "$.state.get",
+          "$.state.set",
+          "$.ui.log",
+          "$.ui.resolve"
+        ],
+        "gallery": "https://mods.baselane.sh/mods/url-links/"
+      }
+    },
+    {
       "name": "wrapped",
       "source": {
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/wrapped",
-        "ref": "wrapped--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "wrapped--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Adds /wrapped: a screenshot-ready Claude Code Wrapped for the last 7 days (or /wrapped month for 30), printed and copied.",
       "author": {
@@ -3746,7 +5177,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "stats",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [
@@ -3778,8 +5209,8 @@
         "source": "git-subdir",
         "url": "baselane-sh/mods",
         "path": "plugins/yoda-mode",
-        "ref": "yoda-mode--v0.2.0",
-        "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0"
+        "ref": "yoda-mode--v0.3.0",
+        "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553"
       },
       "description": "Speaks like Yoda in prose. Code, commands and commit messages stay normal.",
       "author": {
@@ -3791,7 +5222,7 @@
       "repository": "https://github.com/baselane-sh/mods",
       "category": "style",
       "metadata": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "submitter": "mohammad0omar",
         "verified": true,
         "hooks": [

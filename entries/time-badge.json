@@ -1,0 +1,10 @@
+{
+  "name": "time-badge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/time-badge",
+    "ref": "time-badge--v0.3.0"
+  },
+  "category": "render"
+}

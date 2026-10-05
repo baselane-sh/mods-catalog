@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/cost-meter",
-    "ref": "cost-meter--v0.2.0"
+    "ref": "cost-meter--v0.3.0"
   },
   "category": "band"
 }

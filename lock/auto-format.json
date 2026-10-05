@@ -1,12 +1,13 @@
 {
   "name": "auto-format",
-  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
-  "ref": "auto-format--v0.2.0",
-  "version": "0.2.0",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "auto-format--v0.3.0",
+  "version": "0.3.0",
   "hooks": [
     "classic.Notification",
     "classic.SessionEnd",
-    "tool.call"
+    "tool.call",
+    "turn.complete"
   ],
   "calls": [
     "$.clock.now",
@@ -19,9 +20,10 @@
     "$.http.fetch",
     "$.process.run",
     "$.session.cwd",
+    "$.session.root",
     "$.ui.log"
   ],
-  "testCount": 22,
+  "testCount": 23,
   "manifest": {
     "description": "Runs your project's own formatter on each file Claude writes or edits, only when the project has a formatter config, and tells Claude to re-read the file.",
     "author": {
@@ -32,5 +34,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-04"
+  "updatedAt": "2026-10-05"
 }

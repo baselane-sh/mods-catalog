@@ -1,0 +1,10 @@
+{
+  "name": "sports-narrator",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sports-narrator",
+    "ref": "sports-narrator--v0.3.0"
+  },
+  "category": "nudge"
+}

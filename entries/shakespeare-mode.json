@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/shakespeare-mode",
-    "ref": "shakespeare-mode--v0.2.0"
+    "ref": "shakespeare-mode--v0.3.0"
   },
   "category": "style"
 }

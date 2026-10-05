@@ -1,0 +1,10 @@
+{
+  "name": "url-links",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/url-links",
+    "ref": "url-links--v0.3.0"
+  },
+  "category": "render"
+}
