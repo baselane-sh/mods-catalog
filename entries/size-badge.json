@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/size-badge",
-    "ref": "size-badge--v0.3.0"
+    "ref": "size-badge--v0.4.0"
   },
   "category": "render"
 }

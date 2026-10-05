@@ -1,12 +1,10 @@
 {
   "name": "dev-band",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "dev-band--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "dev-band--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "command.run{command=?}",
     "session.end",
-    "session.start",
     "tool.call",
     "turn.complete",
     "turn.start",
@@ -16,21 +14,16 @@
     "$.clock.after",
     "$.clock.every",
     "$.clock.now",
-    "$.command.register",
     "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
-    "$.store.get",
-    "$.store.set",
     "$.ui.log",
-    "$.ui.resolve",
-    "$.ui.toast"
+    "$.ui.resolve"
   ],
-  "testCount": 44,
+  "testCount": 45,
   "manifest": {
-    "description": "The developer band in one row above the prompt: git branch and changed files, wall clock and session age, tool counts, and failed tool calls.",
+    "description": "The developer band in one row above the prompt: git branch and changed files (read with git status), wall clock and session age, tool counts, and failed tool calls.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

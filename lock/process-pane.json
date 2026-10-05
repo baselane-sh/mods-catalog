@@ -1,0 +1,41 @@
+{
+  "name": "process-pane",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "process-pane--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.start",
+    "tool.call",
+    "ui.close{id=?}",
+    "ui.render{component=Pane, requestId=?}"
+  ],
+  "calls": [
+    "$.clock.after (via liveOf)",
+    "$.clock.every (via liveOf)",
+    "$.clock.now",
+    "$.command.register",
+    "$.process.run (via liveOf)",
+    "$.session.cwd (via liveOf)",
+    "$.session.usage (via liveOf)",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.close",
+    "$.ui.log",
+    "$.ui.open",
+    "$.ui.panes (via liveOf)",
+    "$.ui.resolve"
+  ],
+  "testCount": 23,
+  "manifest": {
+    "description": "A live side pane of the processes the session's Bash calls started that still run, with pid, age and command. Read-only: one ps every 5 seconds. Open it with /procs.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

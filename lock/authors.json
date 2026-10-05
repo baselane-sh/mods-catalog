@@ -1,8 +1,8 @@
 {
   "name": "authors",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "authors--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "authors--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -13,9 +13,6 @@
   "calls": [
     "$.clock.now",
     "$.command.register",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.fs.write",
     "$.process.run",
     "$.session.cwd",
     "$.session.turns",
@@ -28,7 +25,7 @@
   ],
   "testCount": 22,
   "manifest": {
-    "description": "Adds /authors: the top 15 contributors by commit count with their last commit date. Names only, never email addresses. Read-only.",
+    "description": "Adds /authors: the top 15 contributors by commit count with their last commit date, from git log. Names only, never email addresses. Read-only.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

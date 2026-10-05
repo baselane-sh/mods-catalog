@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/port-watch",
-    "ref": "port-watch--v0.3.0"
+    "ref": "port-watch--v0.4.0"
   },
   "category": "pane"
 }

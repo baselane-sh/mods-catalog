@@ -1,8 +1,8 @@
 {
   "name": "stats-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "stats-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "stats-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -25,7 +25,7 @@
   ],
   "testCount": 61,
   "manifest": {
-    "description": "Every Baselane stats mod in one: /wrapped, streaks and achievements on one shared daily rollup.",
+    "description": "The three original stats mods in one: /wrapped, streaks and achievements on one shared daily rollup.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

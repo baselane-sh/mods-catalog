@@ -1,8 +1,8 @@
 {
   "name": "todos",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "todos--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "todos--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -13,9 +13,6 @@
   "calls": [
     "$.clock.now",
     "$.command.register",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.fs.write",
     "$.process.run",
     "$.session.cwd",
     "$.session.turns",
@@ -28,7 +25,7 @@
   ],
   "testCount": 20,
   "manifest": {
-    "description": "Adds /todos: TODO, FIXME and HACK lines in tracked files, grouped by file (50 lines at most). Read-only.",
+    "description": "Adds /todos: TODO, FIXME and HACK lines in tracked files, found with git grep, grouped by file (50 lines at most). Read-only.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

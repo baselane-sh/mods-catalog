@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/authors",
-    "ref": "authors--v0.3.0"
+    "ref": "authors--v0.4.0"
   },
   "category": "command"
 }

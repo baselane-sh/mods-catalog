@@ -1,23 +1,16 @@
 {
   "name": "auto-lint",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "auto-lint--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "auto-lint--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.Notification",
-    "classic.SessionEnd",
-    "tool.call",
-    "turn.complete"
+    "tool.call"
   ],
   "calls": [
     "$.clock.now",
-    "$.clock.sleep",
-    "$.env.get",
     "$.fs.exists",
     "$.fs.list",
     "$.fs.read",
-    "$.fs.write",
-    "$.http.fetch",
     "$.process.run",
     "$.session.cwd",
     "$.session.root",

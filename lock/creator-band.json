@@ -1,0 +1,39 @@
+{
+  "name": "creator-band",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "creator-band--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "session.end",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.process.run",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 44,
+  "manifest": {
+    "description": "The creator band in one row above the prompt: turn timer, count of TODO, FIXME and HACK lines (read with git), and the daily streak flame.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

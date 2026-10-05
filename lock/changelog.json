@@ -1,8 +1,8 @@
 {
   "name": "changelog",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "changelog--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "changelog--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -13,9 +13,6 @@
   "calls": [
     "$.clock.now",
     "$.command.register",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.fs.write",
     "$.process.run",
     "$.session.cwd",
     "$.session.turns",
@@ -28,7 +25,7 @@
   ],
   "testCount": 19,
   "manifest": {
-    "description": "Adds /changelog: commits since the last tag (or the last 30), grouped by conventional-commit type, as Markdown.",
+    "description": "Adds /changelog: commits since the last tag (or the last 30), read with git log and grouped by conventional-commit type, as Markdown.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

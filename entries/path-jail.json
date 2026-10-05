@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/path-jail",
-    "ref": "path-jail--v0.3.0"
+    "ref": "path-jail--v0.4.0"
   },
   "category": "guard"
 }

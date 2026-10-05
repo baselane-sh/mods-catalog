@@ -1,0 +1,10 @@
+{
+  "name": "ssh-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ssh-guard",
+    "ref": "ssh-guard--v0.4.0"
+  },
+  "category": "guard"
+}

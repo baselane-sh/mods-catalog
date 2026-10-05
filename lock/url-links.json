@@ -1,21 +1,12 @@
 {
   "name": "url-links",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "url-links--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "url-links--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PostToolUse",
-    "classic.PostToolUseFailure",
-    "ui.render{component=AssistantMessage}",
-    "ui.render{component=ToolResult}",
-    "ui.render{component=ToolUse}"
+    "ui.render{component=ToolResult}"
   ],
   "calls": [
-    "$.fs.stat",
-    "$.prompt.fill",
-    "$.session.cwd",
-    "$.state.get",
-    "$.state.set",
     "$.ui.log",
     "$.ui.resolve"
   ],

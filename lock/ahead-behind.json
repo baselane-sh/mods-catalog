@@ -1,0 +1,35 @@
+{
+  "name": "ahead-behind",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "ahead-behind--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "tool.call",
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.process.run",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 16,
+  "manifest": {
+    "description": "A band above the prompt with the commits ahead and behind the upstream (↑2 ↓1), read with git status after each Bash call and file edit. Hidden when the branch has no upstream.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

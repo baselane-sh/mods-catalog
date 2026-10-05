@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/no-sycophancy",
-    "ref": "no-sycophancy--v0.3.0"
+    "ref": "no-sycophancy--v0.4.0"
   },
   "category": "style"
 }

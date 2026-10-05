@@ -1,0 +1,10 @@
+{
+  "name": "rubber-duck",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/rubber-duck",
+    "ref": "rubber-duck--v0.4.0"
+  },
+  "category": "style"
+}

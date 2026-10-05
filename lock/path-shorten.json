@@ -1,0 +1,27 @@
+{
+  "name": "path-shorten",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "path-shorten--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "ui.render{component=ToolUse}"
+  ],
+  "calls": [
+    "$.env.get",
+    "$.session.root",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 7,
+  "manifest": {
+    "description": "Tool rows draw long absolute file paths shorter: the project root as ./ and your home folder as ~. Display only; Bash commands are drawn as they ran.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

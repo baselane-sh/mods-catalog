@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/git-history-guard",
-    "ref": "git-history-guard--v0.3.0"
+    "ref": "git-history-guard--v0.4.0"
   },
   "category": "guard"
 }

@@ -1,36 +1,34 @@
 {
   "name": "git-pane",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "git-pane--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "git-pane--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.start",
     "tool.call",
-    "turn.complete",
-    "turn.start",
     "ui.close{id=?}",
     "ui.render{component=Pane, requestId=?}"
   ],
   "calls": [
-    "$.clock.after",
-    "$.clock.every",
+    "$.clock.after (via liveOf)",
+    "$.clock.every (via liveOf)",
     "$.clock.now",
     "$.command.register",
-    "$.process.run",
-    "$.session.cwd",
-    "$.session.usage",
+    "$.process.run (via liveOf)",
+    "$.session.cwd (via liveOf)",
+    "$.session.usage (via liveOf)",
     "$.state.get",
     "$.state.set",
     "$.ui.close",
     "$.ui.log",
     "$.ui.open",
-    "$.ui.panes",
+    "$.ui.panes (via liveOf)",
     "$.ui.resolve"
   ],
-  "testCount": 26,
+  "testCount": 28,
   "manifest": {
-    "description": "A live side pane with the branch, ahead and behind its upstream, changed files (staged and unstaged) and the last 5 commits. It refreshes after git commands and file edits. Open it with /git.",
+    "description": "A live side pane, read with git: the branch, ahead and behind its upstream, changed files (staged and unstaged) and the last 5 commits. Refreshes after git commands and edits. Open it with /git.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

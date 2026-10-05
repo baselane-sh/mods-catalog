@@ -1,19 +1,16 @@
 {
   "name": "migration-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "migration-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "migration-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
   "calls": [
     "$.fs.stat",
-    "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 15,
+  "testCount": 9,
   "manifest": {
     "description": "Asks before Write or Edit changes a migration that already exists; new migration files pass.",
     "author": {

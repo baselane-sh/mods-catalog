@@ -1,0 +1,10 @@
+{
+  "name": "langs",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/langs",
+    "ref": "langs--v0.4.0"
+  },
+  "category": "stats"
+}

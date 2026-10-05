@@ -1,0 +1,22 @@
+{
+  "name": "noir-mode",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "noir-mode--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 10,
+  "manifest": {
+    "description": "Prose like a hard-boiled detective narrator, light and clear. Code, commands, commit messages and error text stay exact.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

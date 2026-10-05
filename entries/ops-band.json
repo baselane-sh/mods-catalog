@@ -1,0 +1,10 @@
+{
+  "name": "ops-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ops-band",
+    "ref": "ops-band--v0.4.0"
+  },
+  "category": "band"
+}

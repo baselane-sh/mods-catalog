@@ -1,0 +1,10 @@
+{
+  "name": "socratic-mode",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/socratic-mode",
+    "ref": "socratic-mode--v0.4.0"
+  },
+  "category": "style"
+}

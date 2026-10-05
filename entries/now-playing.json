@@ -1,0 +1,10 @@
+{
+  "name": "now-playing",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/now-playing",
+    "ref": "now-playing--v0.4.0"
+  },
+  "category": "band"
+}

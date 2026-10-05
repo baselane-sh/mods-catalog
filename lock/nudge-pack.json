@@ -1,17 +1,13 @@
 {
   "name": "nudge-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "nudge-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "nudge-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "classic.Stop",
     "tool.call"
   ],
   "calls": [
-    "$.clock.now",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.model.complete",
     "$.session.cwd",
     "$.session.usage",
     "$.ui.log",
@@ -19,7 +15,7 @@
   ],
   "testCount": 8,
   "manifest": {
-    "description": "Every Baselane turn-end reminder in one mod.",
+    "description": "Two turn-end reminders in one mod: test-reminder and ctx-nudge.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

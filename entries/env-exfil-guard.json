@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/env-exfil-guard",
-    "ref": "env-exfil-guard--v0.3.0"
+    "ref": "env-exfil-guard--v0.4.0"
   },
   "category": "guard"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "ship-safe-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ship-safe-pack",
+    "ref": "ship-safe-pack--v0.4.0"
+  },
+  "category": "guard"
+}

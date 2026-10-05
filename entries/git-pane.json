@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/git-pane",
-    "ref": "git-pane--v0.3.0"
+    "ref": "git-pane--v0.4.0"
   },
   "category": "pane"
 }

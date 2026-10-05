@@ -1,0 +1,38 @@
+{
+  "name": "weekly",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "weekly--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 24,
+  "manifest": {
+    "description": "Adds /week: this week (since Monday) against last week, with sessions, turns, tool calls, files edited and cost, and the change for each.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

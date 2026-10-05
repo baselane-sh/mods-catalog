@@ -1,0 +1,10 @@
+{
+  "name": "upload-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/upload-guard",
+    "ref": "upload-guard--v0.4.0"
+  },
+  "category": "guard"
+}

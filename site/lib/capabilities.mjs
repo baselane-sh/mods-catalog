@@ -58,7 +58,8 @@ const HOOKS = {
 }
 
 // "ui.render{component=Pane}" is the ui.render hook with a filter.
-const baseName = item => item.split('{')[0]
+// "$.process.run (via liveOf)" is a call the mod makes through one of its own helpers.
+const baseName = item => item.split('{')[0].replace(/ \(via [^)]*\)$/, '')
 
 function describe(items, table, kind) {
   const groups = new Map()

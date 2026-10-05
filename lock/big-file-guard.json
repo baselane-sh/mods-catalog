@@ -1,21 +1,19 @@
 {
   "name": "big-file-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "big-file-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "big-file-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
   "calls": [
     "$.fs.stat",
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 18,
+  "testCount": 19,
   "manifest": {
-    "description": "Asks before a Write creates content over 1 MB, or git add names a file over 5 MB.",
+    "description": "Asks before a Write creates content over 1 MB, or git add names a file over 5 MB. Measures the files with find.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

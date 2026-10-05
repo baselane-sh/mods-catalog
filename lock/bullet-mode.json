@@ -1,0 +1,22 @@
+{
+  "name": "bullet-mode",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "bullet-mode--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 10,
+  "manifest": {
+    "description": "Replies as short bullet lists, at most one sentence per bullet, unless you ask for code.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "cache-meter",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/cache-meter",
+    "ref": "cache-meter--v0.4.0"
+  },
+  "category": "band"
+}

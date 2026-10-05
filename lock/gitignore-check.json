@@ -1,21 +1,18 @@
 {
   "name": "gitignore-check",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "gitignore-check--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "gitignore-check--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
   "calls": [
-    "$.fs.stat",
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 14,
+  "testCount": 8,
   "manifest": {
-    "description": "Asks before git add or commit when secret-looking files are not ignored or are already tracked.",
+    "description": "Asks before git add or commit when secret-looking files are not ignored or are already tracked. Checks with git ls-files.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

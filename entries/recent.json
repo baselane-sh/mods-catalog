@@ -1,0 +1,10 @@
+{
+  "name": "recent",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/recent",
+    "ref": "recent--v0.4.0"
+  },
+  "category": "command"
+}

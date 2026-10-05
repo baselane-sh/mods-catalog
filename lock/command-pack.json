@@ -1,8 +1,8 @@
 {
   "name": "command-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "command-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "command-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -14,7 +14,6 @@
     "$.clock.now",
     "$.command.register",
     "$.fs.exists",
-    "$.fs.read",
     "$.fs.write",
     "$.process.run",
     "$.session.cwd",
@@ -28,7 +27,7 @@
   ],
   "testCount": 63,
   "manifest": {
-    "description": "Every slash command in one mod: /receipt, /standup, /changelog, /pr-description and /handoff.",
+    "description": "The five original slash commands in one mod: /receipt, /standup, /changelog, /pr-description and /handoff. They read git; /handoff also writes .claude/handoff.md.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

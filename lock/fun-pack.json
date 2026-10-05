@@ -1,8 +1,8 @@
 {
   "name": "fun-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "fun-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "fun-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "prompt.compose"
   ],

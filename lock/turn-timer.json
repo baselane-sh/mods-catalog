@@ -1,0 +1,34 @@
+{
+  "name": "turn-timer",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "turn-timer--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "session.end",
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 15,
+  "manifest": {
+    "description": "A band above the prompt with how long the current turn has run (turn 0:42). It shows while a turn runs and hides between turns.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

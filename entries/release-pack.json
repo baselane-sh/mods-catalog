@@ -1,0 +1,10 @@
+{
+  "name": "release-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/release-pack",
+    "ref": "release-pack--v0.4.0"
+  },
+  "category": "guard"
+}

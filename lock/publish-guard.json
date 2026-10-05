@@ -1,0 +1,22 @@
+{
+  "name": "publish-guard",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "publish-guard--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "classic.PreToolUse"
+  ],
+  "calls": [],
+  "testCount": 13,
+  "manifest": {
+    "description": "Asks before a package is published: npm, pnpm, yarn or bun publish, cargo publish, twine upload, gem push, poetry or uv publish. Dry runs pass.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

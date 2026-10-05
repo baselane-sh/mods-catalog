@@ -1,0 +1,22 @@
+{
+  "name": "docstring-mode",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "docstring-mode--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 10,
+  "manifest": {
+    "description": "Every new or changed public function gets a short doc comment in the language's normal style.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/dev-band",
-    "ref": "dev-band--v0.3.0"
+    "ref": "dev-band--v0.4.0"
   },
   "category": "band"
 }

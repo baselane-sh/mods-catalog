@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/sudo-guard",
-    "ref": "sudo-guard--v0.3.0"
+    "ref": "sudo-guard--v0.4.0"
   },
   "category": "guard"
 }

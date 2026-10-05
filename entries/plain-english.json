@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/plain-english",
-    "ref": "plain-english--v0.3.0"
+    "ref": "plain-english--v0.4.0"
   },
   "category": "style"
 }

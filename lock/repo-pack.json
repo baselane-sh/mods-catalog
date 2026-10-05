@@ -1,8 +1,8 @@
 {
   "name": "repo-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "repo-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "repo-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -13,9 +13,6 @@
   "calls": [
     "$.clock.now",
     "$.command.register",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.fs.write",
     "$.process.run",
     "$.session.cwd",
     "$.session.turns",
@@ -28,7 +25,7 @@
   ],
   "testCount": 73,
   "manifest": {
-    "description": "Five read-only repo commands in one mod: /todos, /loc, /hotspots, /commit-msg and /branches.",
+    "description": "Five read-only repo commands in one mod: /todos, /loc, /hotspots, /commit-msg and /branches. They read git.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

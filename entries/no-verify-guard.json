@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/no-verify-guard",
-    "ref": "no-verify-guard--v0.3.0"
+    "ref": "no-verify-guard--v0.4.0"
   },
   "category": "guard"
 }

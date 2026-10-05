@@ -1,19 +1,13 @@
 {
   "name": "env-exfil-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "env-exfil-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "env-exfil-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
-  "calls": [
-    "$.fs.stat",
-    "$.process.run",
-    "$.session.cwd"
-  ],
-  "testCount": 12,
+  "calls": [],
+  "testCount": 6,
   "manifest": {
     "description": "Asks before a command prints your environment, echoes a secret variable or sends local data to a remote host.",
     "author": {

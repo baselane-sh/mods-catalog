@@ -1,21 +1,20 @@
 {
   "name": "guard-essentials",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "guard-essentials--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "guard-essentials--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "classic.PreToolUse",
     "prompt.submit",
     "tool.call"
   ],
   "calls": [
-    "$.fs.stat",
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 38,
+  "testCount": 39,
   "manifest": {
-    "description": "Asks only before harsh or disaster commands: destructive infra, git and SQL, piping downloads into a shell, sudo, leaking or committing secrets. The quiet choice for daily work.",
+    "description": "Asks only before harsh or disaster commands: destructive infra, git and SQL, piping downloads into a shell, sudo, leaking or committing secrets. Reads git. The quiet choice for daily work.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

@@ -1,13 +1,9 @@
 {
   "name": "context-meter",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "context-meter--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "context-meter--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "command.run{command=?}",
-    "session.end",
-    "session.start",
-    "tool.call",
     "turn.complete",
     "turn.start",
     "ui.render{component=AbovePrompt}"
@@ -16,19 +12,13 @@
     "$.clock.after",
     "$.clock.every",
     "$.clock.now",
-    "$.command.register",
-    "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
-    "$.store.get",
-    "$.store.set",
     "$.ui.log",
-    "$.ui.resolve",
-    "$.ui.toast"
+    "$.ui.resolve"
   ],
-  "testCount": 12,
+  "testCount": 13,
   "manifest": {
     "description": "A band above the prompt with a 10 cell bar of the context window used, yellow from 60 percent, red from 80.",
     "author": {

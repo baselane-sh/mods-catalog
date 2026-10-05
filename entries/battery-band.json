@@ -1,0 +1,10 @@
+{
+  "name": "battery-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/battery-band",
+    "ref": "battery-band--v0.4.0"
+  },
+  "category": "band"
+}
