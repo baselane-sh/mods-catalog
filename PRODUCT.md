@@ -56,7 +56,7 @@ The only mods gallery that shows what each mod can do before you install it (its
 1. Trust is visible: what a mod can do is shown in plain words before the install line, not hidden.
 2. One line to install: the install command is always one copy away.
 3. Honest limits: say what the gallery cannot do (for example, takedowns reach only users with auto-update on).
-4. Fast and plain: static pages, no tracking, works without JavaScript except search and copy.
+4. Fast and plain: static pages, no cookies and no ad tracking (visits are counted with GoatCounter, no personal data stored), works without JavaScript except search and copy.
 
 ## Accessibility & Inclusion
 

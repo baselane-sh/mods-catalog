@@ -212,7 +212,9 @@ Page gutter is max(16px, 3vw). Content is capped at 1400px for the browse page (
 
 **Utility strip.** Search (min 48px high, flexes from 320px), Verified switch, sort select (40px), then the category tab rail below. Tab flex weight follows mod count: w1 104px, w2 132px, w3 164px, w4 196px basis, All 88px.
 
-**Mod page.** Two columns from 960px: a 360px sticky plate (top 76px) and the body, gap 48px. Below that, one column, gap 32px. Sections are separated by 40px. Capability list is two columns from 720px.
+**Mod page.** Three blocks in source order: head (crumb, h1, lede), plate, body. From 960px the grid is a 360px column and the content column, gap 0 by 48px: the plate spans both rows of column 1 and is sticky (top 76px); head sits in row 1 and body in row 2 of column 2, each capped at 75ch. Below 960px it is one column, gap 24px, in source order (head, then plate, then body), and the big plate hides its silk text because the lede already says it. Sections are separated by 40px. Capability list is two columns from 720px.
+
+**Browse head.** From 1100px the intro and the install box sit side by side (`minmax(0, 1fr)` and up to 600px, gap 40px); below that the box follows the intro.
 
 **Responsive.** Layout works from 360px. At 640px and below the tab rail becomes a single horizontally scrolling row, the search takes the full row, and the palette button spans the width.
 
@@ -280,6 +282,16 @@ On a successful copy, a 4px round-capped cable-orange SVG curve is drawn from th
 
 ### Notes
 Verified note: Panel fill, check icon. Unreviewed note: Amber fill, Ink text, 600, warn icon. Both 4px radius, 12px by 14px padding.
+
+### Install path
+The parts that take a visitor from landing to two pasted lines. Keep all of them; they carry the product's main job.
+- **Install box (browse):** "Install in two steps" (h2, 1.25rem) in a Panel well with a 1px Line border and 4px radius, beside the intro. Step 1 is the marketplace line with a Copy button. Step 2 is the pattern `/plugin install <name>@baselane-mods` in a dashed Line well with Silk text and the `<name>` placeholder in Ink 600; it has no Copy button because it is not a real command.
+- **Numbered steps:** an `ol` of steps, 14px apart. Each step is a 28px circle numeral (Barlow Condensed 700, 2px Ink ring, no fill) beside a sentence-case label and the install line under it. The same steps appear on the browse box and on the mod page.
+- **Step 3, use it (mod page):** shown only when the mod registers a slash command (`command.run` hook or `$.command.register`). It reads "Use it: type `/name` in Claude Code." with the command in a small Field chip. Names come from the hook filter or the mod's own description; with none found it says the README names it. It has no Copy button.
+- **Risk summary (mod page):** a Panel well directly above the install steps and below the trust note. The highest risk word (condensed capitals in the risk colour) leads "Its riskiest abilities:", then up to three plain-words lines in 600, then a link to the full capability list. A mod with no hooks and no calls shows one Info line instead. This keeps Trust Is Visible: risk is read before the lines are copied.
+- **Setup note (mod page):** under the install steps, a Panel well with a 1px Line border, warn icon, "Needs setup." in 600 and then the author's own sentence, quoted, never written by us. Shown only when the description says the mod does nothing "until you set" something. Not amber: amber stays the Unreviewed mark.
+- **IN/OUT key (browse):** one line beside the "All mods" heading, 0.9rem Muted: IN jacks are what a mod listens to, OUT jacks are what it does on your machine, a red label means high risk. IN and OUT are set as condensed 0.8rem Ink legends to match the plates.
+- **Install lines on phones:** at 640px and below the command wraps (`overflow-wrap: anywhere`) instead of scrolling, so the whole line is visible before copy.
 
 ## Motion
 

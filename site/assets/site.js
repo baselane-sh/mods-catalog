@@ -3,6 +3,15 @@
 const base = document.body.dataset.base || '/'
 const $ = (selector, root = document) => root.querySelector(selector)
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)]
+const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)
+
+// One polite live region per page, for copy results and filter counts.
+function announce(text) {
+  const region = $('[data-announce]')
+  if (!region) return
+  region.textContent = ''
+  setTimeout(() => { region.textContent = text }, 30)
+}
 
 function setupFilters() {
   const rack = $('[data-rack]')
@@ -15,6 +24,8 @@ function setupFilters() {
   const top = $('[data-top]')
   const count = $('[data-count]')
   const empty = $('[data-empty]')
+  const emptyQuery = $('[data-empty-query]')
+  const hasSort = value => [...sort.options].some(option => option.value === value)
   const state = () => ({
     q: q.value.trim().toLowerCase(),
     category: tabs.find(tab => tab.getAttribute('aria-checked') === 'true')?.dataset.value ?? '',
@@ -43,8 +54,10 @@ function setupFilters() {
     if (write || s.sort !== 'updated') rack.append(...[...modules].sort(SORTS[s.sort] ?? SORTS.updated))
     count.textContent = String(shown)
     empty.hidden = shown > 0
+    emptyQuery.textContent = s.q ? ` "${q.value.trim()}"` : ''
     if (top) top.hidden = Boolean(s.q || s.category || s.verified)
     if (write) {
+      announce(shown === 1 ? '1 mod shown' : `${shown} mods shown`)
       const params = new URLSearchParams()
       if (s.q) params.set('q', s.q)
       if (s.category) params.set('category', s.category)
@@ -56,13 +69,17 @@ function setupFilters() {
   }
 
   function selectTab(value) {
-    for (const tab of tabs) tab.setAttribute('aria-checked', String(tab.dataset.value === value))
+    for (const tab of tabs) {
+      const on = tab.dataset.value === value
+      tab.setAttribute('aria-checked', String(on))
+      tab.tabIndex = on ? 0 : -1
+    }
   }
 
   const params = new URLSearchParams(location.search)
   q.value = params.get('q') ?? ''
   verified.checked = params.get('verified') === '1'
-  if (SORTS[params.get('sort')]) sort.value = params.get('sort')
+  if (SORTS[params.get('sort')] && hasSort(params.get('sort'))) sort.value = params.get('sort')
   selectTab(tabs.some(tab => tab.dataset.value === params.get('category')) ? params.get('category') : '')
 
   let timer
@@ -71,11 +88,15 @@ function setupFilters() {
   sort.addEventListener('change', () => apply())
   for (const tab of tabs) tab.addEventListener('click', () => { selectTab(tab.dataset.value); apply() })
   $('[data-filter="category"]').addEventListener('keydown', event => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return
+    const keys = { ArrowLeft: -1, ArrowUp: -1, ArrowRight: 1, ArrowDown: 1 }
+    if (!(event.key in keys) && event.key !== 'Home' && event.key !== 'End') return
+    event.preventDefault()
     const index = tabs.findIndex(tab => tab.getAttribute('aria-checked') === 'true')
-    const next = tabs[(index + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]
+    const nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + keys[event.key] + tabs.length) % tabs.length
+    const next = tabs[nextIndex]
     selectTab(next.dataset.value)
     next.focus()
+    next.scrollIntoView({ block: 'nearest', inline: 'nearest' })
     apply()
   })
   $('[data-clear]').addEventListener('click', () => { q.value = ''; verified.checked = false; selectTab(''); apply(); q.focus() })
@@ -87,6 +108,7 @@ function patchCable(button, led) {
   if (!led || matchMedia('(prefers-reduced-motion: reduce)').matches) return
   const from = button.getBoundingClientRect()
   const to = led.getBoundingClientRect()
+  if (to.bottom < 0 || to.top > innerHeight) return
   const x1 = from.left + from.width / 2
   const y1 = from.top + from.height / 2
   const x2 = to.left + to.width / 2
@@ -105,21 +127,43 @@ function patchCable(button, led) {
   setTimeout(() => svg.remove(), 1700)
 }
 
+// Clipboard API first; on plain http or a denied permission, select the text and try the
+// older copy command; if that fails too, leave the text selected and say how to copy it.
+async function copyText(code) {
+  const text = code.textContent ?? ''
+  try {
+    await navigator.clipboard.writeText(text)
+    return true
+  } catch {
+    const range = document.createRange()
+    range.selectNodeContents(code)
+    const selection = getSelection()
+    selection.removeAllRanges()
+    selection.addRange(range)
+    try { return document.execCommand('copy') } catch { return false }
+  }
+}
+
 function setupCopy() {
-  const led = $('.mod-plate .led') ?? $('.brand-led')
   for (const button of $$('[data-copy]')) {
     const label = $('[data-copy-label]', button)
+    let reset
     button.addEventListener('click', async () => {
-      const text = document.getElementById(button.dataset.copy)?.textContent ?? ''
-      try {
-        await navigator.clipboard.writeText(text)
+      const code = document.getElementById(button.dataset.copy)
+      if (!code) return
+      const led = $('.mod-plate .led') ?? $('.brand-led')
+      clearTimeout(reset)
+      if (await copyText(code)) {
         patchCable(button, led)
         button.dataset.state = 'copied'
         label.textContent = 'Copied'
         led?.classList.add('lit')
-        setTimeout(() => { delete button.dataset.state; label.textContent = 'Copy'; led?.classList.remove('lit') }, 1800)
-      } catch {
-        label.textContent = 'Select and copy'
+        announce(`Copied: ${code.textContent}`)
+        reset = setTimeout(() => { delete button.dataset.state; label.textContent = 'Copy'; led?.classList.remove('lit') }, 1800)
+      } else {
+        label.textContent = isMac ? 'Press ⌘C' : 'Press Ctrl+C'
+        announce('Could not copy. The line is selected: press the copy keys.')
+        reset = setTimeout(() => { label.textContent = 'Copy' }, 4000)
       }
     })
   }
@@ -131,17 +175,38 @@ function setupPalette() {
   const list = $('[data-palette-results]')
   if (!dialog || !input || !list) return
   let index = null
+  let failed = false
   let results = []
   let active = 0
+
+  for (const key of $$('[data-shortcut]')) key.textContent = isMac ? '⌘K' : 'Ctrl K'
 
   async function load() {
     if (index) return index
     try {
-      index = await (await fetch(`${base}index.json`)).json()
+      const response = await fetch(`${base}index.json`)
+      if (!response.ok) throw new Error(String(response.status))
+      index = await response.json()
+      failed = false
     } catch {
-      index = []
+      failed = true
+      return []
     }
     return index
+  }
+
+  function message(text, href) {
+    const li = document.createElement('li')
+    li.className = 'p-empty'
+    li.setAttribute('role', 'none')
+    li.textContent = text
+    if (href) {
+      const a = document.createElement('a')
+      a.href = href
+      a.textContent = 'Browse all mods'
+      li.append(' ', a)
+    }
+    return li
   }
 
   function draw() {
@@ -151,11 +216,13 @@ function setupPalette() {
       return words.every(word => hay.includes(word))
     }).slice(0, 12)
     active = Math.min(active, Math.max(0, results.length - 1))
-    list.replaceChildren(...(results.length ? results.map((mod, i) => {
+    const rows = results.map((mod, i) => {
       const li = document.createElement('li')
+      li.setAttribute('role', 'none')
       const a = document.createElement('a')
       a.href = `${base}mods/${mod.name}/`
       a.id = `p-${i}`
+      a.tabIndex = -1
       a.setAttribute('role', 'option')
       a.setAttribute('aria-selected', String(i === active))
       for (const [cls, text] of [['p-name', mod.name], ['p-cat', mod.category], ['p-desc', mod.description]]) {
@@ -164,10 +231,19 @@ function setupPalette() {
         span.textContent = text
         a.append(span)
       }
+      a.addEventListener('mousemove', () => {
+        if (active === i) return
+        active = i
+        for (const option of $$('[role="option"]', list)) option.setAttribute('aria-selected', String(option === a))
+        input.setAttribute('aria-activedescendant', a.id)
+      })
       li.append(a)
       return li
-    }) : [Object.assign(document.createElement('li'), { className: 'p-empty', textContent: 'No mod matches.' })]))
-    input.setAttribute('aria-activedescendant', results.length ? `p-${active}` : '')
+    })
+    const fallback = failed ? message('Search could not load.', base) : message('No mod matches. Try fewer words.')
+    list.replaceChildren(...(rows.length ? rows : [fallback]))
+    if (results.length) input.setAttribute('aria-activedescendant', `p-${active}`)
+    else input.removeAttribute('aria-activedescendant')
     $(`#p-${active}`, list)?.scrollIntoView({ block: 'nearest' })
   }
 
@@ -181,9 +257,14 @@ function setupPalette() {
     input.focus()
   }
 
+  // "/" focuses the page's own search on the browse page, and opens the palette elsewhere.
   document.addEventListener('keydown', event => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); open() }
-    else if (event.key === '/' && !event.target.closest('input, textarea, select')) { event.preventDefault(); open() }
+    else if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !event.target.closest('input, textarea, select, [contenteditable]')) {
+      event.preventDefault()
+      const search = $('[data-filter="q"]')
+      if (search && !dialog.open) { search.focus(); search.select() } else open()
+    }
   })
   for (const button of $$('[data-palette-open]')) button.addEventListener('click', open)
   input.addEventListener('input', () => { active = 0; draw() })
