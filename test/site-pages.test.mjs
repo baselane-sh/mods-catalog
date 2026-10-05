@@ -34,3 +34,13 @@ test('the Top row needs a star signal', () => {
   assert.deepEqual(topMods([fakeMod({ stars: 1 }), fakeMod({ name: 'b', stars: 5 })]).map(m => m.name), ['b', 'demo-mod'])
   assert.doesNotMatch(browsePage({ base: '/', mods: [fakeMod()], top: [] }), /Top mods/)
 })
+
+test('every page loads the pinned GoatCounter script and the CSP allows only its two hosts', () => {
+  const page = modPage({ base: '/', mod: fakeMod() })
+  assert.match(page, /<script data-goatcounter="https:\/\/baselane\.goatcounter\.com\/count" async src="https:\/\/gc\.zgo\.at\/count\.v4\.js" integrity="sha384-[A-Za-z0-9+/=]+" crossorigin="anonymous"><\/script>/)
+  const csp = page.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1]
+  assert.match(csp, /script-src 'self' https:\/\/gc\.zgo\.at\/count\.v4\.js;/)
+  assert.match(csp, /connect-src 'self' https:\/\/baselane\.goatcounter\.com;/)
+  assert.doesNotMatch(csp, /img-src [^;]*goatcounter/)
+  assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval/)
+})
