@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/code-only",
-    "ref": "code-only--v0.4.0"
+    "ref": "code-only--v0.5.0"
   },
   "category": "style"
 }

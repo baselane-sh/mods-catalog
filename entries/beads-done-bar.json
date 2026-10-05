@@ -1,0 +1,10 @@
+{
+  "name": "beads-done-bar",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-done-bar",
+    "ref": "beads-done-bar--v0.5.0"
+  },
+  "category": "band"
+}

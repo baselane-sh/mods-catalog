@@ -1,8 +1,8 @@
 {
   "name": "sounds-scifi",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "sounds-scifi--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "sounds-scifi--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "tool.call",
     "turn.complete"
@@ -11,7 +11,7 @@
     "$.audio.play",
     "$.ui.log"
   ],
-  "testCount": 17,
+  "testCount": 19,
   "manifest": {
     "description": "Sci-fi console sounds: a beep when tests pass, an alarm when they fail, a warp when a turn ends.",
     "author": {

@@ -1,13 +1,13 @@
 {
   "name": "no-sycophancy",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "no-sycophancy--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "no-sycophancy--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 6,
+  "testCount": 3,
   "manifest": {
     "description": "No flattery or filler. Disagreement is stated plainly, with the reason.",
     "author": {

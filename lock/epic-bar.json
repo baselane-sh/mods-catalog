@@ -1,0 +1,37 @@
+{
+  "name": "epic-bar",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "epic-bar--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "session.end",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.process.run",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 15,
+  "manifest": {
+    "description": "A band above the prompt with the progress of the epic you work on, or of the open epic nearest to done (bm-ooq ███████░ 7/8), read with bd. Hidden without epics or bd.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

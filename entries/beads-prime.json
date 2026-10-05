@@ -1,0 +1,10 @@
+{
+  "name": "beads-prime",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-prime",
+    "ref": "beads-prime--v0.5.0"
+  },
+  "category": "style"
+}

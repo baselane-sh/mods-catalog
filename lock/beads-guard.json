@@ -1,0 +1,22 @@
+{
+  "name": "beads-guard",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "beads-guard--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "classic.PreToolUse"
+  ],
+  "calls": [],
+  "testCount": 13,
+  "manifest": {
+    "description": "Asks before bd commands that delete data or rewrite history: delete, purge, prune, gc, sql, admin, import, rename, forget, restore, migrate and more. Reads only the command text, runs no bd.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

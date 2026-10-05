@@ -1,8 +1,8 @@
 {
   "name": "ci-band",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "ci-band--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "ci-band--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "session.end",
     "session.start",

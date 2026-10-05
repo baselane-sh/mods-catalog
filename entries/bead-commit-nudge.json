@@ -1,0 +1,10 @@
+{
+  "name": "bead-commit-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/bead-commit-nudge",
+    "ref": "bead-commit-nudge--v0.5.0"
+  },
+  "category": "nudge"
+}

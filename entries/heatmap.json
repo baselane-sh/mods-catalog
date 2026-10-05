@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/heatmap",
-    "ref": "heatmap--v0.4.0"
+    "ref": "heatmap--v0.5.0"
   },
   "category": "stats"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "bead-streak",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/bead-streak",
+    "ref": "bead-streak--v0.5.0"
+  },
+  "category": "stats"
+}

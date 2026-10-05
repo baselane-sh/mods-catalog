@@ -1,0 +1,10 @@
+{
+  "name": "epics-pane",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/epics-pane",
+    "ref": "epics-pane--v0.5.0"
+  },
+  "category": "pane"
+}

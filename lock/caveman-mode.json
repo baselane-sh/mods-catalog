@@ -1,13 +1,13 @@
 {
   "name": "caveman-mode",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "caveman-mode--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "caveman-mode--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 9,
+  "testCount": 6,
   "manifest": {
     "description": "Prose in short caveman speech (\"Fix bug. Test pass.\"), still accurate. Code and commands stay exact.",
     "author": {

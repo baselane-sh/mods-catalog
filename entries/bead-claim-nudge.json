@@ -1,0 +1,10 @@
+{
+  "name": "bead-claim-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/bead-claim-nudge",
+    "ref": "bead-claim-nudge--v0.5.0"
+  },
+  "category": "nudge"
+}

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/conventional-commits",
-    "ref": "conventional-commits--v0.4.0"
+    "ref": "conventional-commits--v0.5.0"
   },
   "category": "style"
 }

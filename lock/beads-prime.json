@@ -1,0 +1,25 @@
+{
+  "name": "beads-prime",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "beads-prime--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 10,
+  "manifest": {
+    "description": "Runs bd prime once per session and adds its text (max 8 KB) to the system prompt, from the repo's .beads files and bd memories. bd setup claude hooks may add it twice.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

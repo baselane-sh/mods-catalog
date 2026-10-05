@@ -1,0 +1,25 @@
+{
+  "name": "bead-chime",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "bead-chime--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "tool.call"
+  ],
+  "calls": [
+    "$.audio.play",
+    "$.ui.log"
+  ],
+  "testCount": 17,
+  "manifest": {
+    "description": "Plays a short chime when a Bash call that ran bd close (or bd done) ends with exit code 0. It reads only the command text and the result, and runs no program.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

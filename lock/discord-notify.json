@@ -1,8 +1,8 @@
 {
   "name": "discord-notify",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "discord-notify--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "discord-notify--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "classic.Notification"
   ],

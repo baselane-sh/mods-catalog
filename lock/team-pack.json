@@ -1,13 +1,13 @@
 {
   "name": "team-pack",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "team-pack--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "team-pack--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 19,
+  "testCount": 16,
   "manifest": {
     "description": "Team habits in one install: Conventional Commits, test-first work and a security check on every change.",
     "author": {

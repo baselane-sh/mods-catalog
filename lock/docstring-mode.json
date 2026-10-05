@@ -1,13 +1,13 @@
 {
   "name": "docstring-mode",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "docstring-mode--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "docstring-mode--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 10,
+  "testCount": 7,
   "manifest": {
     "description": "Every new or changed public function gets a short doc comment in the language's normal style.",
     "author": {

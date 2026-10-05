@@ -1,0 +1,10 @@
+{
+  "name": "beads-standup",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-standup",
+    "ref": "beads-standup--v0.5.0"
+  },
+  "category": "command"
+}

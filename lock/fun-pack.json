@@ -1,13 +1,13 @@
 {
   "name": "fun-pack",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "fun-pack--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "fun-pack--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 15,
+  "testCount": 12,
   "manifest": {
     "description": "Fun habits in one install: caveman prose and gitmoji commit messages. They compose: caveman never touches commit messages.",
     "author": {

@@ -1,0 +1,10 @@
+{
+  "name": "beads-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-guard",
+    "ref": "beads-guard--v0.5.0"
+  },
+  "category": "guard"
+}
