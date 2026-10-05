@@ -27,7 +27,7 @@ test('a mod that needs setup says so in the install section', async ({ page }) =
 })
 
 test('the riskiest abilities sit above the install lines', async ({ page }) => {
-  await page.goto('/mods/secret-guard/')
+  await page.goto('/mods/big-file-guard/')
   const glance = page.locator('.glance')
   await expect(glance).toContainText('Starts programs on your machine')
   const glanceBox = await glance.boundingBox()
