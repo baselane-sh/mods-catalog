@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 
-const visible = page => page.locator('[data-rack] .module:not([hidden])')
+// What the visitor sees, not only the hidden attribute: CSS can override [hidden].
+const visible = page => page.locator('[data-rack] .module:visible')
 const count = page => page.locator('[data-count]')
 
 test.beforeEach(async ({ page }) => {
@@ -38,6 +39,7 @@ test('category tab filters to sound modules, arrow keys move selection', async (
   expect(cats.length).toBeGreaterThan(0)
   expect(new Set(cats)).toEqual(new Set(['sound']))
   await expect(count(page)).toHaveText(String(cats.length))
+  await expect(page.locator('[data-rack] .module[hidden]').first()).toBeHidden()
 
   const checked = rail.locator('[aria-checked="true"]')
   await expect(checked).toHaveAttribute('data-value', 'sound')
