@@ -9,8 +9,10 @@ export const installLine = name => `/plugin install ${name}@${SITE.marketplace}`
 
 export const RISK_WORDS = { high: 'High', medium: 'Medium', low: 'Low', info: 'Info' }
 
-export function copyLine(text, id) {
-  return html`<div class="copy-line"><code id="cmd-${id}">${text}</code><button type="button" class="copy" data-copy="cmd-${id}" aria-describedby="cmd-${id}">${icon('copy')}<span data-copy-label>Copy</span></button></div>`
+// `mod` (optional) names the mod an install line belongs to; the copy counter reads it.
+export function copyLine(text, id, mod) {
+  const modAttr = mod ? html` data-mod="${mod}"` : ''
+  return html`<div class="copy-line"><code id="cmd-${id}">${text}</code><button type="button" class="copy" data-copy="cmd-${id}"${modAttr} aria-describedby="cmd-${id}">${icon('copy')}<span data-copy-label>Copy</span></button></div>`
 }
 
 function step(n, label, content) {
@@ -44,7 +46,7 @@ export function modInstall(mod) {
   <h2 id="install-title">Install</h2>
   <ol class="install-steps">
     ${step(1, 'Add the gallery to Claude Code. Skip this if you did it before.', copyLine(MARKETPLACE_LINE, 'add'))}
-    ${step(2, 'Install this mod.', copyLine(installLine(mod.name), 'install'))}
+    ${step(2, 'Install this mod.', copyLine(installLine(mod.name), 'install', mod.name))}
     ${use ? html`<li class="step"><span class="step-n" aria-hidden="true">3</span><div class="step-body">${use}</div></li>` : ''}
   </ol>
   ${setup ? html`<p class="setup-note">${icon('warn')}<span><strong>Needs setup.</strong> ${setup}</span></p>` : ''}
