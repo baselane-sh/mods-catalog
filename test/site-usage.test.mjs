@@ -18,6 +18,10 @@ test('paths and commands named by a mod that registers none are not slash comman
 
 test('a setup note is the author sentence that says the mod waits for setup', () => {
   assert.equal(setupNote('Sends a push through ntfy.sh. Does nothing until you set an ntfy topic.'), 'Does nothing until you set an ntfy topic.')
+  assert.equal(setupNote('Posts to Slack v1.2 does nothing until you set SLACK_URL.'), 'Posts to Slack v1.2 does nothing until you set SLACK_URL.')
+  assert.equal(setupNote('Does nothing until you set ~/.config/x.json first.'), 'Does nothing until you set ~/.config/x.json first.')
+  assert.equal(setupNote('Posts to a Slack incoming webhook. Sends the project name and a short status only. Does nothing until you set a webhook URL.'), 'Does nothing until you set a webhook URL.')
+  assert.equal(setupNote('Sends a phone push through ntfy.sh when a Bash command ran longer than a threshold (60 seconds by default). Sends the project name and the seconds only. Does nothing until you set an ntfy topic.'), 'Does nothing until you set an ntfy topic.')
   assert.equal(setupNote('Asks before a live API key, token or private key is written.'), null)
 })
 

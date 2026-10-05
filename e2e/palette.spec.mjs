@@ -34,6 +34,16 @@ test('typing lists matches, arrows and Enter navigate, Escape closes', async ({ 
   await expect(page.locator('h1')).toHaveText(target)
 })
 
+test('aria-expanded follows whether the palette lists matches', async ({ page }) => {
+  const input = page.locator('[data-palette-input]')
+  await expect(input).toHaveAttribute('aria-expanded', 'false')
+  await page.keyboard.press('Control+K')
+  await input.fill('cost')
+  await expect(input).toHaveAttribute('aria-expanded', 'true')
+  await input.fill('zzzzqqqq')
+  await expect(input).toHaveAttribute('aria-expanded', 'false')
+})
+
 test('Escape closes the palette', async ({ page }) => {
   await page.keyboard.press('Control+K')
   await expect(dialog(page)).toBeVisible()

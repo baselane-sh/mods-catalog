@@ -242,6 +242,7 @@ function setupPalette() {
     })
     const fallback = failed ? message('Search could not load.', base) : message('No mod matches. Try fewer words.')
     list.replaceChildren(...(rows.length ? rows : [fallback]))
+    input.setAttribute('aria-expanded', String(results.length > 0))
     if (results.length) input.setAttribute('aria-activedescendant', `p-${active}`)
     else input.removeAttribute('aria-activedescendant')
     $(`#p-${active}`, list)?.scrollIntoView({ block: 'nearest' })
