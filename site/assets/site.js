@@ -144,6 +144,21 @@ async function copyText(code) {
   }
 }
 
+// Count a successful copy in GoatCounter (an event, no personal data). Never throws, never
+// blocks the copy; does nothing when the counter script is missing or blocked.
+function copyEventPath(id, mod) {
+  if (id === 'cmd-marketplace' || id === 'cmd-add') return 'copy/marketplace'
+  if (mod) return `install/${mod}`
+  return `copy/${id.replace(/^cmd-/, '')}`
+}
+
+function countCopy(button) {
+  try {
+    const path = copyEventPath(button.dataset.copy, button.dataset.mod)
+    window.goatcounter?.count?.({ path, title: path, event: true })
+  } catch {}
+}
+
 function setupCopy() {
   for (const button of $$('[data-copy]')) {
     const label = $('[data-copy-label]', button)
@@ -154,6 +169,7 @@ function setupCopy() {
       const led = $('.mod-plate .led') ?? $('.brand-led')
       clearTimeout(reset)
       if (await copyText(code)) {
+        countCopy(button)
         patchCable(button, led)
         button.dataset.state = 'copied'
         label.textContent = 'Copied'

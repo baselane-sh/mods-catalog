@@ -41,7 +41,7 @@ function header(base, current) {
 
 function footer() {
   return html`<footer class="bottom-rail">
-  <p>Every mod here passed automated checks and is pinned to the commit that passed them. A mod runs with your permissions. <a href="${SITE.modsDocs}">How mods work</a>. This site counts visits with GoatCounter: no cookies, no personal data stored.</p>
+  <p>Every mod here passed automated checks and is pinned to the commit that passed them. A mod runs with your permissions. <a href="${SITE.modsDocs}">How mods work</a>. This site counts visits and copy clicks per mod with GoatCounter: no cookies, no personal data stored.</p>
   <p class="rail-links"><a href="https://github.com/${SITE.catalogRepo}">Catalog source</a><a href="https://github.com/${SITE.catalogRepo}/security/advisories/new">Report a security problem</a><a href="https://baselane.sh">Baselane</a></p>
 </footer>`
 }
