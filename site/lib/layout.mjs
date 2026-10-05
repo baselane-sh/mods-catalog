@@ -49,7 +49,7 @@ function footer() {
 function palette() {
   return html`<dialog class="palette" data-palette aria-label="Find a mod">
   <div class="palette-box">
-    <label class="palette-field">${icon('search')}<span class="sr-only">Find a mod</span><input type="search" data-palette-input placeholder="Find a mod by name, tag or what it does" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="palette-results"></label>
+    <label class="palette-field">${icon('search')}<span class="sr-only">Find a mod</span><input type="search" data-palette-input placeholder="Find a mod by name, tag or what it does" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="palette-results"></label>
     <ul class="palette-results" id="palette-results" role="listbox" aria-label="Matching mods" data-palette-results></ul>
     <p class="palette-hint"><kbd>↑</kbd><kbd>↓</kbd> move <kbd>↵</kbd> open <kbd>esc</kbd> close</p>
   </div>

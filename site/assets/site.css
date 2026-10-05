@@ -293,7 +293,8 @@ a.module:hover .led, a.module:focus-visible .led { background: radial-gradient(c
 .step-n { display: grid; place-items: center; width: 28px; height: 28px; margin-top: 1px; font: 700 1rem/1 var(--legend); color: var(--ink); border: 2px solid var(--ink); border-radius: 50%; }
 .step-body { display: grid; gap: 6px; min-width: 0; }
 .step-label { margin: 3px 0 0; }
-.step-label code { padding: 1px 5px; background: var(--field); border: 1px solid var(--line); border-radius: 3px; }.cap-grid { display: grid; gap: 24px; margin-top: 16px; }
+.step-label code { padding: 1px 5px; background: var(--field); border: 1px solid var(--line); border-radius: 3px; }
+.cap-grid { display: grid; gap: 24px; margin-top: 16px; }
 @media (min-width: 720px) { .cap-grid { grid-template-columns: 1fr 1fr; } }
 .cap-col h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; }
 .cap-hint { margin: 4px 0 8px; font-size: .9rem; }

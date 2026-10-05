@@ -19,9 +19,10 @@ export function slashCommands({ description = '', hooks = [], calls = [] }) {
   return [...new Set([...fromHooks, ...fromText])]
 }
 
+// A sentence ends at a period followed by space or the end, so "v1.2" and "~/.config" stay whole.
 // The author's own sentence when the description says the mod needs setup first.
 export function setupNote(description = '') {
-  const sentence = description.match(/[^.]*\buntil you (?:set|add|configure|create)\b[^.]*\./i)
+  const sentence = description.match(/(?:^|(?<=\.\s+))(?:(?!\.\s).)*?\buntil you (?:set|add|configure|create)\b.*?\.(?=\s|$)/i)
   return sentence ? sentence[0].trim() : null
 }
 
