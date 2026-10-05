@@ -1,0 +1,26 @@
+{
+  "name": "bead-stale-nudge",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "bead-stale-nudge--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "session.start"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 15,
+  "manifest": {
+    "description": "At session start, one toast when beads in progress have had no update for 7 days, with their ids. Reads with bd stale, and says nothing without bd or a beads project.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

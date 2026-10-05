@@ -1,13 +1,13 @@
 {
   "name": "code-only",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "code-only--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "code-only--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 8,
+  "testCount": 5,
   "manifest": {
     "description": "Replies with the code or command first and at most two short sentences of prose, unless asked to explain.",
     "author": {

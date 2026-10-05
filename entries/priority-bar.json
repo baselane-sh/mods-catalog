@@ -1,0 +1,10 @@
+{
+  "name": "priority-bar",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/priority-bar",
+    "ref": "priority-bar--v0.5.0"
+  },
+  "category": "band"
+}

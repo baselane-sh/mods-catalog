@@ -1,13 +1,13 @@
 {
   "name": "socratic-mode",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "socratic-mode--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "socratic-mode--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 10,
+  "testCount": 7,
   "manifest": {
     "description": "For learning: answers a question with a short hint and one guiding question first, and gives the full answer when you ask. Code and commands stay exact.",
     "author": {

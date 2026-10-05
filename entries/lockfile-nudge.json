@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/lockfile-nudge",
-    "ref": "lockfile-nudge--v0.4.0"
+    "ref": "lockfile-nudge--v0.5.0"
   },
   "category": "nudge"
 }

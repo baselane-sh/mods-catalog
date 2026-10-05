@@ -1,13 +1,13 @@
 {
   "name": "tdd-mode",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "tdd-mode--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "tdd-mode--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 9,
+  "testCount": 6,
   "manifest": {
     "description": "Writes a failing test first, watches it fail, then implements.",
     "author": {

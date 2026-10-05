@@ -1,8 +1,8 @@
 {
   "name": "sounds-zen",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "sounds-zen--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "sounds-zen--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "tool.call",
     "turn.complete"
@@ -11,7 +11,7 @@
     "$.audio.play",
     "$.ui.log"
   ],
-  "testCount": 17,
+  "testCount": 19,
   "manifest": {
     "description": "Soft bells and singing-bowl tones: a bell when tests pass, a low bowl when they fail, a muted chime when a call is blocked, a bowl when a turn ends.",
     "author": {

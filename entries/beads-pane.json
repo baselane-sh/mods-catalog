@@ -1,0 +1,10 @@
+{
+  "name": "beads-pane",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-pane",
+    "ref": "beads-pane--v0.5.0"
+  },
+  "category": "pane"
+}

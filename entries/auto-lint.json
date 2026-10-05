@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/auto-lint",
-    "ref": "auto-lint--v0.4.0"
+    "ref": "auto-lint--v0.5.0"
   },
   "category": "lifecycle"
 }

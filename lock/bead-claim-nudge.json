@@ -1,0 +1,29 @@
+{
+  "name": "bead-claim-nudge",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "bead-claim-nudge--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "classic.Stop",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.session.cwd",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 16,
+  "manifest": {
+    "description": "At turn end, if Claude edited a file and no bead is in progress, shows a toast and reminds Claude at your next prompt, once per session. Reads with bd count; quiet without bd.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

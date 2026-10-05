@@ -1,13 +1,13 @@
 {
   "name": "reply-language",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "reply-language--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "reply-language--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 8,
+  "testCount": 5,
   "manifest": {
     "description": "Answers in the language you set (English by default). Code, identifiers and commands stay as they are.",
     "author": {

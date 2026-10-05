@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/cache-meter",
-    "ref": "cache-meter--v0.4.0"
+    "ref": "cache-meter--v0.5.0"
   },
   "category": "band"
 }

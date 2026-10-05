@@ -1,0 +1,10 @@
+{
+  "name": "bead-stale-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/bead-stale-nudge",
+    "ref": "bead-stale-nudge--v0.5.0"
+  },
+  "category": "lifecycle"
+}

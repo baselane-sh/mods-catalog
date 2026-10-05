@@ -1,0 +1,10 @@
+{
+  "name": "beads-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/beads-band",
+    "ref": "beads-band--v0.5.0"
+  },
+  "category": "band"
+}

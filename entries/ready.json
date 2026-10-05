@@ -1,0 +1,10 @@
+{
+  "name": "ready",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ready",
+    "ref": "ready--v0.5.0"
+  },
+  "category": "command"
+}

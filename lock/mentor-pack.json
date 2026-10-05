@@ -1,13 +1,13 @@
 {
   "name": "mentor-pack",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "mentor-pack--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "mentor-pack--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 22,
+  "testCount": 19,
   "manifest": {
     "description": "Mentor habits in one install: a hint and a guiding question first, assumptions listed before work, and a strict self-review after each change.",
     "author": {

@@ -1,13 +1,13 @@
 {
   "name": "ste-mode",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "ste-mode--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "ste-mode--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 8,
+  "testCount": 5,
   "manifest": {
     "description": "Replies in ASD-STE100 Simplified Technical English: approved words, short sentences, one instruction each, active voice.",
     "author": {

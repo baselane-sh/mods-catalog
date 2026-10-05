@@ -1,8 +1,8 @@
 {
   "name": "sounds-minimal",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "sounds-minimal--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "sounds-minimal--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "tool.call",
     "turn.complete"
@@ -11,7 +11,7 @@
     "$.audio.play",
     "$.ui.log"
   ],
-  "testCount": 17,
+  "testCount": 19,
   "manifest": {
     "description": "Very short, quiet clicks and ticks for a subtle signal: a tick when tests pass, two low ticks when they fail, a click when a call is blocked, a soft tick when a turn ends.",
     "author": {

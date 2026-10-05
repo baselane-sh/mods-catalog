@@ -1,0 +1,29 @@
+{
+  "name": "bead-commit-nudge",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "bead-commit-nudge--v0.5.0",
+  "version": "0.5.0",
+  "hooks": [
+    "classic.Stop",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.session.cwd",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 19,
+  "manifest": {
+    "description": "At turn end, if a git commit named no bead id while a bead is in progress, shows a toast and reminds Claude at your next prompt. Reads with bd count and bd where; quiet without bd.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

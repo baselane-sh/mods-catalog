@@ -1,0 +1,10 @@
+{
+  "name": "epic-bar",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/epic-bar",
+    "ref": "epic-bar--v0.5.0"
+  },
+  "category": "band"
+}

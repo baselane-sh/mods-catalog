@@ -1,13 +1,13 @@
 {
   "name": "rubber-duck",
-  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
-  "ref": "rubber-duck--v0.4.0",
-  "version": "0.4.0",
+  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
+  "ref": "rubber-duck--v0.5.0",
+  "version": "0.5.0",
   "hooks": [
     "prompt.compose"
   ],
   "calls": [],
-  "testCount": 10,
+  "testCount": 7,
   "manifest": {
     "description": "Restates the problem in its own words and lists its assumptions before it starts work.",
     "author": {

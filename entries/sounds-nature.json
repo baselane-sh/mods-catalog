@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/sounds-nature",
-    "ref": "sounds-nature--v0.4.0"
+    "ref": "sounds-nature--v0.5.0"
   },
   "category": "sound"
 }
