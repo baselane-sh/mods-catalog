@@ -1,19 +1,13 @@
 {
   "name": "no-verify-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "no-verify-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "no-verify-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
-  "calls": [
-    "$.fs.stat",
-    "$.process.run",
-    "$.session.cwd"
-  ],
-  "testCount": 12,
+  "calls": [],
+  "testCount": 13,
   "manifest": {
     "description": "Asks before git hooks are skipped (--no-verify, commit -n, HUSKY=0, core.hooksPath=/dev/null).",
     "author": {

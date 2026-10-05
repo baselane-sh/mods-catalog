@@ -1,0 +1,10 @@
+{
+  "name": "turn-timer",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/turn-timer",
+    "ref": "turn-timer--v0.4.0"
+  },
+  "category": "band"
+}

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/todo-nudge",
-    "ref": "todo-nudge--v0.3.0"
+    "ref": "todo-nudge--v0.4.0"
   },
   "category": "nudge"
 }

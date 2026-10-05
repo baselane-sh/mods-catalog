@@ -1,8 +1,8 @@
 {
   "name": "guard-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "guard-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "guard-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "classic.PreToolUse",
     "prompt.submit",
@@ -13,9 +13,9 @@
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 63,
+  "testCount": 64,
   "manifest": {
-    "description": "Every Baselane guard in one mod.",
+    "description": "The 15 core Baselane guards in one mod (secrets, git, infra, packages, path jail). Some read git, measure files with find, read HOME with printenv, or check where a path really lands.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

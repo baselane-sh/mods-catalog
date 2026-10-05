@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/gitignore-check",
-    "ref": "gitignore-check--v0.3.0"
+    "ref": "gitignore-check--v0.4.0"
   },
   "category": "guard"
 }

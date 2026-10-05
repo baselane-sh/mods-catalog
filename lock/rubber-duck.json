@@ -1,0 +1,22 @@
+{
+  "name": "rubber-duck",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "rubber-duck--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 10,
+  "manifest": {
+    "description": "Restates the problem in its own words and lists its assumptions before it starts work.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

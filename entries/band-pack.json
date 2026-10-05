@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/band-pack",
-    "ref": "band-pack--v0.3.0"
+    "ref": "band-pack--v0.4.0"
   },
   "category": "band"
 }

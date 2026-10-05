@@ -1,19 +1,13 @@
 {
   "name": "git-history-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "git-history-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "git-history-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
-  "calls": [
-    "$.fs.stat",
-    "$.process.run",
-    "$.session.cwd"
-  ],
-  "testCount": 12,
+  "calls": [],
+  "testCount": 13,
   "manifest": {
     "description": "Asks before git commands that throw away work or rewrite history: reset --hard, clean, rebase, filter-branch, filter-repo, push --delete, branch -D and stash clear.",
     "author": {

@@ -1,0 +1,33 @@
+{
+  "name": "cache-meter",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "cache-meter--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 15,
+  "manifest": {
+    "description": "A band above the prompt with the share of prompt tokens the cache served this session (cache 87%). A high share means cheaper, faster turns.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

@@ -1,21 +1,18 @@
 {
   "name": "protect-main",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "protect-main--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "protect-main--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
   "calls": [
-    "$.fs.stat",
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 15,
+  "testCount": 9,
   "manifest": {
-    "description": "Asks before a commit, push or merge while you are on main or master.",
+    "description": "Asks before a commit, push or merge while you are on main or master. Reads the branch with git.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

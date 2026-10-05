@@ -1,0 +1,38 @@
+{
+  "name": "langs",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "langs--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "turn.complete",
+    "turn.start"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.toast"
+  ],
+  "testCount": 26,
+  "manifest": {
+    "description": "Counts the file types Claude edits across sessions and adds /langs: a bar list of the types edited most, each file counted once per session.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

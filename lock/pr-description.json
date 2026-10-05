@@ -1,8 +1,8 @@
 {
   "name": "pr-description",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "pr-description--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "pr-description--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -13,9 +13,6 @@
   "calls": [
     "$.clock.now",
     "$.command.register",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.fs.write",
     "$.process.run",
     "$.session.cwd",
     "$.session.turns",
@@ -28,7 +25,7 @@
   ],
   "testCount": 23,
   "manifest": {
-    "description": "Adds /pr-description: title, summary, diff totals and a test plan stub for the current branch against main or master.",
+    "description": "Adds /pr-description: title, summary, diff totals and a test plan stub for the current branch against main or master, read with git.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

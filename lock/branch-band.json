@@ -1,12 +1,9 @@
 {
   "name": "branch-band",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "branch-band--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "branch-band--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "command.run{command=?}",
-    "session.end",
-    "session.start",
     "tool.call",
     "turn.complete",
     "turn.start",
@@ -16,21 +13,16 @@
     "$.clock.after",
     "$.clock.every",
     "$.clock.now",
-    "$.command.register",
     "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
-    "$.store.get",
-    "$.store.set",
     "$.ui.log",
-    "$.ui.resolve",
-    "$.ui.toast"
+    "$.ui.resolve"
   ],
-  "testCount": 18,
+  "testCount": 19,
   "manifest": {
-    "description": "A band above the prompt with the git branch and the count of changed files, refreshed after each Bash call and file edit.",
+    "description": "A band above the prompt with the git branch and the count of changed files, read with git status after each Bash call and file edit.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

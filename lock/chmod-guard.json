@@ -1,19 +1,13 @@
 {
   "name": "chmod-guard",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "chmod-guard--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "chmod-guard--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "classic.PreToolUse",
-    "prompt.submit",
-    "tool.call"
+    "classic.PreToolUse"
   ],
-  "calls": [
-    "$.fs.stat",
-    "$.process.run",
-    "$.session.cwd"
-  ],
-  "testCount": 12,
+  "calls": [],
+  "testCount": 13,
   "manifest": {
     "description": "Asks before chmod makes files world-writable (777, a+w, o+w) or chmod or chown runs recursively on a broad path (/, a system folder, a home folder).",
     "author": {

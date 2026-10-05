@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/lifecycle-pack",
-    "ref": "lifecycle-pack--v0.3.0"
+    "ref": "lifecycle-pack--v0.4.0"
   },
   "category": "lifecycle"
 }

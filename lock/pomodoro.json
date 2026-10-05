@@ -1,13 +1,11 @@
 {
   "name": "pomodoro",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "pomodoro--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "pomodoro--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
-    "session.end",
     "session.start",
-    "tool.call",
     "turn.complete",
     "turn.start",
     "ui.render{component=AbovePrompt}"
@@ -17,18 +15,14 @@
     "$.clock.every",
     "$.clock.now",
     "$.command.register",
-    "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
-    "$.store.get",
-    "$.store.set",
     "$.ui.log",
     "$.ui.resolve",
     "$.ui.toast"
   ],
-  "testCount": 16,
+  "testCount": 17,
   "manifest": {
     "description": "A band above the prompt with a 25/5 focus timer (focus 18:42, break 03:10). Start and stop it with /pomodoro; a toast marks each switch.",
     "author": {

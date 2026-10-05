@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/lockfile-guard",
-    "ref": "lockfile-guard--v0.3.0"
+    "ref": "lockfile-guard--v0.4.0"
   },
   "category": "guard"
 }

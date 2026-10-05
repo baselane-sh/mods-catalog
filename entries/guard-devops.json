@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/guard-devops",
-    "ref": "guard-devops--v0.3.0"
+    "ref": "guard-devops--v0.4.0"
   },
   "category": "guard"
 }

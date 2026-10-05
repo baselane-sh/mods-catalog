@@ -1,0 +1,10 @@
+{
+  "name": "envinfo",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/envinfo",
+    "ref": "envinfo--v0.4.0"
+  },
+  "category": "command"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "sha-links",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/sha-links",
+    "ref": "sha-links--v0.4.0"
+  },
+  "category": "render"
+}

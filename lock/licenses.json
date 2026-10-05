@@ -1,0 +1,41 @@
+{
+  "name": "licenses",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "licenses--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "ui.render{component=CommandOutput, props has {command=?}}"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.fs.exists",
+    "$.fs.list",
+    "$.fs.read",
+    "$.process.run",
+    "$.session.cwd",
+    "$.session.turns",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 21,
+  "manifest": {
+    "description": "Adds /licenses: the licence of each direct dependency, from node_modules and Python dist-info at the git repo root. Shows unknown when it cannot tell. Read-only.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

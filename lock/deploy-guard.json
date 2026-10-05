@@ -1,0 +1,22 @@
+{
+  "name": "deploy-guard",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "deploy-guard--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "classic.PreToolUse"
+  ],
+  "calls": [],
+  "testCount": 13,
+  "manifest": {
+    "description": "Asks before a production deploy: vercel --prod, netlify deploy --prod, firebase deploy, fly deploy, gcloud app deploy, eb deploy, heroku rollback, serverless deploy to prod.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

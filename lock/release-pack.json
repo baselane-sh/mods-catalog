@@ -1,0 +1,25 @@
+{
+  "name": "release-pack",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "release-pack--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "classic.PreToolUse"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 22,
+  "manifest": {
+    "description": "Asks before a release leaves your machine: package publish, tag push, production deploy and registry push guards in one mod. The tag guard reads tags with git.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

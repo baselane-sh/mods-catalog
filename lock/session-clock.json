@@ -1,13 +1,10 @@
 {
   "name": "session-clock",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "session-clock--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "session-clock--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
-    "command.run{command=?}",
     "session.end",
-    "session.start",
-    "tool.call",
     "turn.complete",
     "turn.start",
     "ui.render{component=AbovePrompt}"
@@ -16,19 +13,13 @@
     "$.clock.after",
     "$.clock.every",
     "$.clock.now",
-    "$.command.register",
-    "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
-    "$.store.get",
-    "$.store.set",
     "$.ui.log",
-    "$.ui.resolve",
-    "$.ui.toast"
+    "$.ui.resolve"
   ],
-  "testCount": 17,
+  "testCount": 18,
   "manifest": {
     "description": "A band above the prompt with the wall clock and how long the session has run (14:05 · 1h 12m).",
     "author": {

@@ -1,19 +1,14 @@
 {
   "name": "todo-nudge",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "todo-nudge--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "todo-nudge--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "classic.Stop",
     "tool.call"
   ],
   "calls": [
-    "$.clock.now",
-    "$.fs.exists",
-    "$.fs.read",
-    "$.model.complete",
     "$.session.cwd",
-    "$.session.usage",
     "$.ui.log",
     "$.ui.toast"
   ],

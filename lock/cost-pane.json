@@ -1,8 +1,8 @@
 {
   "name": "cost-pane",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "cost-pane--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "cost-pane--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.start",
@@ -17,7 +17,6 @@
     "$.clock.every",
     "$.clock.now",
     "$.command.register",
-    "$.process.run",
     "$.session.cwd",
     "$.session.usage",
     "$.state.get",
@@ -28,7 +27,7 @@
     "$.ui.panes",
     "$.ui.resolve"
   ],
-  "testCount": 25,
+  "testCount": 27,
   "manifest": {
     "description": "A live side pane with the session cost, the cost of each of the last 10 turns as a bar, and the average per turn. Open it with /cost-pane.",
     "author": {

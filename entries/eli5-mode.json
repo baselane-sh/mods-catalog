@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/eli5-mode",
-    "ref": "eli5-mode--v0.3.0"
+    "ref": "eli5-mode--v0.4.0"
   },
   "category": "style"
 }

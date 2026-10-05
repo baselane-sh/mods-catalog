@@ -1,31 +1,20 @@
 {
   "name": "notify-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "notify-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "notify-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "classic.Notification",
-    "classic.SessionEnd",
-    "tool.call",
     "turn.complete"
   ],
   "calls": [
-    "$.clock.now",
-    "$.clock.sleep",
-    "$.env.get",
-    "$.fs.exists",
-    "$.fs.list",
-    "$.fs.read",
-    "$.fs.write",
-    "$.http.fetch",
     "$.process.run",
     "$.session.cwd",
-    "$.session.root",
     "$.ui.log"
   ],
   "testCount": 22,
   "manifest": {
-    "description": "Local alerts in one: a desktop notification when Claude Code needs your input, and a spoken line on macOS when a long turn ends.",
+    "description": "Local alerts in one: a desktop notification when Claude Code needs your input (osascript or notify-send), and a spoken line (say) on macOS when a long turn ends.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

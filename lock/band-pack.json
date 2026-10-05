@@ -1,11 +1,10 @@
 {
   "name": "band-pack",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "band-pack--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "band-pack--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
-    "session.end",
     "session.start",
     "tool.call",
     "turn.complete",
@@ -17,8 +16,6 @@
     "$.clock.every",
     "$.clock.now",
     "$.command.register",
-    "$.process.run",
-    "$.session.model",
     "$.session.usage",
     "$.state.get",
     "$.state.set",
@@ -28,9 +25,9 @@
     "$.ui.resolve",
     "$.ui.toast"
   ],
-  "testCount": 44,
+  "testCount": 45,
   "manifest": {
-    "description": "Every Baselane band meter in one row above the prompt: session cost, lattes, context bar, today's spend, the focus timer and the mood ring.",
+    "description": "The first six Baselane band meters in one row above the prompt: session cost, lattes, context bar, today's spend, the focus timer and the mood ring.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

@@ -1,0 +1,36 @@
+{
+  "name": "battery-band",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "battery-band--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "session.end",
+    "session.start",
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.process.run",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 18,
+  "manifest": {
+    "description": "A band above the prompt with the Mac battery percent and charging state (🔋 87%, ⚡ 54% while charging), read from pmset once a minute. Hidden on other systems.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

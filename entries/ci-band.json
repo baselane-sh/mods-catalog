@@ -1,0 +1,10 @@
+{
+  "name": "ci-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ci-band",
+    "ref": "ci-band--v0.4.0"
+  },
+  "category": "band"
+}

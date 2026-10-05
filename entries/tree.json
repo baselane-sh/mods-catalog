@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/tree",
-    "ref": "tree--v0.3.0"
+    "ref": "tree--v0.4.0"
   },
   "category": "command"
 }

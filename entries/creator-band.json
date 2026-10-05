@@ -1,0 +1,10 @@
+{
+  "name": "creator-band",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/creator-band",
+    "ref": "creator-band--v0.4.0"
+  },
+  "category": "band"
+}

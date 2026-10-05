@@ -1,0 +1,22 @@
+{
+  "name": "reviewer-mode",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "reviewer-mode--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "prompt.compose"
+  ],
+  "calls": [],
+  "testCount": 10,
+  "manifest": {
+    "description": "After each code change, reviews its own diff like a strict senior reviewer and lists each issue it found and fixed.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

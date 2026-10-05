@@ -1,0 +1,10 @@
+{
+  "name": "todo-count",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/todo-count",
+    "ref": "todo-count--v0.4.0"
+  },
+  "category": "band"
+}

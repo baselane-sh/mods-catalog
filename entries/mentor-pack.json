@@ -1,0 +1,10 @@
+{
+  "name": "mentor-pack",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/mentor-pack",
+    "ref": "mentor-pack--v0.4.0"
+  },
+  "category": "style"
+}

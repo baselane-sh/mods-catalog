@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/prod-db-guard",
-    "ref": "prod-db-guard--v0.3.0"
+    "ref": "prod-db-guard--v0.4.0"
   },
   "category": "guard"
 }

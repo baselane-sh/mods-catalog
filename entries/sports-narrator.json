@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/sports-narrator",
-    "ref": "sports-narrator--v0.3.0"
+    "ref": "sports-narrator--v0.4.0"
   },
   "category": "nudge"
 }

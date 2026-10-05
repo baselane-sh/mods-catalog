@@ -1,0 +1,25 @@
+{
+  "name": "ship-safe-pack",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "ship-safe-pack--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "classic.PreToolUse"
+  ],
+  "calls": [
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 26,
+  "manifest": {
+    "description": "The release-pack guards plus db-reset-guard and upload-guard: asks before publish, tag push, production deploy, registry push, database wipes and file uploads. Reads tags with git.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

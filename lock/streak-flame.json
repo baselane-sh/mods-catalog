@@ -1,0 +1,35 @@
+{
+  "name": "streak-flame",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "streak-flame--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "turn.complete",
+    "turn.start",
+    "ui.render{component=AbovePrompt}"
+  ],
+  "calls": [
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 27,
+  "manifest": {
+    "description": "A band above the prompt with your daily streak, the days in a row you finished a turn (🔥 5d). The mod keeps the count in its own store.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

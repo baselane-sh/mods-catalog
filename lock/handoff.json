@@ -1,8 +1,8 @@
 {
   "name": "handoff",
-  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
-  "ref": "handoff--v0.3.0",
-  "version": "0.3.0",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "handoff--v0.4.0",
+  "version": "0.4.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -14,7 +14,6 @@
     "$.clock.now",
     "$.command.register",
     "$.fs.exists",
-    "$.fs.read",
     "$.fs.write",
     "$.process.run",
     "$.session.cwd",
@@ -28,7 +27,7 @@
   ],
   "testCount": 20,
   "manifest": {
-    "description": "Adds /handoff: writes a session summary to .claude/handoff.md (never overwriting) and answers with the path.",
+    "description": "Adds /handoff: writes a session summary with the git status to .claude/handoff.md (never overwriting) and answers with the path.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"

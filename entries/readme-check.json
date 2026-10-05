@@ -1,0 +1,10 @@
+{
+  "name": "readme-check",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/readme-check",
+    "ref": "readme-check--v0.4.0"
+  },
+  "category": "command"
+}

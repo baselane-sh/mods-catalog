@@ -1,0 +1,38 @@
+{
+  "name": "recent",
+  "sha": "5e240722792c2303f2ccf663dbd3646545743031",
+  "ref": "recent--v0.4.0",
+  "version": "0.4.0",
+  "hooks": [
+    "command.run{command=?}",
+    "session.end",
+    "session.start",
+    "tool.call",
+    "ui.render{component=CommandOutput, props has {command=?}}"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.command.register",
+    "$.process.run",
+    "$.session.cwd",
+    "$.session.turns",
+    "$.session.usage",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.copy",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 20,
+  "manifest": {
+    "description": "Adds /recent: your last 15 commits across all local branches (author is git user.name), with branch and date. Read-only.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}
