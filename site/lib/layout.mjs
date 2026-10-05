@@ -7,6 +7,7 @@ export const SITE = {
   catalogRepo: 'baselane-sh/mods-catalog',
   modsDocs: 'https://code.claude.com/docs/en/plugins/mods/overview',
   customDomain: 'mods.baselane.sh',
+  modsRepo: 'baselane-sh/mods',
 }
 
 const CSP = "default-src 'self'; script-src 'self' https://gc.zgo.at/count.v4.js; style-src 'self'; font-src 'self'; img-src 'self' https://raw.githubusercontent.com https://avatars.githubusercontent.com; connect-src 'self' https://baselane.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'none'"
@@ -42,7 +43,7 @@ function header(base, current) {
 function footer() {
   return html`<footer class="bottom-rail">
   <p>Every mod here passed automated checks and is pinned to the commit that passed them. A mod runs with your permissions. <a href="${SITE.modsDocs}">How mods work</a>. This site counts visits and copy clicks per mod with GoatCounter: no cookies, no personal data stored.</p>
-  <p class="rail-links"><a href="https://github.com/${SITE.catalogRepo}">Catalog source</a><a href="https://github.com/${SITE.catalogRepo}/security/advisories/new">Report a security problem</a><a href="https://baselane.sh">Baselane</a></p>
+  <p class="rail-links"><a href="https://github.com/${SITE.catalogRepo}">Catalog source</a><a href="https://github.com/${SITE.modsRepo}">Baselane mods source</a><a href="https://github.com/${SITE.catalogRepo}/security/advisories/new">Report a security problem</a><a href="https://baselane.sh">Baselane</a></p>
 </footer>`
 }
 

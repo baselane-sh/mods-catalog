@@ -91,3 +91,8 @@ test('every page loads the pinned GoatCounter script and the CSP allows only its
   assert.doesNotMatch(csp, /img-src [^;]*goatcounter/)
   assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval/)
 })
+
+test('the footer links the Baselane mods source repo', () => {
+  const page = modPage({ base: '/', mod: fakeMod() })
+  assert.match(page, /<a href="https:\/\/github\.com\/baselane-sh\/mods">Baselane mods source<\/a>/)
+})
