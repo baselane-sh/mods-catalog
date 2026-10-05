@@ -38,7 +38,7 @@ The only mods gallery that shows what each mod can do before you install it (its
 - Each mod has: name, description, author, version, category, tags, Verified flag, hooks, calls, test count, listed and updated dates, source repo at a pinned SHA, README, optional screenshots, GitHub stars.
 - No install counts exist. "Top mods" ranks by GitHub stars.
 - README text is untrusted: raw HTML is escaped, only https links and images, strict CSP, no inline scripts.
-- Visits are counted with GoatCounter (site code `baselane`): one pinned script from gc.zgo.at with an integrity hash, data sent only to baselane.goatcounter.com, no cookies and no personal data. The CSP allows only those two hosts beyond the existing ones.
+- Visits are counted with GoatCounter (site code `baselane`): one pinned script from gc.zgo.at with an integrity hash, data sent only to baselane.goatcounter.com (by sendBeacon, so img-src does not allow it), no cookies and no personal data stored. The CSP allows only that script path and that host beyond the existing ones.
 - No em-dashes in any UI text.
 
 ## Brand Commitments

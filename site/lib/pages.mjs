@@ -11,7 +11,7 @@ export const SITE = {
   modsDocs: 'https://code.claude.com/docs/en/plugins/mods/overview',
 }
 
-const CSP = "default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; font-src 'self'; img-src 'self' https://raw.githubusercontent.com https://avatars.githubusercontent.com https://baselane.goatcounter.com; connect-src 'self' https://baselane.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+const CSP = "default-src 'self'; script-src 'self' https://gc.zgo.at/count.v4.js; style-src 'self'; font-src 'self'; img-src 'self' https://raw.githubusercontent.com https://avatars.githubusercontent.com; connect-src 'self' https://baselane.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'none'"
 
 const icon = name => html`<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-${name}"></use></svg>`
 
@@ -35,7 +35,7 @@ function header(base, current) {
 
 function footer(base) {
   return html`<footer class="bottom-rail">
-  <p>Every mod here passed automated checks and is pinned to the commit that passed them. A mod runs with your permissions. <a href="${SITE.modsDocs}">How mods work</a>. This site counts visits with GoatCounter: no cookies, no personal data.</p>
+  <p>Every mod here passed automated checks and is pinned to the commit that passed them. A mod runs with your permissions. <a href="${SITE.modsDocs}">How mods work</a>. This site counts visits with GoatCounter: no cookies, no personal data stored.</p>
   <p><a href="https://github.com/${SITE.catalogRepo}">Catalog source</a> <a href="https://github.com/${SITE.catalogRepo}/security/advisories/new">Report a security problem</a> <a href="https://baselane.sh">Baselane</a></p>
 </footer>`
 }
