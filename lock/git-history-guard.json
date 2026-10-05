@@ -1,0 +1,28 @@
+{
+  "name": "git-history-guard",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "git-history-guard--v0.3.0",
+  "version": "0.3.0",
+  "hooks": [
+    "classic.PreToolUse",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 12,
+  "manifest": {
+    "description": "Asks before git commands that throw away work or rewrite history: reset --hard, clean, rebase, filter-branch, filter-repo, push --delete, branch -D and stash clear.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

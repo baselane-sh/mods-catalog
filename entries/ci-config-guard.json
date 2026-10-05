@@ -1,0 +1,10 @@
+{
+  "name": "ci-config-guard",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/ci-config-guard",
+    "ref": "ci-config-guard--v0.3.0"
+  },
+  "category": "guard"
+}

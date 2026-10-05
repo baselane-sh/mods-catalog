@@ -1,0 +1,10 @@
+{
+  "name": "authors",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/authors",
+    "ref": "authors--v0.3.0"
+  },
+  "category": "command"
+}

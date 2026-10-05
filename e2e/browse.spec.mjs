@@ -64,17 +64,19 @@ test('empty state offers Clear the filters, which restores everything', async ({
   await expect(page.locator('[data-filter="category"] [aria-checked="true"]')).toHaveAttribute('data-value', '')
 })
 
-test('Verified toggle keeps the all-verified catalog and sets the URL', async ({ page }) => {
+test('Verified toggle keeps only verified modules and sets the URL', async ({ page }) => {
   const total = Number(await count(page).textContent())
+  const verifiedTotal = await visible(page).evaluateAll(els => els.filter(el => el.dataset.verified === '1').length)
   await page.locator('label.switch').click()
   await expect(page.locator('[data-filter="verified"]')).toBeChecked()
   await expect(page).toHaveURL(/verified=1/)
   const flags = await visible(page).evaluateAll(els => els.map(el => el.dataset.verified))
   expect(new Set(flags)).toEqual(new Set(['1']))
-  await expect(count(page)).toHaveText(String(total))
+  await expect(count(page)).toHaveText(String(verifiedTotal))
   await page.locator('label.switch').click()
   await expect(page.locator('[data-filter="verified"]')).not.toBeChecked()
   await expect(page).not.toHaveURL(/verified/)
+  await expect(count(page)).toHaveText(String(total))
 })
 
 test('Sort by Name orders modules alphabetically', async ({ page }) => {

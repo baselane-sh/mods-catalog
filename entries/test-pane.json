@@ -1,0 +1,10 @@
+{
+  "name": "test-pane",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/test-pane",
+    "ref": "test-pane--v0.3.0"
+  },
+  "category": "pane"
+}

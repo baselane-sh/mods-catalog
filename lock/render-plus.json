@@ -1,0 +1,34 @@
+{
+  "name": "render-plus",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "render-plus--v0.3.0",
+  "version": "0.3.0",
+  "hooks": [
+    "classic.PostToolUse",
+    "classic.PostToolUseFailure",
+    "ui.render{component=AssistantMessage}",
+    "ui.render{component=ToolResult}",
+    "ui.render{component=ToolUse}"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.prompt.fill",
+    "$.session.cwd",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 12,
+  "manifest": {
+    "description": "Three row badges in one: time-badge, exit-badge and size-badge.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

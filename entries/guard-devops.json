@@ -1,0 +1,10 @@
+{
+  "name": "guard-devops",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/guard-devops",
+    "ref": "guard-devops--v0.3.0"
+  },
+  "category": "guard"
+}

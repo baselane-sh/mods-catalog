@@ -1,0 +1,34 @@
+{
+  "name": "json-pretty",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "json-pretty--v0.3.0",
+  "version": "0.3.0",
+  "hooks": [
+    "classic.PostToolUse",
+    "classic.PostToolUseFailure",
+    "ui.render{component=AssistantMessage}",
+    "ui.render{component=ToolResult}",
+    "ui.render{component=ToolUse}"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.prompt.fill",
+    "$.session.cwd",
+    "$.state.get",
+    "$.state.set",
+    "$.ui.log",
+    "$.ui.resolve"
+  ],
+  "testCount": 5,
+  "manifest": {
+    "description": "Bash output that is one long line of JSON is drawn pretty-printed, folded after 30 lines. Display only: Claude reads the output as it was.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "guard-devops",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "guard-devops--v0.3.0",
+  "version": "0.3.0",
+  "hooks": [
+    "classic.PreToolUse",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 21,
+  "manifest": {
+    "description": "Asks before harsh DevOps commands: destructive Docker, Kubernetes and Helm calls, CI config edits, broad chmod and chown, and git commands that lose work. Add infra-guard for plain kubectl delete.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

@@ -1,8 +1,8 @@
 {
   "name": "big-diff-nudge",
-  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
-  "ref": "big-diff-nudge--v0.2.0",
-  "version": "0.2.0",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "big-diff-nudge--v0.3.0",
+  "version": "0.3.0",
   "hooks": [
     "classic.Stop",
     "tool.call"
@@ -12,11 +12,12 @@
     "$.fs.exists",
     "$.fs.read",
     "$.model.complete",
+    "$.session.cwd",
     "$.session.usage",
     "$.ui.log",
     "$.ui.toast"
   ],
-  "testCount": 9,
+  "testCount": 10,
   "manifest": {
     "description": "Suggests splitting the change once your edits added or removed more than 500 lines since the last git commit. A successful commit resets the count.",
     "author": {
@@ -27,5 +28,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-04"
+  "updatedAt": "2026-10-05"
 }

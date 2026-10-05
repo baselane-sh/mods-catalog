@@ -1,0 +1,10 @@
+{
+  "name": "desktop-notify",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/desktop-notify",
+    "ref": "desktop-notify--v0.3.0"
+  },
+  "category": "lifecycle"
+}

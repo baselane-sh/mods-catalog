@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/night-owl",
-    "ref": "night-owl--v0.2.0"
+    "ref": "night-owl--v0.3.0"
   },
   "category": "stats"
 }

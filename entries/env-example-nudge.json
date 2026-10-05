@@ -1,0 +1,10 @@
+{
+  "name": "env-example-nudge",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/env-example-nudge",
+    "ref": "env-example-nudge--v0.3.0"
+  },
+  "category": "nudge"
+}

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/team-pack",
-    "ref": "team-pack--v0.2.0"
+    "ref": "team-pack--v0.3.0"
   },
   "category": "style"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "scripts",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/scripts",
+    "ref": "scripts--v0.3.0"
+  },
+  "category": "command"
+}

@@ -1,10 +1,11 @@
 {
   "name": "tool-counter",
-  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
-  "ref": "tool-counter--v0.2.0",
-  "version": "0.2.0",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "tool-counter--v0.3.0",
+  "version": "0.3.0",
   "hooks": [
     "command.run{command=?}",
+    "session.end",
     "session.start",
     "tool.call",
     "turn.complete",
@@ -12,6 +13,7 @@
     "ui.render{component=AbovePrompt}"
   ],
   "calls": [
+    "$.clock.after",
     "$.clock.every",
     "$.clock.now",
     "$.command.register",
@@ -37,5 +39,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-04"
+  "updatedAt": "2026-10-05"
 }

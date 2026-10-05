@@ -1,0 +1,10 @@
+{
+  "name": "say-done",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/say-done",
+    "ref": "say-done--v0.3.0"
+  },
+  "category": "lifecycle"
+}

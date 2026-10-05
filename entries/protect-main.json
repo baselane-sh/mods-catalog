@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/protect-main",
-    "ref": "protect-main--v0.2.0"
+    "ref": "protect-main--v0.3.0"
   },
   "category": "guard"
 }

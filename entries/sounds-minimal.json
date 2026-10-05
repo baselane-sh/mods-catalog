@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/sounds-minimal",
-    "ref": "sounds-minimal--v0.2.0"
+    "ref": "sounds-minimal--v0.3.0"
   },
   "category": "sound"
 }

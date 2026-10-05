@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/stats-pack",
-    "ref": "stats-pack--v0.2.0"
+    "ref": "stats-pack--v0.3.0"
   },
   "category": "stats"
 }

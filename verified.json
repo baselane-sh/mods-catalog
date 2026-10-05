@@ -6,8 +6,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "achievements",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "agent-firewall",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "agent-firewall",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -18,8 +30,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "auto-format",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "big-diff-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "big-diff-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -30,8 +54,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "branch-band",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "branches",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "branches",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -42,8 +78,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "break-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "caveman-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "caveman-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -54,8 +102,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "changelog",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "clippy",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "clippy",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -66,8 +126,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "code-only",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "command-pack",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "command-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -78,8 +150,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "commit-msg",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "commit-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "commit-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -90,8 +174,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "context-meter",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "conventional-commits",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "conventional-commits",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -102,8 +198,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "cost-meter",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "cost-pane",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "cost-pane",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -114,8 +222,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "ctx-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "curl-pipe-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "curl-pipe-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -126,8 +246,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "daily-spend",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "debug-print-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "debug-print-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -138,8 +270,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "dev-band",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "diff-stats",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "diff-stats",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -150,8 +294,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "docs-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "eli5-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "eli5-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -162,8 +318,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "env-exfil-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "error-meter",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "error-meter",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -174,8 +342,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "file-links",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "focus-pack",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "focus-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -186,8 +366,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "fun-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "git-pane",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "git-pane",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -198,8 +390,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "gitignore-check",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "gitmoji-commits",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "gitmoji-commits",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -210,8 +414,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "guard-essentials",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "guard-pack",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "guard-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -222,8 +438,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "haiku-commits",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "handoff",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "handoff",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -234,8 +462,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "hotspots",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "infra-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "infra-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -246,8 +486,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "junior-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "latte-meter",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "latte-meter",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -258,8 +510,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "lifecycle-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "loc",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "loc",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -270,8 +534,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "lockfile-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "lockfile-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "lockfile-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -282,8 +558,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "long-run-notify",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "migration-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "migration-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -294,8 +582,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "model-badge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "mood-ring",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "mood-ring",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -306,8 +606,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "night-owl",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "no-em-dash",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "no-em-dash",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -318,8 +630,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "no-sycophancy",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "no-verify-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "no-verify-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -330,8 +654,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "ntfy-notify",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "nudge-pack",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "nudge-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -342,8 +678,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "package-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "path-jail",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "path-jail",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -354,8 +702,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "pirate-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "plain-english",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "plain-english",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -366,8 +726,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "port-watch",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "pr-description",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "pr-description",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -378,8 +750,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "prod-db-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "protect-main",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "protect-main",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -390,8 +774,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "quality-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "receipt",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "receipt",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -402,8 +798,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "render-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "reply-language",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "reply-language",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -414,8 +822,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "repo-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "secret-commit-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-commit-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -426,8 +846,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "secret-filename-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "secret-guard",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "secret-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -438,8 +870,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "secret-output-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "security-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "security-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -450,8 +894,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "session-clock",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "session-journal",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "session-journal",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -462,8 +918,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "shakespeare-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "sounds-minimal",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-minimal",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -474,8 +942,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "sounds-nature",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "sounds-office",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-office",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -486,8 +966,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "sounds-retro",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "sounds-scifi",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "sounds-scifi",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -498,8 +990,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "standup",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "stats-pack",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "stats-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -510,8 +1014,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "ste-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "streaks",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "streaks",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -522,8 +1038,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "sudo-guard",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "tdd-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "tdd-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -534,8 +1062,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "team-pack",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "terse-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "terse-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -546,8 +1086,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "test-reminder",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "todo-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "todo-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -558,8 +1110,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "todo-pane",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "todos",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "todos",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -570,8 +1134,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "tool-counter",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "typecheck-nudge",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "typecheck-nudge",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   },
@@ -582,8 +1158,20 @@
     "date": "2026-10-05"
   },
   {
+    "name": "wrapped",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
     "name": "yoda-mode",
     "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
+    "reviewer": "mohammad0omar",
+    "date": "2026-10-05"
+  },
+  {
+    "name": "yoda-mode",
+    "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
     "reviewer": "mohammad0omar",
     "date": "2026-10-05"
   }

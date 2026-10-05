@@ -1,0 +1,10 @@
+{
+  "name": "personal-bests",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/personal-bests",
+    "ref": "personal-bests--v0.3.0"
+  },
+  "category": "stats"
+}

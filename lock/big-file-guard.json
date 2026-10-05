@@ -1,0 +1,28 @@
+{
+  "name": "big-file-guard",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "big-file-guard--v0.3.0",
+  "version": "0.3.0",
+  "hooks": [
+    "classic.PreToolUse",
+    "prompt.submit",
+    "tool.call"
+  ],
+  "calls": [
+    "$.fs.stat",
+    "$.process.run",
+    "$.session.cwd"
+  ],
+  "testCount": 18,
+  "manifest": {
+    "description": "Asks before a Write creates content over 1 MB, or git add names a file over 5 MB.",
+    "author": {
+      "name": "Baselane",
+      "url": "https://baselane.sh"
+    },
+    "license": "MIT"
+  },
+  "submitter": "mohammad0omar",
+  "listedAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}

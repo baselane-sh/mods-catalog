@@ -1,8 +1,8 @@
 {
   "name": "achievements",
-  "sha": "128ecd2f6fb148078261ca78247e74e66b5d61b0",
-  "ref": "achievements--v0.2.0",
-  "version": "0.2.0",
+  "sha": "c2c3707d5134a82fa44571bdd5946ea0cef3c553",
+  "ref": "achievements--v0.3.0",
+  "version": "0.3.0",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -23,7 +23,7 @@
     "$.ui.log",
     "$.ui.toast"
   ],
-  "testCount": 39,
+  "testCount": 40,
   "manifest": {
     "description": "Unlocks eight badges once each (first session, first green test run, 100 and 1,000 tool calls, 7-day streak, 10 blocked calls, a 2 hour session, night owl), with a toast and /achievements.",
     "author": {
@@ -34,5 +34,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-04"
+  "updatedAt": "2026-10-05"
 }

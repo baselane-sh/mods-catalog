@@ -1,0 +1,10 @@
+{
+  "name": "deps",
+  "source": {
+    "source": "git-subdir",
+    "url": "baselane-sh/mods",
+    "path": "plugins/deps",
+    "ref": "deps--v0.3.0"
+  },
+  "category": "command"
+}
