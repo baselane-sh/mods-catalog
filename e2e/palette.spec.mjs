@@ -40,3 +40,21 @@ test('Escape closes the palette', async ({ page }) => {
   await page.keyboard.press('Escape')
   await expect(dialog(page)).toBeHidden()
 })
+
+test('the header button opens the palette, and the palette input is a combobox', async ({ page }) => {
+  await page.locator('[data-palette-open]').first().click()
+  const input = page.locator('[data-palette-input]')
+  await expect(input).toBeFocused()
+  await expect(input).toHaveAttribute('role', 'combobox')
+  await expect(page.locator('[data-palette-results] [role="option"]').first()).toHaveAttribute('aria-selected', 'true')
+})
+
+test('"/" focuses the search on the browse page and opens the palette elsewhere', async ({ page }) => {
+  await page.keyboard.press('/')
+  await expect(page.locator('[data-filter="q"]')).toBeFocused()
+  await expect(dialog(page)).toBeHidden()
+  await page.goto('/mods/secret-guard/')
+  await page.keyboard.press('/')
+  await expect(dialog(page)).toBeVisible()
+  await expect(page.locator('[data-palette-input]')).toBeFocused()
+})

@@ -14,6 +14,15 @@ for (const path of PAGES) {
     expect(scrollWidth).toBeLessThanOrEqual(innerWidth)
   })
 
+  test(`no horizontal scroll on ${path} in dark mode (phone only)`, async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'phone project only')
+    await page.emulateMedia({ colorScheme: 'dark' })
+    await page.goto(path)
+    await page.waitForLoadState('load')
+    expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe('rgb(14, 15, 16)')
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0)
+  })
+
   test(`no console errors or CSP violations on ${path}`, async ({ page }) => {
     const problems = []
     page.on('console', msg => { if (msg.type() === 'error') problems.push(`console: ${msg.text()}`) })

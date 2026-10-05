@@ -3,6 +3,8 @@
 // inline styles, because the CSP allows no inline style.
 import { html, CATEGORY_NAMES } from './html.mjs'
 
+const RISK_LABEL = { high: 'high risk', medium: 'medium risk', low: 'low risk', info: 'no risky abilities' }
+
 const ring = html`<svg class="jack-ring" aria-hidden="true" focusable="false"><use href="#i-jack"></use></svg>`
 
 // On the big plate a jack is focusable and draws its plain-words label on hover or focus.
@@ -27,7 +29,7 @@ export function faceplate(mod, { base, size = 'rack' } = {}) {
   <span class="screw s-tl" aria-hidden="true"></span><span class="screw s-tr" aria-hidden="true"></span>
   <span class="plate-head">
     <span class="led" aria-hidden="true"></span>
-    <span class="plate-name">${mod.name}</span>
+    <span class="plate-name">${mod.name}</span>${size === 'rack' ? html`<span class="sr-only">, ${CATEGORY_NAMES[mod.category]}, ${RISK_LABEL[mod.risk]}.</span>` : ''}
     <span class="plate-stripe" aria-hidden="true"><span>${CATEGORY_NAMES[mod.category]}</span></span>
   </span>
   <span class="plate-silk">${mod.description}</span>

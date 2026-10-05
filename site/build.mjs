@@ -8,13 +8,16 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadCatalog, topMods } from './lib/data.mjs'
 import { browsePage, modPage, submitPage, notFoundPage } from './lib/pages.mjs'
+import { SITE } from './lib/layout.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
 const args = process.argv.slice(2)
 const offline = args.includes('--offline')
 const baseArg = args.includes('--base') ? args[args.indexOf('--base') + 1] : process.env.SITE_BASE
-const base = baseArg ?? '/'
+// Every link and asset is written as base + path, so base must start and end with "/".
+// "/mods-catalog" and "mods-catalog/" both become "/mods-catalog/".
+const base = `/${(baseArg ?? '').replace(/^\/+|\/+$/g, '')}/`.replace(/^\/\/$/, '/')
 const out = path.join(root, '_site')
 const README_LIMIT = 200_000
 
@@ -75,5 +78,5 @@ await writePage('404.html', notFoundPage({ base }))
 for (const mod of mods) await writePage(`mods/${mod.name}/index.html`, modPage({ base, mod }))
 await writePage('index.json', JSON.stringify(sorted.map(indexEntry)))
 await writePage('.nojekyll', '')
-if (base === '/') await writePage('CNAME', 'mods.baselane.sh\n')
+if (base === '/') await writePage('CNAME', `${SITE.customDomain}\n`)
 console.log(`site: ${mods.length} mods built into _site/ (base ${base}${offline ? ', offline' : ''})`)
