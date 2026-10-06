@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/render-pack",
-    "ref": "render-pack--v0.5.0"
+    "ref": "render-pack--v0.5.1"
   },
   "category": "render"
 }

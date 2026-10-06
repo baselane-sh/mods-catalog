@@ -1,13 +1,13 @@
 {
   "name": "db-reset-guard",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "db-reset-guard--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "db-reset-guard--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "classic.PreToolUse"
   ],
   "calls": [],
-  "testCount": 13,
+  "testCount": 16,
   "manifest": {
     "description": "Asks before a framework wipes a database: prisma migrate reset, rails or rake db:drop and db:reset, alembic downgrade, django flush, supabase db reset, knex rollback --all.",
     "author": {
@@ -18,5 +18,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-05",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

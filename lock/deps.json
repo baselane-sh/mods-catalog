@@ -1,8 +1,8 @@
 {
   "name": "deps",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "deps--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "deps--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -26,7 +26,7 @@
   ],
   "testCount": 27,
   "manifest": {
-    "description": "Adds /deps: direct dependencies with versions from package.json, pyproject.toml, requirements.txt, go.mod and Cargo.toml at the git repo root. No network, no audit. Read-only.",
+    "description": "Adds /deps: direct dependencies with versions from package.json, pyproject.toml, requirements.txt, go.mod and Cargo.toml at the repo root. No network. Read-only. Copies the result to your clipboard.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"
@@ -35,5 +35,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-05",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

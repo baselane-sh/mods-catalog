@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/ci-band",
-    "ref": "ci-band--v0.5.0"
+    "ref": "ci-band--v0.5.1"
   },
   "category": "band"
 }

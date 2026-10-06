@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/long-run-notify",
-    "ref": "long-run-notify--v0.5.0"
+    "ref": "long-run-notify--v0.5.1"
   },
   "category": "lifecycle"
 }

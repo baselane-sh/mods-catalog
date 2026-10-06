@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/json-pretty",
-    "ref": "json-pretty--v0.5.0"
+    "ref": "json-pretty--v0.5.1"
   },
   "category": "render"
 }

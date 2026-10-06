@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/notify-pack",
-    "ref": "notify-pack--v0.5.0"
+    "ref": "notify-pack--v0.5.1"
   },
   "category": "lifecycle"
 }

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/noir-mode",
-    "ref": "noir-mode--v0.5.0"
+    "ref": "noir-mode--v0.5.1"
   },
   "category": "style"
 }

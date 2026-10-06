@@ -1,13 +1,13 @@
 {
   "name": "sudo-guard",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "sudo-guard--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "sudo-guard--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "classic.PreToolUse"
   ],
   "calls": [],
-  "testCount": 13,
+  "testCount": 16,
   "manifest": {
     "description": "Asks before sudo, doas or su -c runs a command with elevated rights.",
     "author": {
@@ -18,5 +18,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

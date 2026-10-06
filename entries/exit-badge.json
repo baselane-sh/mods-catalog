@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/exit-badge",
-    "ref": "exit-badge--v0.5.0"
+    "ref": "exit-badge--v0.5.1"
   },
   "category": "render"
 }

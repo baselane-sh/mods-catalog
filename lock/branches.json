@@ -1,8 +1,8 @@
 {
   "name": "branches",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "branches--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "branches--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -25,7 +25,7 @@
   ],
   "testCount": 24,
   "manifest": {
-    "description": "Adds /branches: local branches merged into the default branch or idle for 30 days, as a cleanup list, read with git. Never deletes.",
+    "description": "Adds /branches: local branches merged into the default branch or idle for 30 days, as a cleanup list, read with git. Never deletes. Copies the result to your clipboard.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"
@@ -34,5 +34,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

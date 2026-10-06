@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/test-reminder",
-    "ref": "test-reminder--v0.5.0"
+    "ref": "test-reminder--v0.5.1"
   },
   "category": "nudge"
 }

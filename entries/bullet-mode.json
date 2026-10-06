@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/bullet-mode",
-    "ref": "bullet-mode--v0.5.0"
+    "ref": "bullet-mode--v0.5.1"
   },
   "category": "style"
 }

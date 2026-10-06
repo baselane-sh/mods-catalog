@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/session-journal",
-    "ref": "session-journal--v0.5.0"
+    "ref": "session-journal--v0.5.1"
   },
   "category": "lifecycle"
 }

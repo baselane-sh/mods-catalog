@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/registry-push-guard",
-    "ref": "registry-push-guard--v0.5.0"
+    "ref": "registry-push-guard--v0.5.1"
   },
   "category": "guard"
 }
