@@ -1,8 +1,8 @@
 {
   "name": "envinfo",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "envinfo--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "envinfo--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -24,7 +24,7 @@
   ],
   "testCount": 18,
   "manifest": {
-    "description": "Adds /envinfo: versions of git, node, npm, python3, go, rustc and docker if installed, by running each (2 s limit), and the OS. Read-only.",
+    "description": "Adds /envinfo: versions of git, node, npm, python3, go, rustc and docker if installed, by running each (2 s limit), and the OS. Read-only. Copies the result to your clipboard.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"
@@ -33,5 +33,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-05",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

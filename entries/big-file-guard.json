@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/big-file-guard",
-    "ref": "big-file-guard--v0.5.0"
+    "ref": "big-file-guard--v0.5.1"
   },
   "category": "guard"
 }

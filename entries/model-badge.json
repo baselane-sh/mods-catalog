@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/model-badge",
-    "ref": "model-badge--v0.5.0"
+    "ref": "model-badge--v0.5.1"
   },
   "category": "band"
 }

@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/junior-mode",
-    "ref": "junior-mode--v0.5.0"
+    "ref": "junior-mode--v0.5.1"
   },
   "category": "style"
 }

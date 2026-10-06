@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/daily-spend",
-    "ref": "daily-spend--v0.5.0"
+    "ref": "daily-spend--v0.5.1"
   },
   "category": "band"
 }

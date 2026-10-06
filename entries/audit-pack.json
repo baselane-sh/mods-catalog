@@ -4,7 +4,7 @@
     "source": "git-subdir",
     "url": "baselane-sh/mods",
     "path": "plugins/audit-pack",
-    "ref": "audit-pack--v0.5.0"
+    "ref": "audit-pack--v0.5.1"
   },
   "category": "command"
 }

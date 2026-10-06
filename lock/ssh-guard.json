@@ -1,8 +1,8 @@
 {
   "name": "ssh-guard",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "ssh-guard--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "ssh-guard--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "classic.PreToolUse"
   ],
@@ -11,7 +11,7 @@
     "$.process.run",
     "$.session.cwd"
   ],
-  "testCount": 15,
+  "testCount": 18,
   "manifest": {
     "description": "Asks before a private key in .ssh is read, authorized_keys or the SSH config is changed, or ssh-keygen would overwrite a key. Public keys and ssh -i pass. Reads HOME with printenv.",
     "author": {
@@ -22,5 +22,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-05",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }

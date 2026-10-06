@@ -1,8 +1,8 @@
 {
   "name": "todos",
-  "sha": "7f5ba02923fce24b449bc38ca1d12cb916f057cc",
-  "ref": "todos--v0.5.0",
-  "version": "0.5.0",
+  "sha": "452251077ed9da2804983fa353079da532c431b3",
+  "ref": "todos--v0.5.1",
+  "version": "0.5.1",
   "hooks": [
     "command.run{command=?}",
     "session.end",
@@ -25,7 +25,7 @@
   ],
   "testCount": 20,
   "manifest": {
-    "description": "Adds /todos: TODO, FIXME and HACK lines in tracked files, found with git grep, grouped by file (50 lines at most). Read-only.",
+    "description": "Adds /todos: TODO, FIXME and HACK lines in tracked files, found with git grep, grouped by file (50 lines at most). Read-only. Copies the result to your clipboard.",
     "author": {
       "name": "Baselane",
       "url": "https://baselane.sh"
@@ -34,5 +34,5 @@
   },
   "submitter": "mohammad0omar",
   "listedAt": "2026-10-04",
-  "updatedAt": "2026-10-05"
+  "updatedAt": "2026-10-06"
 }
