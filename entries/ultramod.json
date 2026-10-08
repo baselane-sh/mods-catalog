@@ -1,0 +1,11 @@
+{
+  "name": "ultramod",
+  "source": {
+    "source": "git-subdir",
+    "url": "mertkayacs/ultramod",
+    "path": "plugin",
+    "ref": "v1.0.0"
+  },
+  "category": "guard",
+  "tags": ["git", "secrets", "hud", "receipts", "undo", "tests"]
+}
