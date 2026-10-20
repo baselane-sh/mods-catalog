@@ -1,0 +1,7 @@
+{
+  "name": "clarvis",
+  "source": { "source": "github", "repo": "shahsanket2107/clarvis", "ref": "v1.0.1" },
+  "category": "band",
+  "tags": ["cost", "tokens", "rate-limits", "hud", "arcade", "fun", "avengers"],
+  "screenshots": ["docs/media/band.png", "docs/media/moment.png", "docs/media/stats.png", "docs/media/arcade.png", "docs/media/theater.png"]
+}
