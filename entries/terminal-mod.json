@@ -1,0 +1,1 @@
+{ "name": "terminal-mod", "source": { "source": "github", "repo": "tekikaito/terminal-mod", "ref": "v0.3.1" }, "category": "pane", "tags": ["terminal", "tmux"] }
